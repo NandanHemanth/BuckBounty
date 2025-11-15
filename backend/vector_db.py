@@ -33,12 +33,20 @@ class VectorDB:
     
     def add_transaction(self, transaction: Dict):
         """Add a transaction to the vector database"""
-        # Create text representation for embedding
-        text = f"{transaction['merchant']} {transaction['category']} ${transaction['amount']} on {transaction['date']}"
+        # Check if transaction already exists
+        existing_ids = [t.get('id') for t in self.metadata]
+        if transaction.get('id') in existing_ids:
+            return  # Skip duplicates
         
-        # Generate embedding
-        embedding = self.encoder.encode([text])[0]
-        embedding = np.array([embedding], dtype='float32')
+        # Use pre-computed embedding if available, otherwise generate one
+        if 'embedding' in transaction and transaction['embedding']:
+            embedding = np.array([transaction['embedding']], dtype='float32')
+        else:
+            # Create text representation for embedding
+            text = f"{transaction['merchant']} {transaction['category']} ${transaction['amount']} on {transaction['date']}"
+            # Generate embedding
+            embedding = self.encoder.encode([text])[0]
+            embedding = np.array([embedding], dtype='float32')
         
         # Add to FAISS index
         self.index.add(embedding)
@@ -72,9 +80,42 @@ class VectorDB:
             if idx < len(self.metadata):
                 result = self.metadata[idx].copy()
                 result['similarity_score'] = float(1 / (1 + distance))  # Convert distance to similarity
+                
+                # Include embedding metadata if available
+                if 'embedding_metadata' in result:
+                    result['search_metadata'] = result['embedding_metadata']
+                
                 results.append(result)
         
         return results
+    
+    def get_transactions_by_category(self, category: str):
+        """Get all transactions in a specific classified category"""
+        return [
+            txn for txn in self.metadata 
+            if txn.get('classified_category') == category
+        ]
+    
+    def get_category_stats(self):
+        """Get statistics for each category"""
+        stats = {}
+        for txn in self.metadata:
+            category = txn.get('classified_category', 'Other')
+            if category not in stats:
+                stats[category] = {
+                    'count': 0,
+                    'total_amount': 0,
+                    'avg_amount': 0
+                }
+            stats[category]['count'] += 1
+            stats[category]['total_amount'] += abs(txn.get('amount', 0))
+        
+        # Calculate averages
+        for category in stats:
+            if stats[category]['count'] > 0:
+                stats[category]['avg_amount'] = stats[category]['total_amount'] / stats[category]['count']
+        
+        return stats
     
     def get_all_transactions(self):
         """Get all transactions from the database"""

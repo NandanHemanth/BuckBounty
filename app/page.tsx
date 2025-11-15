@@ -4,6 +4,7 @@ import { useState } from 'react';
 import PlaidLink from '@/components/PlaidLink';
 import TransactionList from '@/components/TransactionList';
 import Dashboard from '@/components/Dashboard';
+import EmbeddingVisualizer from '@/components/EmbeddingVisualizer';
 
 export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
@@ -55,6 +56,9 @@ export default function Home() {
         )}
 
       </div>
+
+      {/* Embedding Visualizer - Bottom Left */}
+      {isConnected && <EmbeddingVisualizer userId={userId} />}
 
       {/* MARK - Animated Agent in Bottom Right */}
       <div className="fixed bottom-6 right-6 z-50">
