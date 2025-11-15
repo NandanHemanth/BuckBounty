@@ -550,6 +550,160 @@
     "vector_id": 550
   },
   {
+    "id": "ED139VXWNpUgrrx6vWLQixeWqWJBABugMNL1p",
+    "date": "2025-11-15",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:44:17.188455",
+    "vector_id": 593
+  },
+  {
+    "id": "MDAP7gXVwzUJRRW8KeZosKNpapAxGxT45roEN",
+    "date": "2025-11-15",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:44:17.225622",
+    "vector_id": 594
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixeWqWJBABugMNL1p",
+    "date": "2025-11-15",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:52.245311",
+    "vector_id": 609
+  },
+  {
+    "id": "MDAP7gXVwzUJRRW8KeZosKNpapAxGxT45roEN",
+    "date": "2025-11-15",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:52.306996",
+    "vector_id": 610
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixeWqWJBABugMNL1p",
+    "date": "2025-11-15",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:55.117449",
+    "vector_id": 653
+  },
+  {
+    "id": "MDAP7gXVwzUJRRW8KeZosKNpapAxGxT45roEN",
+    "date": "2025-11-15",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.164028",
+    "vector_id": 654
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixeWqWJBABugMNL1p",
+    "date": "2025-11-15",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:52.290581",
+    "vector_id": 697
+  },
+  {
+    "id": "MDAP7gXVwzUJRRW8KeZosKNpapAxGxT45roEN",
+    "date": "2025-11-15",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:52.330256",
+    "vector_id": 698
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixeWqWJBABugMNL1p",
+    "date": "2025-11-15",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:53.659159",
+    "vector_id": 713
+  },
+  {
+    "id": "MDAP7gXVwzUJRRW8KeZosKNpapAxGxT45roEN",
+    "date": "2025-11-15",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:53.699341",
+    "vector_id": 714
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixeWqWJBABugMNL1p",
+    "date": "2025-11-15",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:56.044698",
+    "vector_id": 757
+  },
+  {
+    "id": "MDAP7gXVwzUJRRW8KeZosKNpapAxGxT45roEN",
+    "date": "2025-11-15",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:56.090320",
+    "vector_id": 758
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixeWqWJBABugMNL1p",
+    "date": "2025-11-15",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:57.377371",
+    "vector_id": 773
+  },
+  {
+    "id": "MDAP7gXVwzUJRRW8KeZosKNpapAxGxT45roEN",
+    "date": "2025-11-15",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:57.420253",
+    "vector_id": 774
+  },
+  {
     "id": "noEd7wX9yLT6ErXKp65oCwX5LW9QejCA9L4MV",
     "date": "2025-11-13",
     "amount": -500.0,
@@ -1098,6 +1252,160 @@
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
     "added_at": "2025-11-15T16:44:15.175766",
     "vector_id": 552
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mArAga6aiGLd4Xb",
+    "date": "2025-11-13",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:44:17.264194",
+    "vector_id": 595
+  },
+  {
+    "id": "1EGWl68ByqhgAAexVbvmidBWrW3jZjuqa1wxD",
+    "date": "2025-11-13",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:44:17.306753",
+    "vector_id": 596
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mArAga6aiGLd4Xb",
+    "date": "2025-11-13",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:52.366566",
+    "vector_id": 611
+  },
+  {
+    "id": "1EGWl68ByqhgAAexVbvmidBWrW3jZjuqa1wxD",
+    "date": "2025-11-13",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:52.418679",
+    "vector_id": 612
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mArAga6aiGLd4Xb",
+    "date": "2025-11-13",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:55.213595",
+    "vector_id": 655
+  },
+  {
+    "id": "1EGWl68ByqhgAAexVbvmidBWrW3jZjuqa1wxD",
+    "date": "2025-11-13",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.265671",
+    "vector_id": 656
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mArAga6aiGLd4Xb",
+    "date": "2025-11-13",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:52.374511",
+    "vector_id": 699
+  },
+  {
+    "id": "1EGWl68ByqhgAAexVbvmidBWrW3jZjuqa1wxD",
+    "date": "2025-11-13",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:52.418356",
+    "vector_id": 700
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mArAga6aiGLd4Xb",
+    "date": "2025-11-13",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:53.739077",
+    "vector_id": 715
+  },
+  {
+    "id": "1EGWl68ByqhgAAexVbvmidBWrW3jZjuqa1wxD",
+    "date": "2025-11-13",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:53.781947",
+    "vector_id": 716
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mArAga6aiGLd4Xb",
+    "date": "2025-11-13",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:56.136265",
+    "vector_id": 759
+  },
+  {
+    "id": "1EGWl68ByqhgAAexVbvmidBWrW3jZjuqa1wxD",
+    "date": "2025-11-13",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:56.174524",
+    "vector_id": 760
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mArAga6aiGLd4Xb",
+    "date": "2025-11-13",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:57.466455",
+    "vector_id": 775
+  },
+  {
+    "id": "1EGWl68ByqhgAAexVbvmidBWrW3jZjuqa1wxD",
+    "date": "2025-11-13",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:57.508574",
+    "vector_id": 776
   },
   {
     "id": "b4EnKgaoLdH3z7Z4q35RipoakGWMeZcmnMe6b",
@@ -1760,6 +2068,160 @@
     "vector_id": 554
   },
   {
+    "id": "LDWPVpXwjrUgoon7Arw4iyPKdKr8j8Uem5JRB",
+    "date": "2025-11-12",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:44:17.346787",
+    "vector_id": 597
+  },
+  {
+    "id": "pnzA5M4mLyIJaaV5vw46sEmV5VpZaZcJqdxW8",
+    "date": "2025-11-12",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:44:17.385815",
+    "vector_id": 598
+  },
+  {
+    "id": "LDWPVpXwjrUgoon7Arw4iyPKdKr8j8Uem5JRB",
+    "date": "2025-11-12",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:52.477792",
+    "vector_id": 613
+  },
+  {
+    "id": "pnzA5M4mLyIJaaV5vw46sEmV5VpZaZcJqdxW8",
+    "date": "2025-11-12",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:52.535873",
+    "vector_id": 614
+  },
+  {
+    "id": "LDWPVpXwjrUgoon7Arw4iyPKdKr8j8Uem5JRB",
+    "date": "2025-11-12",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.309736",
+    "vector_id": 657
+  },
+  {
+    "id": "pnzA5M4mLyIJaaV5vw46sEmV5VpZaZcJqdxW8",
+    "date": "2025-11-12",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.354822",
+    "vector_id": 658
+  },
+  {
+    "id": "LDWPVpXwjrUgoon7Arw4iyPKdKr8j8Uem5JRB",
+    "date": "2025-11-12",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:52.461027",
+    "vector_id": 701
+  },
+  {
+    "id": "pnzA5M4mLyIJaaV5vw46sEmV5VpZaZcJqdxW8",
+    "date": "2025-11-12",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:52.506089",
+    "vector_id": 702
+  },
+  {
+    "id": "LDWPVpXwjrUgoon7Arw4iyPKdKr8j8Uem5JRB",
+    "date": "2025-11-12",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:53.827045",
+    "vector_id": 717
+  },
+  {
+    "id": "pnzA5M4mLyIJaaV5vw46sEmV5VpZaZcJqdxW8",
+    "date": "2025-11-12",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:53.869719",
+    "vector_id": 718
+  },
+  {
+    "id": "LDWPVpXwjrUgoon7Arw4iyPKdKr8j8Uem5JRB",
+    "date": "2025-11-12",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:56.220516",
+    "vector_id": 761
+  },
+  {
+    "id": "pnzA5M4mLyIJaaV5vw46sEmV5VpZaZcJqdxW8",
+    "date": "2025-11-12",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:56.260292",
+    "vector_id": 762
+  },
+  {
+    "id": "LDWPVpXwjrUgoon7Arw4iyPKdKr8j8Uem5JRB",
+    "date": "2025-11-12",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:57.555656",
+    "vector_id": 777
+  },
+  {
+    "id": "pnzA5M4mLyIJaaV5vw46sEmV5VpZaZcJqdxW8",
+    "date": "2025-11-12",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:57.597622",
+    "vector_id": 778
+  },
+  {
     "id": "yxq1E5aR4mIX5z7jKX8aI1J4mXoj3zf4P7B8z",
     "date": "2025-11-11",
     "amount": 89.4,
@@ -2090,6 +2552,83 @@
     "vector_id": 555
   },
   {
+    "id": "onry51aoXGI5WWENaQ4Duk16N6XdxdSpPm3zw",
+    "date": "2025-11-11",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:44:17.428382",
+    "vector_id": 599
+  },
+  {
+    "id": "onry51aoXGI5WWENaQ4Duk16N6XdxdSpPm3zw",
+    "date": "2025-11-11",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:52.586548",
+    "vector_id": 615
+  },
+  {
+    "id": "onry51aoXGI5WWENaQ4Duk16N6XdxdSpPm3zw",
+    "date": "2025-11-11",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.400407",
+    "vector_id": 659
+  },
+  {
+    "id": "onry51aoXGI5WWENaQ4Duk16N6XdxdSpPm3zw",
+    "date": "2025-11-11",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:52.546065",
+    "vector_id": 703
+  },
+  {
+    "id": "onry51aoXGI5WWENaQ4Duk16N6XdxdSpPm3zw",
+    "date": "2025-11-11",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:53.906097",
+    "vector_id": 719
+  },
+  {
+    "id": "onry51aoXGI5WWENaQ4Duk16N6XdxdSpPm3zw",
+    "date": "2025-11-11",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:56.300619",
+    "vector_id": 763
+  },
+  {
+    "id": "onry51aoXGI5WWENaQ4Duk16N6XdxdSpPm3zw",
+    "date": "2025-11-11",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:57.642982",
+    "vector_id": 779
+  },
+  {
     "id": "KvE5JbEAeBCwrXVJ8RoBiZbGy5e9ZXFRkL387",
     "date": "2025-11-10",
     "amount": -4.22,
@@ -2310,6 +2849,83 @@
     "vector_id": 556
   },
   {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5G1GEAjAHP5VGDe",
+    "date": "2025-11-10",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:44:17.473469",
+    "vector_id": 600
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5G1GEAjAHP5VGDe",
+    "date": "2025-11-10",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:52.641210",
+    "vector_id": 616
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5G1GEAjAHP5VGDe",
+    "date": "2025-11-10",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:55.441960",
+    "vector_id": 660
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5G1GEAjAHP5VGDe",
+    "date": "2025-11-10",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:52.591775",
+    "vector_id": 704
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5G1GEAjAHP5VGDe",
+    "date": "2025-11-10",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:53.948426",
+    "vector_id": 720
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5G1GEAjAHP5VGDe",
+    "date": "2025-11-10",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:56.343394",
+    "vector_id": 764
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5G1GEAjAHP5VGDe",
+    "date": "2025-11-10",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:57.692339",
+    "vector_id": 780
+  },
+  {
     "id": "BEQ6JpQLq8C89oD3kVbmh864BLxp8Qi45QJyw",
     "date": "2025-10-31",
     "amount": 500.0,
@@ -2528,6 +3144,83 @@
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
     "added_at": "2025-11-15T16:44:15.359009",
     "vector_id": 557
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy6p6mjvjT3X4BNr",
+    "date": "2025-10-31",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:44:17.511497",
+    "vector_id": 601
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy6p6mjvjT3X4BNr",
+    "date": "2025-10-31",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:52.690847",
+    "vector_id": 617
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy6p6mjvjT3X4BNr",
+    "date": "2025-10-31",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:55.489014",
+    "vector_id": 661
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy6p6mjvjT3X4BNr",
+    "date": "2025-10-31",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:52.634489",
+    "vector_id": 705
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy6p6mjvjT3X4BNr",
+    "date": "2025-10-31",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:53.990902",
+    "vector_id": 721
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy6p6mjvjT3X4BNr",
+    "date": "2025-10-31",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:56.389056",
+    "vector_id": 765
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy6p6mjvjT3X4BNr",
+    "date": "2025-10-31",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:57.734820",
+    "vector_id": 781
   },
   {
     "id": "9prXmKvjP3InD1eaKnzvF6arMoqXVyu4oX69m",
@@ -2860,6 +3553,83 @@
     "vector_id": 558
   },
   {
+    "id": "gW87bMq6AGUqJJnomXdru46nmnAo7oFLGJXwa",
+    "date": "2025-10-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:44:17.551550",
+    "vector_id": 602
+  },
+  {
+    "id": "gW87bMq6AGUqJJnomXdru46nmnAo7oFLGJXwa",
+    "date": "2025-10-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:52.738878",
+    "vector_id": 618
+  },
+  {
+    "id": "gW87bMq6AGUqJJnomXdru46nmnAo7oFLGJXwa",
+    "date": "2025-10-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.539195",
+    "vector_id": 662
+  },
+  {
+    "id": "gW87bMq6AGUqJJnomXdru46nmnAo7oFLGJXwa",
+    "date": "2025-10-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:52.679045",
+    "vector_id": 706
+  },
+  {
+    "id": "gW87bMq6AGUqJJnomXdru46nmnAo7oFLGJXwa",
+    "date": "2025-10-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.028469",
+    "vector_id": 722
+  },
+  {
+    "id": "gW87bMq6AGUqJJnomXdru46nmnAo7oFLGJXwa",
+    "date": "2025-10-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:56.430533",
+    "vector_id": 766
+  },
+  {
+    "id": "gW87bMq6AGUqJJnomXdru46nmnAo7oFLGJXwa",
+    "date": "2025-10-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:57.779995",
+    "vector_id": 782
+  },
+  {
     "id": "34qpM3qnWaib5g3vl7qKC1Go3QB81RUZbBNJZ",
     "date": "2025-10-26",
     "amount": 500.0,
@@ -3078,6 +3848,83 @@
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
     "added_at": "2025-11-15T16:44:15.432596",
     "vector_id": 559
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN85z5nZ6ZfoJew18",
+    "date": "2025-10-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:44:17.589103",
+    "vector_id": 603
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN85z5nZ6ZfoJew18",
+    "date": "2025-10-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:52.792010",
+    "vector_id": 619
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN85z5nZ6ZfoJew18",
+    "date": "2025-10-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:55.592295",
+    "vector_id": 663
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN85z5nZ6ZfoJew18",
+    "date": "2025-10-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:52.717557",
+    "vector_id": 707
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN85z5nZ6ZfoJew18",
+    "date": "2025-10-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.067552",
+    "vector_id": 723
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN85z5nZ6ZfoJew18",
+    "date": "2025-10-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:56.479729",
+    "vector_id": 767
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN85z5nZ6ZfoJew18",
+    "date": "2025-10-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:57.820649",
+    "vector_id": 783
   },
   {
     "id": "avM5Q1M6EACDxXV9BwgrTMxvoJy9MghZJzG4e",
@@ -3740,6 +4587,237 @@
     "vector_id": 562
   },
   {
+    "id": "9Ex68RXjVah8BB7KDdG9H5bnknlyzyiq36mwa",
+    "date": "2025-10-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:44:17.628124",
+    "vector_id": 604
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE7K7lzazCKZBQbb",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:44:17.665674",
+    "vector_id": 605
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMboWo9DRDH4la5nW",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:44:17.706234",
+    "vector_id": 606
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5bnknlyzyiq36mwa",
+    "date": "2025-10-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:52.840611",
+    "vector_id": 620
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE7K7lzazCKZBQbb",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:52.888172",
+    "vector_id": 621
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMboWo9DRDH4la5nW",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:52.930759",
+    "vector_id": 622
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5bnknlyzyiq36mwa",
+    "date": "2025-10-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:55.637333",
+    "vector_id": 664
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE7K7lzazCKZBQbb",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:55.677897",
+    "vector_id": 665
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMboWo9DRDH4la5nW",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:55.724460",
+    "vector_id": 666
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5bnknlyzyiq36mwa",
+    "date": "2025-10-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:52.757479",
+    "vector_id": 708
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE7K7lzazCKZBQbb",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:52.799555",
+    "vector_id": 709
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMboWo9DRDH4la5nW",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:52.842425",
+    "vector_id": 710
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5bnknlyzyiq36mwa",
+    "date": "2025-10-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.110546",
+    "vector_id": 724
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE7K7lzazCKZBQbb",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.157338",
+    "vector_id": 725
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMboWo9DRDH4la5nW",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.199102",
+    "vector_id": 726
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5bnknlyzyiq36mwa",
+    "date": "2025-10-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:56.518131",
+    "vector_id": 768
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE7K7lzazCKZBQbb",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:56.562154",
+    "vector_id": 769
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMboWo9DRDH4la5nW",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:56.603258",
+    "vector_id": 770
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5bnknlyzyiq36mwa",
+    "date": "2025-10-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:57.868462",
+    "vector_id": 784
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE7K7lzazCKZBQbb",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:57.908232",
+    "vector_id": 785
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMboWo9DRDH4la5nW",
+    "date": "2025-10-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:57.953260",
+    "vector_id": 786
+  },
+  {
     "id": "vzXQoArJxGIXqRy4WXg5ImPgBkd8zMsqb9dZ3",
     "date": "2025-10-16",
     "amount": 5.4,
@@ -4290,6 +5368,160 @@
     "vector_id": 564
   },
   {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6WyWBwPwf4kmvdG",
+    "date": "2025-10-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:44:17.748271",
+    "vector_id": 607
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqWnvnrJVJCZRByGP",
+    "date": "2025-10-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:44:17.785862",
+    "vector_id": 608
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6WyWBwPwf4kmvdG",
+    "date": "2025-10-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:52.974328",
+    "vector_id": 623
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqWnvnrJVJCZRByGP",
+    "date": "2025-10-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.009867",
+    "vector_id": 624
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6WyWBwPwf4kmvdG",
+    "date": "2025-10-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:55.768009",
+    "vector_id": 667
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqWnvnrJVJCZRByGP",
+    "date": "2025-10-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.809052",
+    "vector_id": 668
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6WyWBwPwf4kmvdG",
+    "date": "2025-10-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:52.890752",
+    "vector_id": 711
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqWnvnrJVJCZRByGP",
+    "date": "2025-10-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:52.935609",
+    "vector_id": 712
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6WyWBwPwf4kmvdG",
+    "date": "2025-10-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:54.241056",
+    "vector_id": 727
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqWnvnrJVJCZRByGP",
+    "date": "2025-10-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.283530",
+    "vector_id": 728
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6WyWBwPwf4kmvdG",
+    "date": "2025-10-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:56.643069",
+    "vector_id": 771
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqWnvnrJVJCZRByGP",
+    "date": "2025-10-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:56.688341",
+    "vector_id": 772
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6WyWBwPwf4kmvdG",
+    "date": "2025-10-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:58.006490",
+    "vector_id": 787
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqWnvnrJVJCZRByGP",
+    "date": "2025-10-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.045051",
+    "vector_id": 788
+  },
+  {
     "id": "4NKo1xKn34iA1VXwBbK3C59VEl4pbzFJpGRNM",
     "date": "2025-10-14",
     "amount": 78.5,
@@ -4442,6 +5674,94 @@
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
     "added_at": "2025-11-15T16:44:15.682636",
     "vector_id": 566
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqW7l4oyDJuW7Ky3w",
+    "date": "2025-10-14",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:53.055948",
+    "vector_id": 625
+  },
+  {
+    "id": "RDrG8wnAVaUVMMKXDgewCnyRBadnJNCaNXQpB",
+    "date": "2025-10-14",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.104516",
+    "vector_id": 626
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqW7l4oyDJuW7Ky3w",
+    "date": "2025-10-14",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:55.852623",
+    "vector_id": 669
+  },
+  {
+    "id": "RDrG8wnAVaUVMMKXDgewCnyRBadnJNCaNXQpB",
+    "date": "2025-10-14",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.893220",
+    "vector_id": 670
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqW7l4oyDJuW7Ky3w",
+    "date": "2025-10-14",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.323080",
+    "vector_id": 729
+  },
+  {
+    "id": "RDrG8wnAVaUVMMKXDgewCnyRBadnJNCaNXQpB",
+    "date": "2025-10-14",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.364508",
+    "vector_id": 730
+  },
+  {
+    "id": "8E3ZpJXPwdhVzzJDExMoCqW7l4oyDJuW7Ky3w",
+    "date": "2025-10-14",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:58.091742",
+    "vector_id": 789
+  },
+  {
+    "id": "RDrG8wnAVaUVMMKXDgewCnyRBadnJNCaNXQpB",
+    "date": "2025-10-14",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.132483",
+    "vector_id": 790
   },
   {
     "id": "qPBxvKBJmetpgBvkLM7EtKdQEbM3VBsglpyXJ",
@@ -4598,6 +5918,94 @@
     "vector_id": 568
   },
   {
+    "id": "6EzvgnD4m3hJKKbg4NRnsvagNMnv8Wf8QbRDp",
+    "date": "2025-10-13",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.141621",
+    "vector_id": 627
+  },
+  {
+    "id": "XWar8bJR1eUQ11AowyPRukmZajQkB8IbkPRKq",
+    "date": "2025-10-13",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.183672",
+    "vector_id": 628
+  },
+  {
+    "id": "6EzvgnD4m3hJKKbg4NRnsvagNMnv8Wf8QbRDp",
+    "date": "2025-10-13",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.938800",
+    "vector_id": 671
+  },
+  {
+    "id": "XWar8bJR1eUQ11AowyPRukmZajQkB8IbkPRKq",
+    "date": "2025-10-13",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:55.980382",
+    "vector_id": 672
+  },
+  {
+    "id": "6EzvgnD4m3hJKKbg4NRnsvagNMnv8Wf8QbRDp",
+    "date": "2025-10-13",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.405367",
+    "vector_id": 731
+  },
+  {
+    "id": "XWar8bJR1eUQ11AowyPRukmZajQkB8IbkPRKq",
+    "date": "2025-10-13",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.446611",
+    "vector_id": 732
+  },
+  {
+    "id": "6EzvgnD4m3hJKKbg4NRnsvagNMnv8Wf8QbRDp",
+    "date": "2025-10-13",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.173747",
+    "vector_id": 791
+  },
+  {
+    "id": "XWar8bJR1eUQ11AowyPRukmZajQkB8IbkPRKq",
+    "date": "2025-10-13",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.218272",
+    "vector_id": 792
+  },
+  {
     "id": "rk3dvr37LQCJ8kVvpB6xuR8AQxMdPgC7b8kB7",
     "date": "2025-10-12",
     "amount": 89.4,
@@ -4673,6 +6081,50 @@
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
     "added_at": "2025-11-15T16:44:15.788285",
     "vector_id": 569
+  },
+  {
+    "id": "DDMB8nXGRLUdQQWG1y73tQmGrxVQNgI3NE8Wa",
+    "date": "2025-10-12",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.220700",
+    "vector_id": 629
+  },
+  {
+    "id": "DDMB8nXGRLUdQQWG1y73tQmGrxVQNgI3NE8Wa",
+    "date": "2025-10-12",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:56.022956",
+    "vector_id": 673
+  },
+  {
+    "id": "DDMB8nXGRLUdQQWG1y73tQmGrxVQNgI3NE8Wa",
+    "date": "2025-10-12",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.482158",
+    "vector_id": 733
+  },
+  {
+    "id": "DDMB8nXGRLUdQQWG1y73tQmGrxVQNgI3NE8Wa",
+    "date": "2025-10-12",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.262433",
+    "vector_id": 793
   },
   {
     "id": "lxlK6blmX4trM68oL3Vjf36e4qdLw1upBPmAD",
@@ -4752,6 +6204,50 @@
     "vector_id": 570
   },
   {
+    "id": "3AqJKn5xBruEQQdV9vnPFzPVbvwz75fZgMalA",
+    "date": "2025-10-11",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:53.261281",
+    "vector_id": 630
+  },
+  {
+    "id": "3AqJKn5xBruEQQdV9vnPFzPVbvwz75fZgMalA",
+    "date": "2025-10-11",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:56.069024",
+    "vector_id": 674
+  },
+  {
+    "id": "3AqJKn5xBruEQQdV9vnPFzPVbvwz75fZgMalA",
+    "date": "2025-10-11",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:54.527303",
+    "vector_id": 734
+  },
+  {
+    "id": "3AqJKn5xBruEQQdV9vnPFzPVbvwz75fZgMalA",
+    "date": "2025-10-11",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:58.306817",
+    "vector_id": 794
+  },
+  {
     "id": "NvG5JlG8edCR9QbAvkJ1FjmVkJGBM4cy8RABQ",
     "date": "2025-10-01",
     "amount": 500.0,
@@ -4827,6 +6323,50 @@
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
     "added_at": "2025-11-15T16:44:15.861856",
     "vector_id": 571
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixe3V8zPdBc489Lx4",
+    "date": "2025-10-01",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:53.306324",
+    "vector_id": 631
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixe3V8zPdBc489Lx4",
+    "date": "2025-10-01",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:56.117146",
+    "vector_id": 675
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixe3V8zPdBc489Lx4",
+    "date": "2025-10-01",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.568426",
+    "vector_id": 735
+  },
+  {
+    "id": "ED139VXWNpUgrrx6vWLQixe3V8zPdBc489Lx4",
+    "date": "2025-10-01",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:58.351986",
+    "vector_id": 795
   },
   {
     "id": "zp7QvN7l48tlBaQ3195WTGEM9qm6PnFldkX83",
@@ -4906,6 +6446,50 @@
     "vector_id": 572
   },
   {
+    "id": "VDxqWZJm1jUallArBE67Fj6lrdLjBQi9QpJgd",
+    "date": "2025-09-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.345409",
+    "vector_id": 632
+  },
+  {
+    "id": "VDxqWZJm1jUallArBE67Fj6lrdLjBQi9QpJgd",
+    "date": "2025-09-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:56.186266",
+    "vector_id": 676
+  },
+  {
+    "id": "VDxqWZJm1jUallArBE67Fj6lrdLjBQi9QpJgd",
+    "date": "2025-09-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.606334",
+    "vector_id": 736
+  },
+  {
+    "id": "VDxqWZJm1jUallArBE67Fj6lrdLjBQi9QpJgd",
+    "date": "2025-09-29",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.394394",
+    "vector_id": 796
+  },
+  {
     "id": "Pvq5JKqky4CQ64yqBxmKikGLvDx6BPuoLqyBy",
     "date": "2025-09-26",
     "amount": 500.0,
@@ -4981,6 +6565,50 @@
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
     "added_at": "2025-11-15T16:44:15.928937",
     "vector_id": 573
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5xDkqbaAh63wGZP",
+    "date": "2025-09-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:53.390455",
+    "vector_id": 633
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5xDkqbaAh63wGZP",
+    "date": "2025-09-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:56.225807",
+    "vector_id": 677
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5xDkqbaAh63wGZP",
+    "date": "2025-09-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.650387",
+    "vector_id": 737
+  },
+  {
+    "id": "WDdkRXnA87Uzwwxp7jbqiM5xDkqbaAh63wGZP",
+    "date": "2025-09-26",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:58.443095",
+    "vector_id": 797
   },
   {
     "id": "elo5LgoMqrupNeVwx8DRtgNVrRoJGXCrvA3R9",
@@ -5214,6 +6842,138 @@
     "vector_id": 576
   },
   {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy5BxnoNjfA9KBlE",
+    "date": "2025-09-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:53.432026",
+    "vector_id": 634
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mEVbpwjai6KA4Mn",
+    "date": "2025-09-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:53.472595",
+    "vector_id": 635
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6o4vpZzwf9L6vr6",
+    "date": "2025-09-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:53.514634",
+    "vector_id": 636
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy5BxnoNjfA9KBlE",
+    "date": "2025-09-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:56.267405",
+    "vector_id": 678
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mEVbpwjai6KA4Mn",
+    "date": "2025-09-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:56.311968",
+    "vector_id": 679
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6o4vpZzwf9L6vr6",
+    "date": "2025-09-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:56.358049",
+    "vector_id": 680
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy5BxnoNjfA9KBlE",
+    "date": "2025-09-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.692785",
+    "vector_id": 738
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mEVbpwjai6KA4Mn",
+    "date": "2025-09-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.731709",
+    "vector_id": 739
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6o4vpZzwf9L6vr6",
+    "date": "2025-09-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.772932",
+    "vector_id": 740
+  },
+  {
+    "id": "nnKA5Rd9pGI1wwypEnQRiKy5BxnoNjfA9KBlE",
+    "date": "2025-09-25",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:58.486561",
+    "vector_id": 798
+  },
+  {
+    "id": "GDpdQnX63gU6339AwD8bf5mEVbpwjai6KA4Mn",
+    "date": "2025-09-25",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:58.529234",
+    "vector_id": 799
+  },
+  {
+    "id": "AEeKnwXWQZhwjjrBbomXcN6o4vpZzwf9L6vr6",
+    "date": "2025-09-25",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:58.570539",
+    "vector_id": 800
+  },
+  {
     "id": "qPBxvKBJmetpgBvkLM7EtKdQEbM3VBsglpyXp",
     "date": "2025-09-16",
     "amount": 25.0,
@@ -5366,6 +7126,94 @@
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
     "added_at": "2025-11-15T16:44:16.115176",
     "vector_id": 578
+  },
+  {
+    "id": "xnPKrDMmBGIqEEVDg15luJm6zReJAwF6MJE4z",
+    "date": "2025-09-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:53.551676",
+    "vector_id": 637
+  },
+  {
+    "id": "wmNqKRZ1AGhReeoqzNbwCq1gVlZqj4fPzq6Zm",
+    "date": "2025-09-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.592245",
+    "vector_id": 638
+  },
+  {
+    "id": "xnPKrDMmBGIqEEVDg15luJm6zReJAwF6MJE4z",
+    "date": "2025-09-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:56.407173",
+    "vector_id": 681
+  },
+  {
+    "id": "wmNqKRZ1AGhReeoqzNbwCq1gVlZqj4fPzq6Zm",
+    "date": "2025-09-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:56.453256",
+    "vector_id": 682
+  },
+  {
+    "id": "xnPKrDMmBGIqEEVDg15luJm6zReJAwF6MJE4z",
+    "date": "2025-09-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:54.816322",
+    "vector_id": 741
+  },
+  {
+    "id": "wmNqKRZ1AGhReeoqzNbwCq1gVlZqj4fPzq6Zm",
+    "date": "2025-09-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.859020",
+    "vector_id": 742
+  },
+  {
+    "id": "xnPKrDMmBGIqEEVDg15luJm6zReJAwF6MJE4z",
+    "date": "2025-09-16",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:58.609565",
+    "vector_id": 801
+  },
+  {
+    "id": "wmNqKRZ1AGhReeoqzNbwCq1gVlZqj4fPzq6Zm",
+    "date": "2025-09-16",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.651123",
+    "vector_id": 802
   },
   {
     "id": "QwK5lrKpeNImBKXw1a64cME63pygajswPbl4Q",
@@ -5522,6 +7370,94 @@
     "vector_id": 580
   },
   {
+    "id": "bW1yxDno3GUoDDEqzwrjFN8aDrw4AZfmnNwbE",
+    "date": "2025-09-14",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:53.636805",
+    "vector_id": 639
+  },
+  {
+    "id": "5mr5on8axBhVqq7GyxX5CNaG85VNRoF5X3DKQ",
+    "date": "2025-09-14",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.682372",
+    "vector_id": 640
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN8aDrw4AZfmnNwbE",
+    "date": "2025-09-14",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:56.501377",
+    "vector_id": 683
+  },
+  {
+    "id": "5mr5on8axBhVqq7GyxX5CNaG85VNRoF5X3DKQ",
+    "date": "2025-09-14",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:56.543940",
+    "vector_id": 684
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN8aDrw4AZfmnNwbE",
+    "date": "2025-09-14",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:54.905600",
+    "vector_id": 743
+  },
+  {
+    "id": "5mr5on8axBhVqq7GyxX5CNaG85VNRoF5X3DKQ",
+    "date": "2025-09-14",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.956547",
+    "vector_id": 744
+  },
+  {
+    "id": "bW1yxDno3GUoDDEqzwrjFN8aDrw4AZfmnNwbE",
+    "date": "2025-09-14",
+    "amount": 78.5,
+    "merchant": "Touchstone Climbing",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:58.698540",
+    "vector_id": 803
+  },
+  {
+    "id": "5mr5on8axBhVqq7GyxX5CNaG85VNRoF5X3DKQ",
+    "date": "2025-09-14",
+    "amount": -500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.739936",
+    "vector_id": 804
+  },
+  {
     "id": "6jz8paznwPi1MmaNVWzdu5XmwyRBDeF8QvPAG",
     "date": "2025-09-13",
     "amount": 12.0,
@@ -5676,6 +7612,94 @@
     "vector_id": 582
   },
   {
+    "id": "JD8VEwXWaqU6GGPJwX1EfMVpG19MdDsBXoL6X",
+    "date": "2025-09-13",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.720921",
+    "vector_id": 641
+  },
+  {
+    "id": "kWGAyMBob6UmyyEa4zLwfyJEPVlyBeUL7zb6D",
+    "date": "2025-09-13",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.762972",
+    "vector_id": 642
+  },
+  {
+    "id": "JD8VEwXWaqU6GGPJwX1EfMVpG19MdDsBXoL6X",
+    "date": "2025-09-13",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:56.588580",
+    "vector_id": 685
+  },
+  {
+    "id": "kWGAyMBob6UmyyEa4zLwfyJEPVlyBeUL7zb6D",
+    "date": "2025-09-13",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:56.639689",
+    "vector_id": 686
+  },
+  {
+    "id": "JD8VEwXWaqU6GGPJwX1EfMVpG19MdDsBXoL6X",
+    "date": "2025-09-13",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:54.992947",
+    "vector_id": 745
+  },
+  {
+    "id": "kWGAyMBob6UmyyEa4zLwfyJEPVlyBeUL7zb6D",
+    "date": "2025-09-13",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:55.033420",
+    "vector_id": 746
+  },
+  {
+    "id": "JD8VEwXWaqU6GGPJwX1EfMVpG19MdDsBXoL6X",
+    "date": "2025-09-13",
+    "amount": 12.0,
+    "merchant": "McDonald's",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.778978",
+    "vector_id": 805
+  },
+  {
+    "id": "kWGAyMBob6UmyyEa4zLwfyJEPVlyBeUL7zb6D",
+    "date": "2025-09-13",
+    "amount": 4.33,
+    "merchant": "Starbucks",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.821152",
+    "vector_id": 806
+  },
+  {
     "id": "DAM5JgMnrWsAo94ykqM6Cwz9LjPZWlu3NjLpZ",
     "date": "2025-09-12",
     "amount": 89.4,
@@ -5751,6 +7775,50 @@
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
     "added_at": "2025-11-15T16:44:16.294846",
     "vector_id": 583
+  },
+  {
+    "id": "lnlAZm3oWGIqXXE1noRQuExMRnVEXvIpBEvoo",
+    "date": "2025-09-12",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.812061",
+    "vector_id": 643
+  },
+  {
+    "id": "lnlAZm3oWGIqXXE1noRQuExMRnVEXvIpBEvoo",
+    "date": "2025-09-12",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:56.692271",
+    "vector_id": 687
+  },
+  {
+    "id": "lnlAZm3oWGIqXXE1noRQuExMRnVEXvIpBEvoo",
+    "date": "2025-09-12",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:55.082061",
+    "vector_id": 747
+  },
+  {
+    "id": "lnlAZm3oWGIqXXE1noRQuExMRnVEXvIpBEvoo",
+    "date": "2025-09-12",
+    "amount": 89.4,
+    "merchant": "FUN",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:58.865902",
+    "vector_id": 807
   },
   {
     "id": "KvE5JbEAeBCwrXVJ8RoBiZbN6ozqaxCRodD3w",
@@ -5830,6 +7898,50 @@
     "vector_id": 584
   },
   {
+    "id": "d6pZwMb9dkS6RRoBM3bdfDyombjDXLCJyD3EM",
+    "date": "2025-09-11",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:53.853618",
+    "vector_id": 644
+  },
+  {
+    "id": "d6pZwMb9dkS6RRoBM3bdfDyombjDXLCJyD3EM",
+    "date": "2025-09-11",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:56.758478",
+    "vector_id": 688
+  },
+  {
+    "id": "d6pZwMb9dkS6RRoBM3bdfDyombjDXLCJyD3EM",
+    "date": "2025-09-11",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:55.120249",
+    "vector_id": 748
+  },
+  {
+    "id": "d6pZwMb9dkS6RRoBM3bdfDyombjDXLCJyD3EM",
+    "date": "2025-09-11",
+    "amount": -4.22,
+    "merchant": "INTRST PYMNT",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:58.914446",
+    "vector_id": 808
+  },
+  {
     "id": "ZXN5aPNExLuGl8Vj5RZDi7lwdeZ6xgfeaZ1A6",
     "date": "2025-09-01",
     "amount": 500.0,
@@ -5905,6 +8017,50 @@
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
     "added_at": "2025-11-15T16:44:16.370435",
     "vector_id": 585
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMbr5vP1nDhgeM5yr",
+    "date": "2025-09-01",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:53.918737",
+    "vector_id": 645
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMbr5vP1nDhgeM5yr",
+    "date": "2025-09-01",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:56.839627",
+    "vector_id": 689
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMbr5vP1nDhgeM5yr",
+    "date": "2025-09-01",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:55.166335",
+    "vector_id": 749
+  },
+  {
+    "id": "mnqA5MxwLGILggoW7P4AFMbr5vP1nDhgeM5yr",
+    "date": "2025-09-01",
+    "amount": 500.0,
+    "merchant": "United Airlines",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:58.979821",
+    "vector_id": 809
   },
   {
     "id": "Vvx5BdxZXQCZ31qEJQkRHmogKJV4GMI9QGZAl",
@@ -5984,6 +8140,50 @@
     "vector_id": 586
   },
   {
+    "id": "qyBARJkoXGHb11wmGkj8hNJ6rx1N4mFglNqrK",
+    "date": "2025-08-30",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:53.981861",
+    "vector_id": 646
+  },
+  {
+    "id": "qyBARJkoXGHb11wmGkj8hNJ6rx1N4mFglNqrK",
+    "date": "2025-08-30",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:56.919295",
+    "vector_id": 690
+  },
+  {
+    "id": "qyBARJkoXGHb11wmGkj8hNJ6rx1N4mFglNqrK",
+    "date": "2025-08-30",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:55.211818",
+    "vector_id": 750
+  },
+  {
+    "id": "qyBARJkoXGHb11wmGkj8hNJ6rx1N4mFglNqrK",
+    "date": "2025-08-30",
+    "amount": 6.33,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:59.025505",
+    "vector_id": 810
+  },
+  {
     "id": "MvA5JyAg1xCGVEweybXvilbQyXE7JaFLXaRwo",
     "date": "2025-08-27",
     "amount": 500.0,
@@ -6059,6 +8259,50 @@
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
     "added_at": "2025-11-15T16:44:16.447044",
     "vector_id": 587
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE4QDLxAzt4PWQ6M",
+    "date": "2025-08-27",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:54.077618",
+    "vector_id": 647
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE4QDLxAzt4PWQ6M",
+    "date": "2025-08-27",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:56.990971",
+    "vector_id": 691
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE4QDLxAzt4PWQ6M",
+    "date": "2025-08-27",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:55.256728",
+    "vector_id": 751
+  },
+  {
+    "id": "ynjrVk1R3XI6ooEK5lD1fbE4QDLxAzt4PWQ6M",
+    "date": "2025-08-27",
+    "amount": 500.0,
+    "merchant": "Tectra Inc",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:59.070450",
+    "vector_id": 811
   },
   {
     "id": "pNz3vqzMJ7iLo78wnZmyHMvgyJn4r5splPQyw",
@@ -6292,6 +8536,138 @@
     "vector_id": 590
   },
   {
+    "id": "RDrG8wnAVaUVMMKXDgewCnyKWorq1jfaNXQpr",
+    "date": "2025-08-26",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:54.168316",
+    "vector_id": 648
+  },
+  {
+    "id": "vn4lqgQJ5wIl881WqLrnCn1gDZLNrMfqbnD67",
+    "date": "2025-08-26",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:54.229974",
+    "vector_id": 649
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5brwEKmgyi4oVmxM",
+    "date": "2025-08-26",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:54.274018",
+    "vector_id": 650
+  },
+  {
+    "id": "RDrG8wnAVaUVMMKXDgewCnyKWorq1jfaNXQpr",
+    "date": "2025-08-26",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:57.134314",
+    "vector_id": 692
+  },
+  {
+    "id": "vn4lqgQJ5wIl881WqLrnCn1gDZLNrMfqbnD67",
+    "date": "2025-08-26",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:57.194406",
+    "vector_id": 693
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5brwEKmgyi4oVmxM",
+    "date": "2025-08-26",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T16:48:57.253556",
+    "vector_id": 694
+  },
+  {
+    "id": "RDrG8wnAVaUVMMKXDgewCnyKWorq1jfaNXQpr",
+    "date": "2025-08-26",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:55.300230",
+    "vector_id": 752
+  },
+  {
+    "id": "vn4lqgQJ5wIl881WqLrnCn1gDZLNrMfqbnD67",
+    "date": "2025-08-26",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:55.346296",
+    "vector_id": 753
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5brwEKmgyi4oVmxM",
+    "date": "2025-08-26",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:55.390247",
+    "vector_id": 754
+  },
+  {
+    "id": "RDrG8wnAVaUVMMKXDgewCnyKWorq1jfaNXQpr",
+    "date": "2025-08-26",
+    "amount": 2078.5,
+    "merchant": "AUTOMATIC PAYMENT - THANK",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:59.116189",
+    "vector_id": 812
+  },
+  {
+    "id": "vn4lqgQJ5wIl881WqLrnCn1gDZLNrMfqbnD67",
+    "date": "2025-08-26",
+    "amount": 500.0,
+    "merchant": "KFC",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:59.159963",
+    "vector_id": 813
+  },
+  {
+    "id": "9Ex68RXjVah8BB7KDdG9H5brwEKmgyi4oVmxM",
+    "date": "2025-08-26",
+    "amount": 500.0,
+    "merchant": "Madison Bicycle Shop",
+    "category": "Other",
+    "pending": false,
+    "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
+    "added_at": "2025-11-15T17:24:59.202089",
+    "vector_id": 814
+  },
+  {
     "id": "rk3dvr37LQCJ8kVvpB6xuR8AQxMdPgC7b8kqZ",
     "date": "2025-08-17",
     "amount": 25.0,
@@ -6446,6 +8822,94 @@
     "vector_id": 592
   },
   {
+    "id": "abM7e6DGd8hN77AGk9oZI18Dr6B1VziZ61954",
+    "date": "2025-08-17",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:54.324099",
+    "vector_id": 651
+  },
+  {
+    "id": "KDEPnAXWaKUk44jKdJ7euMPkjBDMK1sRoGvpx",
+    "date": "2025-08-17",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:54.363150",
+    "vector_id": 652
+  },
+  {
+    "id": "abM7e6DGd8hN77AGk9oZI18Dr6B1VziZ61954",
+    "date": "2025-08-17",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T16:48:57.314718",
+    "vector_id": 695
+  },
+  {
+    "id": "KDEPnAXWaKUk44jKdJ7euMPkjBDMK1sRoGvpx",
+    "date": "2025-08-17",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T16:48:57.379905",
+    "vector_id": 696
+  },
+  {
+    "id": "abM7e6DGd8hN77AGk9oZI18Dr6B1VziZ61954",
+    "date": "2025-08-17",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:55.430172",
+    "vector_id": 755
+  },
+  {
+    "id": "KDEPnAXWaKUk44jKdJ7euMPkjBDMK1sRoGvpx",
+    "date": "2025-08-17",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:55.472774",
+    "vector_id": 756
+  },
+  {
+    "id": "abM7e6DGd8hN77AGk9oZI18Dr6B1VziZ61954",
+    "date": "2025-08-17",
+    "amount": 25.0,
+    "merchant": "CREDIT CARD 3333 PAYMENT *//",
+    "category": "Other",
+    "pending": false,
+    "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
+    "added_at": "2025-11-15T17:24:59.248431",
+    "vector_id": 815
+  },
+  {
+    "id": "KDEPnAXWaKUk44jKdJ7euMPkjBDMK1sRoGvpx",
+    "date": "2025-08-17",
+    "amount": 5.4,
+    "merchant": "Uber",
+    "category": "Other",
+    "pending": false,
+    "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
+    "added_at": "2025-11-15T17:24:59.295442",
+    "vector_id": 816
+  },
+  {
     "id": "ED139VXWNpUgrrx6vWLQixeWqWJBABugMNL1p",
     "date": "2025-11-15",
     "amount": 25.0,
@@ -6453,8 +8917,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
-    "added_at": "2025-11-15T16:44:17.188455",
-    "vector_id": 593
+    "added_at": "2025-11-15T17:24:59.853197",
+    "vector_id": 817
   },
   {
     "id": "MDAP7gXVwzUJRRW8KeZosKNpapAxGxT45roEN",
@@ -6464,8 +8928,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
-    "added_at": "2025-11-15T16:44:17.225622",
-    "vector_id": 594
+    "added_at": "2025-11-15T17:24:59.901848",
+    "vector_id": 818
   },
   {
     "id": "GDpdQnX63gU6339AwD8bf5mArAga6aiGLd4Xb",
@@ -6475,8 +8939,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
-    "added_at": "2025-11-15T16:44:17.264194",
-    "vector_id": 595
+    "added_at": "2025-11-15T17:24:59.949163",
+    "vector_id": 819
   },
   {
     "id": "1EGWl68ByqhgAAexVbvmidBWrW3jZjuqa1wxD",
@@ -6486,8 +8950,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
-    "added_at": "2025-11-15T16:44:17.306753",
-    "vector_id": 596
+    "added_at": "2025-11-15T17:25:00.002268",
+    "vector_id": 820
   },
   {
     "id": "LDWPVpXwjrUgoon7Arw4iyPKdKr8j8Uem5JRB",
@@ -6497,8 +8961,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
-    "added_at": "2025-11-15T16:44:17.346787",
-    "vector_id": 597
+    "added_at": "2025-11-15T17:25:00.050194",
+    "vector_id": 821
   },
   {
     "id": "pnzA5M4mLyIJaaV5vw46sEmV5VpZaZcJqdxW8",
@@ -6508,8 +8972,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
-    "added_at": "2025-11-15T16:44:17.385815",
-    "vector_id": 598
+    "added_at": "2025-11-15T17:25:00.090278",
+    "vector_id": 822
   },
   {
     "id": "onry51aoXGI5WWENaQ4Duk16N6XdxdSpPm3zw",
@@ -6519,8 +8983,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
-    "added_at": "2025-11-15T16:44:17.428382",
-    "vector_id": 599
+    "added_at": "2025-11-15T17:25:00.135438",
+    "vector_id": 823
   },
   {
     "id": "WDdkRXnA87Uzwwxp7jbqiM5G1GEAjAHP5VGDe",
@@ -6530,8 +8994,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
-    "added_at": "2025-11-15T16:44:17.473469",
-    "vector_id": 600
+    "added_at": "2025-11-15T17:25:00.183589",
+    "vector_id": 824
   },
   {
     "id": "nnKA5Rd9pGI1wwypEnQRiKy6p6mjvjT3X4BNr",
@@ -6541,8 +9005,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
-    "added_at": "2025-11-15T16:44:17.511497",
-    "vector_id": 601
+    "added_at": "2025-11-15T17:25:00.227165",
+    "vector_id": 825
   },
   {
     "id": "gW87bMq6AGUqJJnomXdru46nmnAo7oFLGJXwa",
@@ -6552,8 +9016,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
-    "added_at": "2025-11-15T16:44:17.551550",
-    "vector_id": 602
+    "added_at": "2025-11-15T17:25:00.269233",
+    "vector_id": 826
   },
   {
     "id": "bW1yxDno3GUoDDEqzwrjFN85z5nZ6ZfoJew18",
@@ -6563,8 +9027,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
-    "added_at": "2025-11-15T16:44:17.589103",
-    "vector_id": 603
+    "added_at": "2025-11-15T17:25:00.311954",
+    "vector_id": 827
   },
   {
     "id": "9Ex68RXjVah8BB7KDdG9H5bnknlyzyiq36mwa",
@@ -6574,8 +9038,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
-    "added_at": "2025-11-15T16:44:17.628124",
-    "vector_id": 604
+    "added_at": "2025-11-15T17:25:00.359417",
+    "vector_id": 828
   },
   {
     "id": "ynjrVk1R3XI6ooEK5lD1fbE7K7lzazCKZBQbb",
@@ -6585,8 +9049,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
-    "added_at": "2025-11-15T16:44:17.665674",
-    "vector_id": 605
+    "added_at": "2025-11-15T17:25:00.407282",
+    "vector_id": 829
   },
   {
     "id": "mnqA5MxwLGILggoW7P4AFMboWo9DRDH4la5nW",
@@ -6596,8 +9060,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "bW1yxDno3GUoDDEqzwrjFN8QNwjkb7CmnPPr8",
-    "added_at": "2025-11-15T16:44:17.706234",
-    "vector_id": 606
+    "added_at": "2025-11-15T17:25:00.448373",
+    "vector_id": 830
   },
   {
     "id": "AEeKnwXWQZhwjjrBbomXcN6WyWBwPwf4kmvdG",
@@ -6607,8 +9071,8 @@
     "category": "Other",
     "pending": false,
     "account_id": "nnKA5Rd9pGI1wwypEnQRiKy3KnRLqbHA9DDgr",
-    "added_at": "2025-11-15T16:44:17.748271",
-    "vector_id": 607
+    "added_at": "2025-11-15T17:25:00.487116",
+    "vector_id": 831
   },
   {
     "id": "8E3ZpJXPwdhVzzJDExMoCqWnvnrJVJCZRByGP",
@@ -6618,7 +9082,7 @@
     "category": "Other",
     "pending": false,
     "account_id": "GDpdQnX63gU6339AwD8bf5mJ5pe1B7U6KwwRb",
-    "added_at": "2025-11-15T16:44:17.785862",
-    "vector_id": 608
+    "added_at": "2025-11-15T17:25:00.533587",
+    "vector_id": 832
   }
 ]
