@@ -57,17 +57,25 @@ async def exchange_public_token(request: PublicTokenRequest):
 
 @app.get("/api/transactions/{user_id}")
 async def get_transactions(user_id: str, days: int = 30):
-    """Get transactions and sync to vector DB"""
+    """Get transactions from vector DB (includes all stored transactions)"""
     try:
-        transactions = plaid_service.get_transactions(user_id, days)
+        # Try to fetch new Plaid transactions and add to vector DB
+        try:
+            plaid_transactions = plaid_service.get_transactions(user_id, days)
+            for txn in plaid_transactions:
+                vector_db.add_transaction(txn)
+        except Exception as plaid_error:
+            print(f"Plaid fetch skipped: {plaid_error}")
         
-        # Add each transaction to vector DB
-        for txn in transactions:
-            vector_db.add_transaction(txn)
+        # Return all transactions from vector DB
+        all_transactions = vector_db.get_all_transactions()
+        
+        # Sort by date (newest first)
+        all_transactions.sort(key=lambda x: x.get('date', ''), reverse=True)
         
         return {
-            "transactions": transactions,
-            "count": len(transactions),
+            "transactions": all_transactions,
+            "count": len(all_transactions),
             "synced_to_vector_db": True
         }
     except Exception as e:
