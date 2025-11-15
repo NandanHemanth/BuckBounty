@@ -26,7 +26,11 @@ class PlaidService:
     def create_link_token(self, user_id: str):
         """Create a link token for Plaid Link"""
         request = LinkTokenCreateRequest(
-            products=[Products("transactions")],
+            products=[
+                Products("transactions"),
+                Products("liabilities"),  # For credit cards and loans
+                Products("investments")   # For investment accounts
+            ],
             client_name="BuckBounty",
             country_codes=[CountryCode('US')],
             language='en',
@@ -48,8 +52,8 @@ class PlaidService:
         
         return access_token
     
-    def get_transactions(self, user_id: str, days: int = 30):
-        """Fetch transactions from Plaid"""
+    def get_transactions(self, user_id: str, days: int = 730):
+        """Fetch transactions from Plaid (max 2 years for sandbox)"""
         # In production, retrieve access_token from database using user_id
         # For now, using the first available token
         if not self.access_tokens:
@@ -57,28 +61,46 @@ class PlaidService:
         
         access_token = list(self.access_tokens.values())[0]
         
+        # Fetch up to 2 years of transactions (sandbox limit)
         start_date = (datetime.now() - timedelta(days=days)).date()
         end_date = datetime.now().date()
         
-        request = TransactionsGetRequest(
-            access_token=access_token,
-            start_date=start_date,
-            end_date=end_date
-        )
+        # Fetch all transactions with pagination
+        all_transactions = []
+        offset = 0
+        has_more = True
         
-        response = self.client.transactions_get(request)
-        transactions = response['transactions']
+        while has_more:
+            request = TransactionsGetRequest(
+                access_token=access_token,
+                start_date=start_date,
+                end_date=end_date,
+                options={
+                    'count': 500,  # Max per request
+                    'offset': offset
+                }
+            )
+            
+            response = self.client.transactions_get(request)
+            transactions = response['transactions']
+            all_transactions.extend(transactions)
+            
+            # Check if there are more transactions
+            total_transactions = response['total_transactions']
+            offset += len(transactions)
+            has_more = offset < total_transactions
         
         # Format transactions
         formatted_transactions = []
-        for txn in transactions:
+        for txn in all_transactions:
             formatted_transactions.append({
                 'id': txn['transaction_id'],
                 'date': str(txn['date']),
                 'amount': txn['amount'],
                 'merchant': txn['merchant_name'] or txn['name'],
                 'category': txn['category'][0] if txn['category'] else 'Other',
-                'pending': txn['pending']
+                'pending': txn['pending'],
+                'account_id': txn.get('account_id', 'unknown')
             })
         
         return formatted_transactions

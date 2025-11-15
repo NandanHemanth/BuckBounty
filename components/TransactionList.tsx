@@ -20,7 +20,7 @@ export default function TransactionList({ userId }: { userId: string }) {
   const fetchTransactions = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:8000/api/transactions/${userId}?days=30`);
+      const response = await axios.get(`http://localhost:8000/api/transactions/${userId}?days=730`);
       setTransactions(response.data.transactions);
     } catch (error) {
       console.error('Error fetching transactions:', error);

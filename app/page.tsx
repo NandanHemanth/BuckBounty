@@ -54,35 +54,27 @@ export default function Home() {
           </div>
         )}
 
-        {/* Features Section */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
-          <FeatureCard 
-            icon="🤖"
-            title="AI Assistant (MARK)"
-            description="Get personalized financial advice and insights"
-          />
-          <FeatureCard 
-            icon="🔍"
-            title="Smart Search"
-            description="Find transactions using natural language"
-          />
-          <FeatureCard 
-            icon="💾"
-            title="Vector DB Storage"
-            description="All transactions stored locally with AI embeddings"
-          />
+      </div>
+
+      {/* MARK - Animated Agent in Bottom Right */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <div className="relative group">
+          {/* Agent Container */}
+          <div className="bg-white rounded-full shadow-2xl p-4 cursor-pointer transform transition-all duration-300 hover:scale-110 animate-bounce">
+            <div className="text-4xl">🤖</div>
+          </div>
+          
+          {/* Tooltip */}
+          <div className="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div className="bg-gray-800 text-white text-sm rounded-lg py-2 px-3 whitespace-nowrap">
+              Hi! I'm MARK, your AI assistant
+            </div>
+          </div>
+          
+          {/* Pulse Effect */}
+          <div className="absolute inset-0 rounded-full bg-indigo-400 opacity-75 animate-ping"></div>
         </div>
       </div>
     </main>
-  );
-}
-
-function FeatureCard({ icon, title, description }: { icon: string; title: string; description: string }) {
-  return (
-    <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-      <div className="text-4xl mb-3">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
   );
 }
