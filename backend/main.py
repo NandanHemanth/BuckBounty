@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, BackgroundTasks
+from fastapi import FastAPI, HTTPException, BackgroundTasks, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
@@ -7,8 +7,10 @@ from dotenv import load_dotenv
 from plaid_service import PlaidService
 from vector_db import VectorDB
 from background_tasks import BackgroundProcessor
+from bill_service import BillService
 from datetime import datetime
 import asyncio
+import stripe
 
 load_dotenv()
 
@@ -27,6 +29,12 @@ app.add_middleware(
 plaid_service = PlaidService()
 vector_db = VectorDB()
 background_processor = BackgroundProcessor(vector_db)
+bill_service = BillService()
+
+# Initialize Stripe
+stripe_key = os.getenv('STRIPE_API_KEY', '')
+if stripe_key.startswith('sk_'):
+    stripe.api_key = stripe_key
 
 class LinkTokenRequest(BaseModel):
     user_id: str
@@ -34,6 +42,17 @@ class LinkTokenRequest(BaseModel):
 class PublicTokenRequest(BaseModel):
     public_token: str
     user_id: str
+
+class BillPaymentRequest(BaseModel):
+    amount: float
+    user_id: str
+    bill_items: List[dict]
+
+class BillTransactionRequest(BaseModel):
+    amount: float
+    user_id: str
+    bill_items: List[dict]
+    paid: bool = False
 
 @app.get("/")
 async def root():
@@ -336,6 +355,107 @@ async def get_budget(user_id: str, month: Optional[str] = None):
             'month': month,
             'amount': budget
         }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/bill/parse")
+async def parse_bill(file: UploadFile = File(...)):
+    """Parse bill image using Gemini Vision API"""
+    try:
+        # Read file content
+        content = await file.read()
+        
+        # Parse bill using Gemini
+        parsed_data = bill_service.parse_bill_image(content)
+        
+        return parsed_data
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/bill/create-payment")
+async def create_payment(request: BillPaymentRequest):
+    """Create Stripe checkout session for bill payment"""
+    try:
+        if not stripe.api_key:
+            raise HTTPException(status_code=500, detail="Stripe not configured")
+        
+        # Create Stripe checkout session
+        session = stripe.checkout.Session.create(
+            payment_method_types=['card'],
+            line_items=[{
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'Bill Split Payment',
+                        'description': f"{len(request.bill_items)} items",
+                    },
+                    'unit_amount': int(request.amount * 100),  # Convert to cents
+                },
+                'quantity': 1,
+            }],
+            mode='payment',
+            success_url='http://localhost:3000?payment=success',
+            cancel_url='http://localhost:3000?payment=cancelled',
+            metadata={
+                'user_id': request.user_id,
+                'bill_items': str(request.bill_items)
+            }
+        )
+        
+        return {
+            'checkout_url': session.url,
+            'session_id': session.id
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/bill/add-transaction")
+async def add_bill_transaction(request: BillTransactionRequest):
+    """Add bill split transaction to dashboard"""
+    try:
+        from datetime import datetime
+        
+        # Create transaction object
+        transaction = {
+            'id': f"bill_{datetime.now().timestamp()}",
+            'transaction_id': f"bill_{datetime.now().timestamp()}",
+            'user_id': request.user_id,
+            'amount': request.amount,
+            'date': datetime.now().strftime('%Y-%m-%d'),
+            'name': f"Bill Split - {len(request.bill_items)} items",
+            'merchant': 'Bill Split',
+            'merchant_name': 'Bill Split',
+            'category': ['Food and Drink', 'Restaurants'],
+            'classified_category': 'Dining',
+            'paid': request.paid,
+            'bill_items': request.bill_items
+        }
+        
+        # Add to vector DB
+        vector_db.add_transaction(transaction)
+        
+        return {
+            'success': True,
+            'transaction': transaction
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/bill/webhook")
+async def stripe_webhook(request: dict):
+    """Handle Stripe webhook events"""
+    try:
+        event = request
+        
+        if event['type'] == 'checkout.session.completed':
+            session = event['data']['object']
+            user_id = session['metadata']['user_id']
+            
+            # Add transaction as paid
+            # This would be called after successful payment
+            pass
+        
+        return {'status': 'success'}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

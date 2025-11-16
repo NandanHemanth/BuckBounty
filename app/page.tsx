@@ -5,20 +5,33 @@ import PlaidLink from '@/components/PlaidLink';
 import TransactionList from '@/components/TransactionList';
 import Dashboard from '@/components/Dashboard';
 import EmbeddingVisualizer from '@/components/EmbeddingVisualizer';
+import BillSplitModal from '@/components/BillSplitModal';
 
 export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
   const [userId] = useState('user_' + Math.random().toString(36).substr(2, 9));
   const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const [isBillSplitOpen, setIsBillSplitOpen] = useState(false);
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-800 mb-2">
-            💰 BuckBounty
-          </h1>
+        <header className="text-center mb-12 relative">
+          <div className="flex items-center justify-center gap-4 mb-2">
+            {isConnected && (
+              <button
+                onClick={() => setIsBillSplitOpen(true)}
+                className="absolute left-0 top-1/2 -translate-y-1/2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+              >
+                <span className="text-2xl">🧾</span>
+                <span>Split Bill</span>
+              </button>
+            )}
+            <h1 className="text-5xl font-bold text-gray-800">
+              💰 BuckBounty
+            </h1>
+          </div>
           <p className="text-xl text-gray-600">
             Your AI-Powered Personal Finance Assistant
           </p>
@@ -52,7 +65,11 @@ export default function Home() {
         ) : (
           <div className="space-y-6">
             <Dashboard userId={userId} refreshTrigger={refreshTrigger} />
-            <TransactionList userId={userId} onTransactionAdded={() => setRefreshTrigger(prev => prev + 1)} />
+            <TransactionList 
+              userId={userId} 
+              onTransactionAdded={() => setRefreshTrigger(prev => prev + 1)}
+              refreshTrigger={refreshTrigger}
+            />
           </div>
         )}
 
@@ -60,6 +77,14 @@ export default function Home() {
 
       {/* Embedding Visualizer - Bottom Left */}
       {isConnected && <EmbeddingVisualizer userId={userId} />}
+
+      {/* Bill Split Modal */}
+      <BillSplitModal
+        isOpen={isBillSplitOpen}
+        onClose={() => setIsBillSplitOpen(false)}
+        userId={userId}
+        onTransactionAdded={() => setRefreshTrigger(prev => prev + 1)}
+      />
 
       {/* MARK - Animated Agent in Bottom Right */}
       <div className="fixed bottom-6 right-6 z-50">

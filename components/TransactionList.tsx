@@ -14,10 +14,12 @@ interface Transaction {
 
 export default function TransactionList({ 
   userId, 
-  onTransactionAdded 
+  onTransactionAdded,
+  refreshTrigger 
 }: { 
   userId: string;
   onTransactionAdded?: () => void;
+  refreshTrigger?: number;
 }) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -99,6 +101,14 @@ export default function TransactionList({
     
     return () => clearInterval(interval);
   }, [userId]);
+
+  // Refresh when refreshTrigger changes (e.g., after adding a bill split transaction)
+  useEffect(() => {
+    if (refreshTrigger && refreshTrigger > 0) {
+      console.log('Refreshing transactions due to external trigger');
+      fetchTransactions(false);
+    }
+  }, [refreshTrigger]);
 
   return (
     <div className="bg-white rounded-2xl shadow-xl p-6">
