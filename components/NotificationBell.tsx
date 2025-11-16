@@ -262,59 +262,59 @@ export default function NotificationBell() {
             <div className="p-6 overflow-y-auto max-h-[calc(80vh-120px)]">
               {/* Notification Types */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Notification Types</h3>
+                <h3 className="text-lg font-semibold text-green-500 mb-4">Notification Types</h3>
                 <div className="space-y-3">
-                  <label className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                  <label className="flex items-center justify-between p-4 glass border border-green-500/30 rounded-lg hover:glow transition-all cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                        <AlertCircle className="w-5 h-5 text-blue-600" />
+                      <div className="w-10 h-10 bg-green-900/30 rounded-full flex items-center justify-center">
+                        <AlertCircle className="w-5 h-5 text-green-500" />
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-800">Bill Reminders</div>
-                        <div className="text-sm text-gray-600">Get notified about upcoming bills</div>
+                        <div className="font-semibold text-green-500">Bill Reminders</div>
+                        <div className="text-sm text-green-400">Get notified about upcoming bills</div>
                       </div>
                     </div>
                     <input
                       type="checkbox"
                       checked={settings.bills}
                       onChange={(e) => setSettings({...settings, bills: e.target.checked})}
-                      className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+                      className="w-5 h-5 text-green-500 rounded focus:ring-2 focus:ring-green-500"
                     />
                   </label>
 
-                  <label className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                  <label className="flex items-center justify-between p-4 glass border border-green-500/30 rounded-lg hover:glow transition-all cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                        <CreditCard className="w-5 h-5 text-purple-600" />
+                      <div className="w-10 h-10 bg-green-900/30 rounded-full flex items-center justify-center">
+                        <CreditCard className="w-5 h-5 text-green-500" />
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-800">EMI Reminders</div>
-                        <div className="text-sm text-gray-600">Track your loan EMI payments</div>
+                        <div className="font-semibold text-green-500">EMI Reminders</div>
+                        <div className="text-sm text-green-400">Track your loan EMI payments</div>
                       </div>
                     </div>
                     <input
                       type="checkbox"
                       checked={settings.emis}
                       onChange={(e) => setSettings({...settings, emis: e.target.checked})}
-                      className="w-5 h-5 text-purple-600 rounded focus:ring-2 focus:ring-purple-500"
+                      className="w-5 h-5 text-green-500 rounded focus:ring-2 focus:ring-green-500"
                     />
                   </label>
 
-                  <label className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                  <label className="flex items-center justify-between p-4 glass border border-green-500/30 rounded-lg hover:glow transition-all cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                        <Zap className="w-5 h-5 text-green-600" />
+                      <div className="w-10 h-10 bg-green-900/30 rounded-full flex items-center justify-center">
+                        <Zap className="w-5 h-5 text-green-500" />
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-800">Coupon Alerts</div>
-                        <div className="text-sm text-gray-600">New coupons and deals</div>
+                        <div className="font-semibold text-green-500">Coupon Alerts</div>
+                        <div className="text-sm text-green-400">New coupons and deals</div>
                       </div>
                     </div>
                     <input
                       type="checkbox"
                       checked={settings.coupons}
                       onChange={(e) => setSettings({...settings, coupons: e.target.checked})}
-                      className="w-5 h-5 text-green-600 rounded focus:ring-2 focus:ring-green-500"
+                      className="w-5 h-5 text-green-500 rounded focus:ring-2 focus:ring-green-500"
                     />
                   </label>
                 </div>
@@ -322,7 +322,7 @@ export default function NotificationBell() {
 
               {/* Categories */}
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Categories</h3>
+                <h3 className="text-lg font-semibold text-green-500 mb-4">Categories</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {Object.entries({
                     utilities: 'Utilities',
@@ -331,14 +331,14 @@ export default function NotificationBell() {
                     insurance: 'Insurance',
                     rent: 'Rent'
                   }).map(([key, label]) => (
-                    <label key={key} className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                    <label key={key} className="flex items-center gap-2 p-3 glass border border-green-500/30 rounded-lg hover:glow transition-all cursor-pointer">
                       <input
                         type="checkbox"
                         checked={settings[key as keyof NotificationSettings]}
                         onChange={(e) => setSettings({...settings, [key]: e.target.checked})}
-                        className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+                        className="w-4 h-4 text-green-500 rounded focus:ring-2 focus:ring-green-500"
                       />
-                      <span className="text-sm font-medium text-gray-700">{label}</span>
+                      <span className="text-sm font-medium text-green-500">{label}</span>
                     </label>
                   ))}
                 </div>
@@ -346,7 +346,7 @@ export default function NotificationBell() {
 
               {/* Upcoming Reminders */}
               <div className="mt-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Upcoming Payments ({reminders.length})</h3>
+                <h3 className="text-lg font-semibold text-green-500 mb-4">Upcoming Payments ({reminders.length})</h3>
                 <div className="space-y-2 max-h-60 overflow-y-auto">
                   {reminders.slice(0, 5).map((reminder) => {
                     const daysUntil = getDaysUntilDue(reminder.due_date);

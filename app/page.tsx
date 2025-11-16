@@ -35,7 +35,7 @@ export default function Home() {
                 <>
                   <Button
                     onClick={() => setIsBillSplitOpen(true)}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-green text-black hover:glow hover-lift"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 glass border border-green-500/30 text-green-500 hover:bg-green-500 hover:text-black hover:glow hover-lift"
                   >
                     <span className="text-2xl mr-2">🧾</span>
                     Split Bill
@@ -43,14 +43,14 @@ export default function Home() {
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-3">
                     <Button
                       onClick={() => window.open('https://polymarket.com', '_blank')}
-                      className="bg-green-600 hover:bg-green-700 text-black hover-lift"
+                      className="glass border border-green-500/30 text-green-500 hover:bg-green-500 hover:text-black hover:glow hover-lift"
                     >
                       <span className="text-2xl mr-2">📊</span>
                       PolyMarket
                     </Button>
                     <Button
                       onClick={() => window.open('https://robinhood.com', '_blank')}
-                      className="bg-green-600 hover:bg-green-700 text-black hover-lift"
+                      className="glass border border-green-500/30 text-green-500 hover:bg-green-500 hover:text-black hover:glow hover-lift"
                     >
                       <span className="text-2xl mr-2">📈</span>
                       Stocks

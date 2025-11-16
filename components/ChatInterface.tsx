@@ -249,47 +249,47 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
   return (
     <div className="h-full flex flex-col bg-black border-l border-green-500/30 shadow-2xl">
       {/* Header */}
-      <div className="bg-gradient-green text-black p-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="text-3xl">🤖</div>
+      <div className="bg-gradient-green text-black p-6 flex items-center justify-between shadow-lg">
+        <div className="flex items-center gap-4">
+          <div className="text-4xl">🤖</div>
           <div>
-            <h2 className="text-xl font-bold">MARK</h2>
-            <p className="text-xs text-black/70">Multi-Agent Finance Orchestrator</p>
+            <h2 className="text-2xl font-bold text-white">MARK</h2>
+            <p className="text-sm text-white font-medium">Multi-Agent Finance Orchestrator</p>
           </div>
         </div>
         <button
           onClick={onClose}
-          className="p-2 hover:bg-black/20 rounded-lg transition-colors"
+          className="p-2 bg-red-600/80 hover:bg-red-600 rounded-lg transition-colors"
           aria-label="Close chat"
         >
-          <X size={24} />
+          <X size={24} className="text-white" />
         </button>
       </div>
 
       {/* Agent Status Cards */}
-      <div className="p-4 bg-black/50 border-b border-green-500/30">
-        <div className="grid grid-cols-2 gap-3">
+      <div className="px-6 py-3 bg-black/50 border-b border-green-500/30">
+        <div className="flex gap-2.5">
           {agentStatuses.map((agent, index) => (
             <div
               key={index}
-              className={`p-3 rounded-xl border-2 transition-all duration-200 ${
+              className={`flex-1 p-2.5 rounded-lg transition-all duration-300 ${
                 agent.isActive
-                  ? 'border-green-500 bg-green-900/20 hover:glow'
-                  : 'border-green-500/30 bg-black/50 opacity-60'
+                  ? 'bg-green-950/30 backdrop-blur-xl border-2 border-green-500/40 hover:bg-green-500/20 hover:border-green-500 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] animate-subtle-glow'
+                  : 'bg-black/40 backdrop-blur-xl border-2 border-green-500/20 opacity-60'
               }`}
             >
-              <div className="flex items-start gap-2">
+              <div className="flex items-center gap-2">
                 <div className="text-2xl">{agent.emoji}</div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-semibold text-sm text-gray-800 truncate">
+                  <div className="flex items-center gap-1.5">
+                    <h3 className="font-semibold text-sm text-green-400 truncate">
                       {agent.name}
                     </h3>
                     {agent.isActive && (
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse flex-shrink-0"></div>
                     )}
                   </div>
-                  <p className="text-xs text-gray-600 mt-0.5">{agent.description}</p>
+                  <p className="text-[10px] text-green-500/70">{agent.description}</p>
                 </div>
               </div>
             </div>
@@ -298,7 +298,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
       </div>
 
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-black/50">
+      <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-black/50">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -308,32 +308,52 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
               className={`max-w-[80%] rounded-2xl p-4 ${
                 message.role === 'user'
                   ? 'bg-green-600 text-black'
-                  : 'glass text-green-500 border border-green-500/30'
+                  : 'bg-green-900/30 backdrop-blur-md text-green-500 border border-green-500/40'
               }`}
             >
               {message.role === 'assistant' && (
-                <div className="flex items-center gap-2 mb-2 text-sm font-semibold text-indigo-600">
+                <div className="flex items-center gap-2 mb-2 text-sm font-semibold text-green-400">
                   <span>{getAgentIcon(message.agent)}</span>
                   <span>{getAgentName(message.agent)}</span>
                 </div>
               )}
               <div className="prose prose-sm max-w-none">
                 {message.content.split('\n').map((line, i) => {
-                  // Handle bold text **text**
+                  // Handle bold text **text** and @ mentions
                   const boldRegex = /\*\*(.*?)\*\*/g;
-                  const parts = line.split(boldRegex);
+                  const mentionRegex = /@(\w+)/g;
+                  
+                  // First split by bold
+                  const boldParts = line.split(boldRegex);
                   
                   return (
                     <p key={i} className="mb-2 last:mb-0">
-                      {parts.map((part, j) => 
-                        j % 2 === 1 ? <strong key={j}>{part}</strong> : part
-                      )}
+                      {boldParts.map((part, j) => {
+                        if (j % 2 === 1) {
+                          // This is bold text
+                          return <strong key={j}>{part}</strong>;
+                        } else {
+                          // Check for @ mentions
+                          const mentionParts = part.split(mentionRegex);
+                          return mentionParts.map((mentionPart, k) => {
+                            // Odd indices are the captured merchant names
+                            if (k % 2 === 1) {
+                              return (
+                                <span key={`${j}-${k}`} className="text-green-400 font-semibold bg-green-500/20 px-1 rounded">
+                                  @{mentionPart}
+                                </span>
+                              );
+                            }
+                            return mentionPart;
+                          });
+                        }
+                      })}
                     </p>
                   );
                 })}
               </div>
               <div className={`flex items-center gap-2 text-xs mt-2 ${
-                message.role === 'user' ? 'text-indigo-200' : 'text-gray-500'
+                message.role === 'user' ? 'text-black/70' : 'text-green-400'
               }`}>
                 <span>{message.timestamp.toLocaleTimeString()}</span>
                 
@@ -401,8 +421,8 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
       </div>
 
       {/* Quick Action Buttons - 4 buttons in a row */}
-      <div className="border-t border-green-500/30 px-4 pt-3 pb-2 bg-black/50">
-        <div className="grid grid-cols-4 gap-2">
+      <div className="border-t border-green-500/30 px-6 py-3 bg-black/50">
+        <div className="flex justify-center gap-2.5">
           {/* Button 1: Maximize Savings */}
           <button
             onClick={async () => {
@@ -410,10 +430,13 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
               await handleSendMessage(savingsMessage);
             }}
             disabled={isLoading}
-            className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-green-50 to-emerald-50 hover:from-green-100 hover:to-emerald-100 border border-green-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            className="relative flex flex-col items-center justify-center w-20 h-20 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group
+                       bg-green-950/30 backdrop-blur-xl border-2 border-green-500/40
+                       hover:bg-green-500/20 hover:border-green-500 hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]
+                       animate-subtle-glow"
+            title="Max Savings"
           >
-            <span className="text-2xl mb-1">💰</span>
-            <span className="text-xs font-semibold text-gray-800 text-center">Max Savings</span>
+            <span className="text-2xl">💰</span>
           </button>
 
           {/* Button 2: Budget Check */}
@@ -424,10 +447,13 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
               handleSendMessage(budgetQuery);
             }}
             disabled={isLoading}
-            className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            className="relative flex flex-col items-center justify-center w-20 h-20 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group
+                       bg-green-950/30 backdrop-blur-xl border-2 border-green-500/40
+                       hover:bg-green-500/20 hover:border-green-500 hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]
+                       animate-subtle-glow"
+            title="Budget?"
           >
-            <span className="text-2xl mb-1">🛒</span>
-            <span className="text-xs font-semibold text-gray-800 text-center">Budget?</span>
+            <span className="text-2xl">🛒</span>
           </button>
 
           {/* Button 3: Build Wealth */}
@@ -438,10 +464,13 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
               handleSendMessage(wealthQuery);
             }}
             disabled={isLoading}
-            className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border border-purple-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            className="relative flex flex-col items-center justify-center w-20 h-20 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group
+                       bg-green-950/30 backdrop-blur-xl border-2 border-green-500/40
+                       hover:bg-green-500/20 hover:border-green-500 hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]
+                       animate-subtle-glow"
+            title="Build Wealth"
           >
-            <span className="text-2xl mb-1">📈</span>
-            <span className="text-xs font-semibold text-gray-800 text-center">Build Wealth</span>
+            <span className="text-2xl">📈</span>
           </button>
 
           {/* Button 4: PolyMarket Analysis */}
@@ -452,24 +481,27 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
               handleSendMessage(polymarketQuery);
             }}
             disabled={isLoading}
-            className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-orange-50 to-yellow-50 hover:from-orange-100 hover:to-yellow-100 border border-orange-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            className="relative flex flex-col items-center justify-center w-20 h-20 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group
+                       bg-green-950/30 backdrop-blur-xl border-2 border-green-500/40
+                       hover:bg-green-500/20 hover:border-green-500 hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]
+                       animate-subtle-glow"
+            title="PolyMarket"
           >
-            <span className="text-2xl mb-1">🔮</span>
-            <span className="text-xs font-semibold text-gray-800 text-center">PolyMarket</span>
+            <span className="text-2xl">🔮</span>
           </button>
         </div>
       </div>
 
       {/* Input Area */}
-      <div className="border-t border-green-500/30 p-4 bg-black/50">
-        <div className="flex gap-2">
+      <div className="border-t border-green-500/30 p-6 bg-black/50">
+        <div className="flex gap-3">
           {/* Voice Button */}
           <button
             onClick={handleVoiceInput}
             className={`px-4 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center gap-2 ${
               isRecording
                 ? 'bg-red-500 text-white hover:bg-red-600 animate-pulse'
-                : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
+                : 'glass border border-green-500/30 text-green-500 hover:bg-green-500 hover:text-black hover:glow'
             }`}
             title={isRecording ? 'Stop recording' : 'Start voice input'}
           >
@@ -483,7 +515,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage(undefined)}
             placeholder="Ask MARK anything about your finances..."
-            className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="flex-1 px-4 py-3 glass border border-green-500/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-green-500 placeholder-green-400/50"
             disabled={isLoading}
           />
 
@@ -491,7 +523,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
           <button
             onClick={() => handleSendMessage(undefined)}
             disabled={isLoading || !inputMessage.trim()}
-            className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
           >
             <Send size={20} />
             <span>Send</span>
@@ -499,7 +531,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
         </div>
 
         {/* Agent Status Indicators */}
-        <div className="mt-3 flex items-center gap-4 text-xs text-gray-600">
+        <div className="mt-3 flex items-center gap-4 text-xs text-green-400">
           <div className="flex items-center gap-1">
             <div className="w-2 h-2 bg-green-500 rounded-full"></div>
             <span>MARK Online</span>

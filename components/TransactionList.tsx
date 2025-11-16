@@ -111,8 +111,8 @@ export default function TransactionList({
   }, [refreshTrigger]);
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">💳 Transactions</h2>
+    <div className="glass glow rounded-2xl p-6 border border-green-500/30">
+      <h2 className="text-2xl font-bold text-green-500 mb-6">💳 Transactions</h2>
       
       {/* Search Bar */}
       <div className="mb-6 flex gap-2">
@@ -122,11 +122,11 @@ export default function TransactionList({
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && searchTransactions()}
-          className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+          className="flex-1 px-3 py-2 text-sm glass border border-green-500/30 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all text-green-500 placeholder-green-400/50"
         />
         <button
           onClick={searchTransactions}
-          className="px-4 py-2 text-sm bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-all duration-200 flex items-center gap-1.5"
+          className="px-4 py-2 text-sm glass border border-green-500/30 text-green-500 hover:bg-green-500 hover:text-black rounded-lg font-medium transition-all duration-200 flex items-center gap-1.5 hover-lift"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -135,7 +135,7 @@ export default function TransactionList({
         </button>
         <button
           onClick={() => fetchTransactions(false)}
-          className="px-4 py-2 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-all duration-200 flex items-center gap-1.5"
+          className="px-4 py-2 text-sm glass border border-green-500/30 text-green-500 hover:bg-green-500 hover:text-black rounded-lg font-medium transition-all duration-200 flex items-center gap-1.5 hover-lift"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -146,25 +146,25 @@ export default function TransactionList({
 
       {/* Transaction List */}
       {loading ? (
-        <div className="text-center py-8 text-gray-500">Loading...</div>
+        <div className="text-center py-8 text-green-400">Loading...</div>
       ) : transactions.length === 0 ? (
-        <div className="text-center py-8 text-gray-500">No transactions found</div>
+        <div className="text-center py-8 text-green-400">No transactions found</div>
       ) : (
         <>
           <div className="space-y-3">
             {currentTransactions.map((txn) => (
               <div
                 key={txn.id}
-                className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                className="flex items-center justify-between p-4 glass border border-green-500/30 rounded-lg hover:glow transition-all hover-lift"
               >
                 <div className="flex-1">
-                  <div className="font-semibold text-gray-800">{txn.merchant}</div>
-                  <div className="text-sm text-gray-500">
+                  <div className="font-semibold text-green-500">{txn.merchant}</div>
+                  <div className="text-sm text-green-400">
                     {txn.category} • {new Date(txn.date).toLocaleDateString()}
-                    {txn.pending && <span className="ml-2 text-yellow-600">⏳ Pending</span>}
+                    {txn.pending && <span className="ml-2 text-yellow-500">⏳ Pending</span>}
                   </div>
                 </div>
-                <div className={`text-lg font-bold ${txn.amount > 0 ? 'text-red-600' : 'text-green-600'}`}>
+                <div className={`text-lg font-bold ${txn.amount > 0 ? 'text-red-500' : 'text-green-500'}`}>
                   ${Math.abs(txn.amount).toFixed(2)}
                 </div>
               </div>

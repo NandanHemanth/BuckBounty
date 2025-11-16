@@ -76,6 +76,10 @@ vector_db = VectorDB()
 background_processor = BackgroundProcessor(vector_db)
 bill_service = BillService()
 
+# Initialize RAG service for HNSW-based retrieval
+from rag_service import RAGService
+rag_service = RAGService(dimension=384)  # Match sentence transformer dimension
+
 # Initialize Stripe
 stripe_key = os.getenv('STRIPE_API_KEY', '')
 if stripe_key.startswith('sk_'):
@@ -526,13 +530,79 @@ class ChatRequest(BaseModel):
 async def agent_chat(request: ChatRequest):
     """Chat with MARK and the agent team"""
     try:
-        # Route request through MCP server
+        # Check for @ mentions and process them
+        from mention_handler import MentionHandler
+        mention_handler = MentionHandler(vector_db=vector_db, rag_service=rag_service)
+        
+        # Log database stats
+        print(f"\n📊 Database Stats:")
+        print(f"   Vector DB: {vector_db.index.ntotal} transactions, {len(vector_db.metadata)} metadata")
+        if vector_db.metadata:
+            sample_merchants = list(set(tx.get('merchant', 'Unknown') for tx in vector_db.metadata[:10]))
+            print(f"   Sample merchants: {sample_merchants}")
+        
+        mention_data = mention_handler.process_mentions(request.message)
+        
+        # Add mention data to the message context if mentions exist
+        enhanced_message = request.message
+        if mention_data.get("has_mentions"):
+            # Append mention analysis to the message for the agent
+            enhanced_message += "\n\n[SYSTEM: Merchant Analysis Available]"
+            for mention in mention_data.get("mentions", []):
+                merchant = mention.get("merchant")
+                spending = mention.get("spending_analysis", {})
+                coupons = mention.get("coupons", [])
+                suggestions = mention.get("savings_suggestions", [])
+                
+                enhanced_message += f"\n\n@{merchant.upper()} Analysis:"
+                
+                # Check if transactions were found
+                if spending.get('transaction_count', 0) > 0:
+                    enhanced_message += f"\n- {spending.get('message', '')}"
+                    enhanced_message += f"\n- Total Spent: ${spending.get('total_spent', 0)}"
+                    enhanced_message += f"\n- Transactions: {spending.get('transaction_count', 0)}"
+                    enhanced_message += f"\n- Average per Transaction: ${spending.get('avg_per_transaction', 0)}"
+                    enhanced_message += f"\n- Last 30 Days: ${spending.get('monthly_average', 0)}"
+                    if spending.get('date_range'):
+                        enhanced_message += f"\n- Date Range: {spending.get('date_range')}"
+                else:
+                    enhanced_message += f"\n- {spending.get('message', 'No transactions found')}"
+                    enhanced_message += "\n- Note: User may need to link their accounts or this merchant hasn't been used recently"
+                
+                if coupons:
+                    enhanced_message += f"\n\n💰 Available Coupons ({len(coupons)}):"
+                    for coupon in coupons[:3]:
+                        enhanced_message += f"\n- {coupon.get('code')}: {coupon.get('description')}"
+                        if coupon.get('expiry_date'):
+                            enhanced_message += f" (Expires: {coupon.get('expiry_date')})"
+                
+                if suggestions:
+                    enhanced_message += f"\n\n💡 Savings Suggestions:"
+                    for sug in suggestions[:5]:
+                        if sug.get('type') == 'alternative':
+                            enhanced_message += f"\n- {sug.get('title')}: {sug.get('suggestion')}"
+                            if sug.get('estimated_savings'):
+                                enhanced_message += f" (Save: {sug.get('estimated_savings')})"
+                        elif sug.get('type') == 'coupon':
+                            enhanced_message += f"\n- Use code {sug.get('code')}: {sug.get('description')}"
+        
+        # Log the enhanced message for debugging
+        if mention_data.get("has_mentions"):
+            print(f"\n📝 Enhanced Message being sent to MARK:")
+            print(f"{enhanced_message}")
+            print(f"\n" + "="*60 + "\n")
+        
+        # Route request through MCP server with enhanced message
         result = await mcp_server.route_request(
             user_id=request.user_id,
-            message=request.message,
+            message=enhanced_message,
             conversation_history=request.conversation_history,
             target_agent=request.target_agent
         )
+        
+        # Add mention data to response
+        if mention_data.get("has_mentions"):
+            result["mention_data"] = mention_data
 
         return result
     except Exception as e:
@@ -552,6 +622,19 @@ async def get_agent_status():
             'bounty_hunter_2': redis_cache.get_agent_status('bounty_hunter_2'),
             'mark': 'Ready'
         }
+        
+        # Add transaction database stats
+        base_status['database_stats'] = {
+            'vector_db_transactions': vector_db.index.ntotal,
+            'vector_db_metadata': len(vector_db.metadata),
+            'rag_flat_transactions': rag_service.flat_index.ntotal if rag_service else 0,
+            'rag_hnsw_transactions': rag_service.hnsw_index.ntotal if rag_service else 0
+        }
+        
+        # Sample merchants
+        if vector_db.metadata:
+            merchants = list(set(tx.get('merchant', 'Unknown') for tx in vector_db.metadata[:20]))
+            base_status['sample_merchants'] = merchants[:10]
         
         return base_status
     except Exception as e:

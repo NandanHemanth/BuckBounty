@@ -270,16 +270,16 @@ export default function Dashboard({ userId, refreshTrigger }: { userId: string; 
         </ChartCard>
       </div>
 
-      <div className="bg-white rounded-xl shadow-lg p-6">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">Category Details</h3>
+      <div className="glass glow rounded-xl p-6 border border-green-500/30">
+        <h3 className="text-lg font-semibold text-green-500 mb-4">Category Details</h3>
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-gray-200">
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Category</th>
-                <th className="text-right py-3 px-4 text-sm font-medium text-gray-600">Current</th>
-                <th className="text-right py-3 px-4 text-sm font-medium text-gray-600">Previous</th>
-                <th className="text-right py-3 px-4 text-sm font-medium text-gray-600">Change</th>
+              <tr className="border-b border-green-500/30">
+                <th className="text-left py-3 px-4 text-sm font-medium text-green-400">Category</th>
+                <th className="text-right py-3 px-4 text-sm font-medium text-green-400">Current</th>
+                <th className="text-right py-3 px-4 text-sm font-medium text-green-400">Previous</th>
+                <th className="text-right py-3 px-4 text-sm font-medium text-green-400">Change</th>
               </tr>
             </thead>
             <tbody>
@@ -289,13 +289,13 @@ export default function Dashboard({ userId, refreshTrigger }: { userId: string; 
                   : cat.current_amount > 0 ? 100 : 0;
                 
                 return (
-                  <tr key={idx} className="border-b border-gray-100 hover:bg-gray-50 transition">
-                    <td className="py-3 px-4 text-sm text-gray-800">{cat.category}</td>
-                    <td className="py-3 px-4 text-sm text-right text-gray-800">
+                  <tr key={idx} className="border-b border-green-500/20 hover:bg-green-900/10 transition">
+                    <td className="py-3 px-4 text-sm text-green-500">{cat.category}</td>
+                    <td className="py-3 px-4 text-sm text-right text-green-500">
                       ${cat.current_amount.toFixed(2)}
-                      <span className="text-xs text-gray-500 ml-1">({cat.current_count})</span>
+                      <span className="text-xs text-green-400 ml-1">({cat.current_count})</span>
                     </td>
-                    <td className="py-3 px-4 text-sm text-right text-gray-600">
+                    <td className="py-3 px-4 text-sm text-right text-green-400">
                       ${cat.previous_amount.toFixed(2)}
                     </td>
                     <td className="py-3 px-4 text-sm text-right">
@@ -335,9 +335,9 @@ function StatCard({
   trend?: number;
 }) {
   return (
-    <div className="bg-white rounded-xl shadow-sm p-3.5 hover:shadow-md transition-all duration-200 border border-gray-100">
+    <div className="glass rounded-xl p-3.5 hover:glow transition-all duration-200 border border-green-500/30 hover-lift">
       <div className="flex items-start justify-between mb-2">
-        <div className={`${iconBg} ${iconColor} p-2 rounded-lg`}>
+        <div className="bg-green-900/30 text-green-500 p-2 rounded-lg">
           {icon}
         </div>
         {trend !== undefined && trend !== 0 && (
@@ -349,8 +349,8 @@ function StatCard({
           </div>
         )}
       </div>
-      <div className="text-[10px] text-gray-500 mb-0.5 uppercase tracking-wide">{label}</div>
-      <div className="text-lg font-bold text-gray-800 truncate">{value}</div>
+      <div className="text-[10px] text-green-400 mb-0.5 uppercase tracking-wide">{label}</div>
+      <div className="text-lg font-bold text-green-500 truncate">{value}</div>
     </div>
   );
 }
@@ -378,9 +378,9 @@ function BudgetCard({
   const isOverBudget = percentage > 100;
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-3.5 hover:shadow-md transition-all duration-200 border border-gray-100">
+    <div className="glass rounded-xl p-3.5 hover:glow transition-all duration-200 border border-green-500/30 hover-lift">
       <div className="flex items-start justify-between mb-2">
-        <div className={`bg-indigo-50 text-indigo-600 p-2 rounded-lg`}>
+        <div className="bg-green-900/30 text-green-500 p-2 rounded-lg">
           <Target className="w-4 h-4" />
         </div>
         {!isEditing && (
@@ -392,12 +392,12 @@ function BudgetCard({
           </button>
         )}
       </div>
-      <div className="text-[10px] text-gray-500 mb-0.5 uppercase tracking-wide">Budget</div>
+      <div className="text-[10px] text-green-400 mb-0.5 uppercase tracking-wide">Budget</div>
       
       {isEditing ? (
         <div className="flex items-center gap-1 mt-1">
           <div className="relative flex-1">
-            <span className="absolute left-2 top-1/2 -translate-y-1/2 text-sm text-gray-500">$</span>
+            <span className="absolute left-2 top-1/2 -translate-y-1/2 text-sm text-green-400">$</span>
             <input
               type="number"
               step="0.01"
@@ -423,7 +423,7 @@ function BudgetCard({
         </div>
       ) : (
         <>
-          <div className="text-lg font-bold text-gray-800 truncate">
+          <div className="text-lg font-bold text-green-500 truncate">
             ${budget > 0 ? budget.toFixed(2) : '0.00'}
           </div>
           {budget > 0 && (
@@ -465,14 +465,14 @@ function ChartCard({
 }) {
   return (
     <div 
-      className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl ${
+      className={`glass glow rounded-xl p-6 transition-all duration-300 border border-green-500/30 ${
         isExpanded ? 'fixed inset-8 z-50 overflow-auto' : ''
       }`}
     >
       <div className="flex items-start justify-between mb-4">
         <div>
-          <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
-          <p className="text-sm text-gray-500 mt-1">{subtitle}</p>
+          <h3 className="text-lg font-semibold text-green-500">{title}</h3>
+          <p className="text-sm text-green-400 mt-1">{subtitle}</p>
         </div>
         <button 
           className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-all duration-200"
