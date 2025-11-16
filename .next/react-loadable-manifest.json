@@ -1,1 +1,14 @@
-{}
+{
+  "components\\VantaBackground.tsx -> three": {
+    "id": "components\\VantaBackground.tsx -> three",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_three_build_three_module_js.js"
+    ]
+  },
+  "components\\VantaBackground.tsx -> vanta/dist/vanta.net.min": {
+    "id": "components\\VantaBackground.tsx -> vanta/dist/vanta.net.min",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_vanta_dist_vanta_net_min_js.js"
+    ]
+  }
+}

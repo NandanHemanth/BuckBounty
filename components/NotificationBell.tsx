@@ -153,11 +153,11 @@ export default function NotificationBell() {
       {/* Bell Icon Button - Bottom Left */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 left-6 w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-40 group"
+        className="fixed bottom-6 left-6 w-16 h-16 glass border-green-500/30 rounded-full shadow-2xl hover:glow transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-40 group"
       >
-        <Bell className="w-8 h-8 text-white group-hover:animate-bounce" />
+        <Bell className="w-8 h-8 text-green-500 group-hover:animate-bounce" />
         {pendingCount > 0 && (
-          <span className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center animate-pulse">
+          <span className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 text-black text-xs font-bold rounded-full flex items-center justify-center animate-pulse">
             {pendingCount}
           </span>
         )}
@@ -165,16 +165,16 @@ export default function NotificationBell() {
 
       {/* Notification Popup - Top Left */}
       {activeNotification && (
-        <div className="fixed top-6 left-6 w-96 bg-white rounded-xl shadow-2xl border-2 border-gray-200 z-50 animate-slide-in-left">
-          <div className={`p-4 rounded-t-xl border-b-2 ${getUrgencyColor(getDaysUntilDue(activeNotification.due_date))}`}>
+        <div className="fixed top-6 left-6 w-96 glass glow rounded-xl shadow-2xl border-2 border-green-500/30 z-50 animate-slide-in-left">
+          <div className={`p-4 rounded-t-xl border-b-2 border-green-500/30 bg-black/30`}>
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-2">
-                <AlertCircle className="w-5 h-5" />
-                <h3 className="font-bold text-lg">Payment Reminder</h3>
+                <AlertCircle className="w-5 h-5 text-green-500" />
+                <h3 className="font-bold text-lg text-green-500">Payment Reminder</h3>
               </div>
               <button
                 onClick={dismissNotification}
-                className="text-gray-500 hover:text-gray-700 transition-colors"
+                className="text-green-400 hover:text-green-300 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -183,26 +183,26 @@ export default function NotificationBell() {
           
           <div className="p-4">
             <div className="flex items-center justify-between mb-3">
-              <h4 className="font-semibold text-gray-800 text-lg">{activeNotification.name}</h4>
-              <span className="text-2xl font-bold text-gray-900">${activeNotification.amount.toFixed(2)}</span>
+              <h4 className="font-semibold text-green-500 text-lg">{activeNotification.name}</h4>
+              <span className="text-2xl font-bold text-green-500">${activeNotification.amount.toFixed(2)}</span>
             </div>
 
             {activeNotification.emi_details && (
-              <div className="mb-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
+              <div className="mb-3 p-3 glass rounded-lg border border-green-500/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <CreditCard className="w-4 h-4 text-blue-600" />
-                  <span className="text-sm font-semibold text-blue-800">EMI Progress</span>
+                  <CreditCard className="w-4 h-4 text-green-500" />
+                  <span className="text-sm font-semibold text-green-500">EMI Progress</span>
                 </div>
-                <div className="text-sm text-blue-700">
+                <div className="text-sm text-green-400">
                   {activeNotification.emi_details.current_emi} / {activeNotification.emi_details.total_emis} EMIs paid
                 </div>
-                <div className="w-full bg-blue-200 rounded-full h-2 mt-2">
+                <div className="w-full bg-green-900/30 rounded-full h-2 mt-2">
                   <div 
-                    className="bg-blue-600 h-2 rounded-full transition-all duration-500"
+                    className="bg-green-500 h-2 rounded-full transition-all duration-500"
                     style={{ width: `${(activeNotification.emi_details.current_emi / activeNotification.emi_details.total_emis) * 100}%` }}
                   ></div>
                 </div>
-                <div className="text-xs text-blue-600 mt-1">
+                <div className="text-xs text-green-400 mt-1">
                   {activeNotification.emi_details.remaining_emis} EMIs remaining
                 </div>
               </div>
@@ -210,24 +210,24 @@ export default function NotificationBell() {
 
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
-                <span className="text-gray-600">Due Date:</span>
-                <span className="font-semibold text-gray-800">{new Date(activeNotification.due_date).toLocaleDateString()}</span>
+                <span className="text-green-400">Due Date:</span>
+                <span className="font-semibold text-green-500">{new Date(activeNotification.due_date).toLocaleDateString()}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Days Until Due:</span>
-                <span className={`font-semibold ${getDaysUntilDue(activeNotification.due_date) <= 3 ? 'text-red-600' : 'text-gray-800'}`}>
+                <span className="text-green-400">Days Until Due:</span>
+                <span className={`font-semibold ${getDaysUntilDue(activeNotification.due_date) <= 3 ? 'text-red-500' : 'text-green-500'}`}>
                   {getDaysUntilDue(activeNotification.due_date)} days
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Minimum Due:</span>
-                <span className="font-semibold text-gray-800">${activeNotification.min_due.toFixed(2)}</span>
+                <span className="text-green-400">Minimum Due:</span>
+                <span className="font-semibold text-green-500">${activeNotification.min_due.toFixed(2)}</span>
               </div>
             </div>
 
             <button
               onClick={dismissNotification}
-              className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+              className="w-full mt-4 px-4 py-2 glass border border-green-500/30 text-green-500 rounded-lg font-semibold hover:glow hover:bg-green-500 hover:text-black transform hover:scale-105 transition-all duration-200"
             >
               Mark as Seen
             </button>
@@ -237,10 +237,10 @@ export default function NotificationBell() {
 
       {/* Settings Modal */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center" onClick={() => setIsOpen(false)}>
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center" onClick={() => setIsOpen(false)}>
+          <div className="glass glow rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden border border-green-500/30" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
-            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-6 text-white">
+            <div className="bg-gradient-green p-6 text-black">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <Bell className="w-8 h-8" />

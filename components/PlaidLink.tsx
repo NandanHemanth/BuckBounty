@@ -53,7 +53,7 @@ export default function PlaidLink({ userId, onSuccess }: PlaidLinkProps) {
     <button
       onClick={() => open()}
       disabled={!ready}
-      className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white font-semibold py-3.5 px-6 rounded-lg transition-all duration-200 text-base inline-flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
+      className="w-full glass border border-green-500/30 hover:glow hover:bg-green-500 hover:text-black disabled:opacity-50 text-green-500 font-semibold py-3.5 px-6 rounded-lg transition-all duration-200 text-base inline-flex items-center justify-center gap-2 hover-lift"
     >
       {ready ? (
         <>

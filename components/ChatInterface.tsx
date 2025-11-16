@@ -247,19 +247,19 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
   };
 
   return (
-    <div className="h-full flex flex-col bg-white border-l border-gray-200 shadow-2xl">
+    <div className="h-full flex flex-col bg-black border-l border-green-500/30 shadow-2xl">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 flex items-center justify-between">
+      <div className="bg-gradient-green text-black p-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="text-3xl">🤖</div>
           <div>
             <h2 className="text-xl font-bold">MARK</h2>
-            <p className="text-xs text-indigo-100">Multi-Agent Finance Orchestrator</p>
+            <p className="text-xs text-black/70">Multi-Agent Finance Orchestrator</p>
           </div>
         </div>
         <button
           onClick={onClose}
-          className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+          className="p-2 hover:bg-black/20 rounded-lg transition-colors"
           aria-label="Close chat"
         >
           <X size={24} />
@@ -267,15 +267,15 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
       </div>
 
       {/* Agent Status Cards */}
-      <div className="p-4 bg-gradient-to-br from-gray-50 to-white border-b border-gray-200">
+      <div className="p-4 bg-black/50 border-b border-green-500/30">
         <div className="grid grid-cols-2 gap-3">
           {agentStatuses.map((agent, index) => (
             <div
               key={index}
               className={`p-3 rounded-xl border-2 transition-all duration-200 ${
                 agent.isActive
-                  ? 'border-green-400 bg-green-50 hover:shadow-md'
-                  : 'border-gray-300 bg-gray-50 opacity-60'
+                  ? 'border-green-500 bg-green-900/20 hover:glow'
+                  : 'border-green-500/30 bg-black/50 opacity-60'
               }`}
             >
               <div className="flex items-start gap-2">
@@ -298,7 +298,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
       </div>
 
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-black/50">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -307,8 +307,8 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
             <div
               className={`max-w-[80%] rounded-2xl p-4 ${
                 message.role === 'user'
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-800 border border-gray-200'
+                  ? 'bg-green-600 text-black'
+                  : 'glass text-green-500 border border-green-500/30'
               }`}
             >
               {message.role === 'assistant' && (
@@ -389,8 +389,8 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
         ))}
         {isLoading && (
           <div className="flex justify-start">
-            <div className="bg-white border border-gray-200 rounded-2xl p-4">
-              <div className="flex items-center gap-2 text-gray-600">
+            <div className="glass border border-green-500/30 rounded-2xl p-4">
+              <div className="flex items-center gap-2 text-green-500">
                 <Loader2 className="animate-spin" size={20} />
                 <span>Thinking...</span>
               </div>
@@ -401,7 +401,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
       </div>
 
       {/* Quick Action Buttons - 4 buttons in a row */}
-      <div className="border-t border-gray-200 px-4 pt-3 pb-2 bg-white">
+      <div className="border-t border-green-500/30 px-4 pt-3 pb-2 bg-black/50">
         <div className="grid grid-cols-4 gap-2">
           {/* Button 1: Maximize Savings */}
           <button
@@ -461,7 +461,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
       </div>
 
       {/* Input Area */}
-      <div className="border-t border-gray-200 p-4 bg-white">
+      <div className="border-t border-green-500/30 p-4 bg-black/50">
         <div className="flex gap-2">
           {/* Voice Button */}
           <button
