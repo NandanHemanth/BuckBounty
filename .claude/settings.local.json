@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(ls:*)",
+      "Bash(timeout 10 python:*)",
+      "Bash(timeout 15 python:*)"
     ],
     "deny": [],
     "ask": []

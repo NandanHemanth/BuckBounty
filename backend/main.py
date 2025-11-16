@@ -1,8 +1,19 @@
+# Fix Windows console encoding FIRST (before any imports that print)
+import sys
+import os
+if sys.platform == 'win32' and os.name == 'nt':
+    try:
+        import codecs
+        if hasattr(sys.stdout, 'buffer'):
+            sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'replace')
+            sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'replace')
+    except Exception:
+        pass  # Silently fail if encoding setup doesn't work
+
 from fastapi import FastAPI, HTTPException, BackgroundTasks, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import List, Optional
-import os
+from typing import List, Optional, Dict, Any
 from dotenv import load_dotenv
 from plaid_service import PlaidService
 from vector_db import VectorDB
@@ -11,10 +22,44 @@ from bill_service import BillService
 from datetime import datetime
 import asyncio
 import stripe
+from contextlib import asynccontextmanager
+
+# Import agents
+from agents.mcp_server import mcp_server
+from agents.mark_agent import MarkAgent
+from agents.bounty_hunter_1 import BountyHunter1
+from agents.bounty_hunter_2 import BountyHunter2
+from agents.scheduler import agent_scheduler
 
 load_dotenv()
 
-app = FastAPI(title="BuckBounty API")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Initialize MCP server and start background tasks"""
+    print("🚀 Starting BuckBounty API with MCP Agents...")
+
+    # Start MCP server
+    await mcp_server.start()
+
+    # Schedule BountyHunter2 to scrape every 24 hours
+    agent_scheduler.add_task(
+        task_id="bh2_finance_news_scrape",
+        task_func=bounty_hunter_2.scrape_finance_news,
+        interval_hours=24,
+        run_immediately=True  # Run on startup if 24 hours have passed
+    )
+
+    # Start the scheduler in background
+    asyncio.create_task(agent_scheduler.start())
+
+    print("✅ All agents initialized and ready!")
+    
+    yield
+    
+    # Cleanup on shutdown (if needed)
+    print("🛑 Shutting down BuckBounty API...")
+
+app = FastAPI(title="BuckBounty API", lifespan=lifespan)
 
 # CORS middleware
 app.add_middleware(
@@ -35,6 +80,16 @@ bill_service = BillService()
 stripe_key = os.getenv('STRIPE_API_KEY', '')
 if stripe_key.startswith('sk_'):
     stripe.api_key = stripe_key
+
+# Initialize Agents
+bounty_hunter_1 = BountyHunter1()
+bounty_hunter_2 = BountyHunter2()
+mark_agent = MarkAgent(bounty_hunter_1, bounty_hunter_2)
+
+# Register agents with MCP server
+mcp_server.register_agent("mark", mark_agent)
+mcp_server.register_agent("bounty_hunter_1", bounty_hunter_1)
+mcp_server.register_agent("bounty_hunter_2", bounty_hunter_2)
 
 class LinkTokenRequest(BaseModel):
     user_id: str
@@ -446,18 +501,110 @@ async def stripe_webhook(request: dict):
     """Handle Stripe webhook events"""
     try:
         event = request
-        
+
         if event['type'] == 'checkout.session.completed':
             session = event['data']['object']
             user_id = session['metadata']['user_id']
-            
+
             # Add transaction as paid
             # This would be called after successful payment
             pass
-        
+
         return {'status': 'success'}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+# ==================== AGENT ENDPOINTS ====================
+
+class ChatRequest(BaseModel):
+    user_id: str
+    message: str
+    conversation_history: Optional[List[Dict[str, Any]]] = []
+    target_agent: Optional[str] = None
+
+@app.post("/api/agents/chat")
+async def agent_chat(request: ChatRequest):
+    """Chat with MARK and the agent team"""
+    try:
+        # Route request through MCP server
+        result = await mcp_server.route_request(
+            user_id=request.user_id,
+            message=request.message,
+            conversation_history=request.conversation_history,
+            target_agent=request.target_agent
+        )
+
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/agents/status")
+async def get_agent_status():
+    """Get status of all agents and MCP server"""
+    try:
+        return mcp_server.get_server_status()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/agents/bounty-hunter-1/scrape")
+async def trigger_bh1_scrape(background_tasks: BackgroundTasks):
+    """Manually trigger BountyHunter1 coupon scraping"""
+    try:
+        background_tasks.add_task(bounty_hunter_1.scrape_all_sources)
+        return {
+            "success": True,
+            "message": "BountyHunter1 scraping started in background"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/agents/bounty-hunter-2/scrape")
+async def trigger_bh2_scrape(background_tasks: BackgroundTasks):
+    """Manually trigger BountyHunter2 finance news scraping"""
+    try:
+        background_tasks.add_task(bounty_hunter_2.scrape_finance_news)
+        return {
+            "success": True,
+            "message": "BountyHunter2 scraping started in background"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/agents/bounty-hunter-1/coupons")
+async def get_coupons(query: Optional[str] = None):
+    """Get coupons from BountyHunter1"""
+    try:
+        if query:
+            coupons = await bounty_hunter_1._search_coupons(query)
+        else:
+            coupons = bounty_hunter_1.coupons
+
+        return {
+            "coupons": coupons,
+            "count": len(coupons),
+            "last_scrape": bounty_hunter_1.last_scrape.isoformat() if bounty_hunter_1.last_scrape else None
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/agents/bounty-hunter-2/news")
+async def get_finance_news(query: Optional[str] = None):
+    """Get finance news from BountyHunter2"""
+    try:
+        if query:
+            news = await bounty_hunter_2._get_personalized_news("default", query)
+        else:
+            news = bounty_hunter_2.news_articles
+
+        return {
+            "news": news,
+            "count": len(news),
+            "last_scrape": bounty_hunter_2.last_scrape.isoformat() if bounty_hunter_2.last_scrape else None
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# ==================== MAIN ====================
 
 if __name__ == "__main__":
     import uvicorn
