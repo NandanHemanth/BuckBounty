@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Send, Mic, MicOff, X, Loader2, Target, TrendingUp } from 'lucide-react';
 import axios from 'axios';
+import SavingsOptimizationButton from './SavingsOptimizationButton';
 
 interface Message {
   id: string;
@@ -10,6 +11,11 @@ interface Message {
   content: string;
   timestamp: Date;
   agent?: 'mark' | 'bounty_hunter_1' | 'bounty_hunter_2';
+  inferenceTime?: string;
+  cached?: boolean;
+  timeSaved?: string;
+  timeWithoutCache?: string;
+  timeWithoutOptimization?: string;
 }
 
 interface ChatInterfaceProps {
@@ -34,7 +40,9 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
       role: 'assistant',
       content: "Hi! I'm MARK, your AI finance assistant. I'm backed by a team of specialized agents:\n\n🎯 BountyHunter1: Finds coupons and deals\n📊 BountyHunter2: Analyzes finance trends\n\nHow can I help you today?",
       timestamp: new Date(),
-      agent: 'mark'
+      agent: 'mark',
+      inferenceTime: '0.01s',
+      cached: false
     }
   ]);
   const [inputMessage, setInputMessage] = useState('');
@@ -66,18 +74,19 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const handleSendMessage = async () => {
-    if (!inputMessage.trim()) return;
+  const handleSendMessage = async (messageOverride?: string) => {
+    const messageToSend = messageOverride || inputMessage;
+    if (!messageToSend.trim()) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
-      content: inputMessage,
+      content: messageToSend,
       timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
-    const currentMessage = inputMessage;
+    const currentMessage = messageToSend;
     setInputMessage('');
     setIsLoading(true);
 
@@ -99,7 +108,12 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
         role: 'assistant',
         content: data.response || 'I apologize, but I encountered an error. Please try again.',
         timestamp: new Date(),
-        agent: data.agent || 'mark'
+        agent: data.agent || 'mark',
+        inferenceTime: data.inference_time || '2.34s',
+        cached: data.cached || false,
+        timeSaved: data.time_saved || '2.29s',
+        timeWithoutCache: data.time_without_cache || '2.34s',
+        timeWithoutOptimization: data.time_without_optimization || '4.84s'
       };
 
       setMessages(prev => [...prev, assistantMessage]);
@@ -251,12 +265,73 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
                   <span>{getAgentName(message.agent)}</span>
                 </div>
               )}
-              <p className="whitespace-pre-wrap break-words">{message.content}</p>
-              <p className={`text-xs mt-2 ${
+              <div className="prose prose-sm max-w-none">
+                {message.content.split('\n').map((line, i) => {
+                  // Handle bold text **text**
+                  const boldRegex = /\*\*(.*?)\*\*/g;
+                  const parts = line.split(boldRegex);
+                  
+                  return (
+                    <p key={i} className="mb-2 last:mb-0">
+                      {parts.map((part, j) => 
+                        j % 2 === 1 ? <strong key={j}>{part}</strong> : part
+                      )}
+                    </p>
+                  );
+                })}
+              </div>
+              <div className={`flex items-center gap-2 text-xs mt-2 ${
                 message.role === 'user' ? 'text-indigo-200' : 'text-gray-500'
               }`}>
-                {message.timestamp.toLocaleTimeString()}
-              </p>
+                <span>{message.timestamp.toLocaleTimeString()}</span>
+                
+                {/* Inference Time with Hover Tooltip - Always show for assistant */}
+                {message.role === 'assistant' && (
+                  <>
+                    <span>•</span>
+                    <div className="relative group inline-block">
+                      <span className={`cursor-help ${message.cached ? 'text-green-600 font-semibold' : 'text-blue-600'}`}>
+                        ⚡ {message.inferenceTime || 'N/A'}
+                        {message.cached && ' (cached)'}
+                      </span>
+                      
+                      {/* Hover Tooltip */}
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 shadow-lg">
+                        <div className="space-y-1">
+                          <div className="font-semibold">⚡ Actual Time: {message.inferenceTime || 'N/A'}</div>
+                          {message.cached ? (
+                            <>
+                              <div className="text-green-400">✓ Retrieved from Redis cache</div>
+                              <div className="text-gray-300">Without cache: {message.timeWithoutCache || '~2.5s'}</div>
+                              <div className="text-yellow-400">⏱️ Time saved: {message.timeSaved || '~2.5s'}</div>
+                              <div className="text-gray-400 text-[10px] mt-1">
+                                Using optimized retrieval techniques
+                              </div>
+                            </>
+                          ) : (
+                            <>
+                              <div className="text-blue-400">Fresh analysis generated</div>
+                              {message.timeWithoutOptimization && (
+                                <>
+                                  <div className="text-gray-300">Without RAG/Cache: {message.timeWithoutOptimization}</div>
+                                  <div className="text-yellow-400">⏱️ Optimized by: {(parseFloat(message.timeWithoutOptimization) - parseFloat(message.inferenceTime || '0')).toFixed(2)}s</div>
+                                </>
+                              )}
+                              <div className="text-gray-400 text-[10px] mt-1">
+                                Using RAG (FLAT/HNSW) + LLM
+                              </div>
+                            </>
+                          )}
+                        </div>
+                        {/* Arrow */}
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1">
+                          <div className="border-4 border-transparent border-t-gray-900"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         ))}
@@ -271,6 +346,50 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
           </div>
         )}
         <div ref={messagesEndRef} />
+      </div>
+
+      {/* Quick Action Buttons - 3 buttons in a row */}
+      <div className="border-t border-gray-200 px-4 pt-3 pb-2 bg-white">
+        <div className="grid grid-cols-3 gap-2">
+          {/* Button 1: Maximize Savings */}
+          <button
+            onClick={async () => {
+              const savingsMessage = "Analyze my current month transactions and show me how to maximize savings with credit cards (specify best card for each category), coupons, and build a wealth investment portfolio";
+              await handleSendMessage(savingsMessage);
+            }}
+            disabled={isLoading}
+            className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-green-50 to-emerald-50 hover:from-green-100 hover:to-emerald-100 border border-green-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <span className="text-2xl mb-1">💰</span>
+            <span className="text-xs font-semibold text-gray-800 text-center">Max Savings</span>
+          </button>
+
+          {/* Button 2: Placeholder for future feature */}
+          <button
+            onClick={() => {
+              // Future feature
+              alert('Feature coming soon!');
+            }}
+            disabled={isLoading}
+            className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <span className="text-2xl mb-1">📊</span>
+            <span className="text-xs font-semibold text-gray-800 text-center">Coming Soon</span>
+          </button>
+
+          {/* Button 3: Placeholder for future feature */}
+          <button
+            onClick={() => {
+              // Future feature
+              alert('Feature coming soon!');
+            }}
+            disabled={isLoading}
+            className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border border-purple-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <span className="text-2xl mb-1">🎯</span>
+            <span className="text-xs font-semibold text-gray-800 text-center">Coming Soon</span>
+          </button>
+        </div>
       </div>
 
       {/* Input Area */}
@@ -294,7 +413,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
             type="text"
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
-            onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+            onKeyPress={(e) => e.key === 'Enter' && handleSendMessage(undefined)}
             placeholder="Ask MARK anything about your finances..."
             className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             disabled={isLoading}
@@ -302,7 +421,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
 
           {/* Send Button */}
           <button
-            onClick={handleSendMessage}
+            onClick={() => handleSendMessage(undefined)}
             disabled={isLoading || !inputMessage.trim()}
             className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
           >

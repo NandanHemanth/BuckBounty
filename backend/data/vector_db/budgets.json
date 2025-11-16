@@ -14,5 +14,29 @@
     "embedding": null,
     "embedding_text": "Monthly budget for 2025-11: $9000.00 USD. User: user_m0l3et2ms. Budget limit set for financial tracking and spending control.",
     "updated_at": "2025-11-15T23:28:52.517889"
+  },
+  "user_lem6ztoos_2025-11": {
+    "user_id": "user_lem6ztoos",
+    "month": "2025-11",
+    "amount": 9000.0,
+    "embedding": null,
+    "embedding_text": "Monthly budget for 2025-11: $9000.00 USD. User: user_lem6ztoos. Budget limit set for financial tracking and spending control.",
+    "updated_at": "2025-11-16T01:30:43.176233"
+  },
+  "user_2jvxus7l4_2025-11": {
+    "user_id": "user_2jvxus7l4",
+    "month": "2025-11",
+    "amount": 10000.0,
+    "embedding": null,
+    "embedding_text": "Monthly budget for 2025-11: $10000.00 USD. User: user_2jvxus7l4. Budget limit set for financial tracking and spending control.",
+    "updated_at": "2025-11-16T01:58:15.182037"
+  },
+  "user_89c3wbs39_2025-11": {
+    "user_id": "user_89c3wbs39",
+    "month": "2025-11",
+    "amount": 10000.0,
+    "embedding": null,
+    "embedding_text": "Monthly budget for 2025-11: $10000.00 USD. User: user_89c3wbs39. Budget limit set for financial tracking and spending control.",
+    "updated_at": "2025-11-16T02:19:13.987374"
   }
 }

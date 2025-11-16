@@ -1,0 +1,3 @@
+@echo off
+echo Opening MARK Chat Interface...
+start http://localhost:3000/mark-chat

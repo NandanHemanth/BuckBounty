@@ -540,9 +540,20 @@ async def agent_chat(request: ChatRequest):
 
 @app.get("/api/agents/status")
 async def get_agent_status():
-    """Get status of all agents and MCP server"""
+    """Get status of all agents and MCP server with real-time status"""
     try:
-        return mcp_server.get_server_status()
+        from redis_cache import redis_cache
+        
+        base_status = mcp_server.get_server_status()
+        
+        # Add real-time status from Redis
+        base_status['agent_status'] = {
+            'bounty_hunter_1': redis_cache.get_agent_status('bounty_hunter_1'),
+            'bounty_hunter_2': redis_cache.get_agent_status('bounty_hunter_2'),
+            'mark': 'Ready'
+        }
+        
+        return base_status
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -600,6 +611,74 @@ async def get_finance_news(query: Optional[str] = None):
             "news": news,
             "count": len(news),
             "last_scrape": bounty_hunter_2.last_scrape.isoformat() if bounty_hunter_2.last_scrape else None
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/agents/ideal-prompts")
+async def get_ideal_prompts():
+    """Get ideal prompt buttons for the chat interface"""
+    try:
+        prompts = [
+            {
+                "id": "savings_optimization",
+                "title": "💰 Maximize My Savings",
+                "prompt": "Analyze my transactions and show me how to maximize savings with credit cards, coupons, and build a wealth investment portfolio",
+                "description": "Get credit card recommendations, coupon savings, and investment breakdown",
+                "category": "wealth_building",
+                "icon": "💳📈"
+            },
+            {
+                "id": "transaction_analysis",
+                "title": "📊 Analyze My Spending",
+                "prompt": "Analyze my current month transactions and show me spending patterns",
+                "description": "Deep dive into your spending habits with RAG-powered insights",
+                "category": "analysis",
+                "icon": "🔍"
+            },
+            {
+                "id": "coupon_search",
+                "title": "🎟️ Find Deals & Coupons",
+                "prompt": "Show me the best coupons and deals available right now",
+                "description": "Get latest coupons from UberEats, DoorDash, and more",
+                "category": "savings",
+                "icon": "🏷️"
+            }
+        ]
+        
+        return {
+            "prompts": prompts,
+            "count": len(prompts)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/rag/stats")
+async def get_rag_stats():
+    """Get RAG service statistics"""
+    try:
+        from rag_service import rag_service
+        
+        stats = rag_service.get_stats()
+        
+        return {
+            "success": True,
+            "stats": stats
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/cache/clear")
+async def clear_user_cache(user_id: str):
+    """Clear Redis cache for a user"""
+    try:
+        from redis_cache import redis_cache
+        
+        redis_cache.clear_user_cache(user_id)
+        
+        return {
+            "success": True,
+            "message": f"Cache cleared for user {user_id}"
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
