@@ -7,6 +7,7 @@ import Dashboard from '@/components/Dashboard';
 import EmbeddingVisualizer from '@/components/EmbeddingVisualizer';
 import BillSplitModal from '@/components/BillSplitModal';
 import ChatInterface from '@/components/ChatInterface';
+import NotificationBell from '@/components/NotificationBell';
 
 export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
@@ -100,8 +101,8 @@ export default function Home() {
 
         </div>
 
-        {/* Embedding Visualizer - Bottom Left */}
-        {isConnected && <EmbeddingVisualizer userId={userId} />}
+        {/* Notification Bell - Bottom Left */}
+        {isConnected && <NotificationBell />}
 
       {/* Bill Split Modal */}
       <BillSplitModal

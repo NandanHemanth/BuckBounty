@@ -1,0 +1,178 @@
+[
+  {
+    "id": "bill_001",
+    "type": "bill",
+    "category": "utilities",
+    "name": "Electric Bill",
+    "amount": 125.50,
+    "due_date": "2024-11-25",
+    "min_due": 25.00,
+    "payment_details": {
+      "payee": "City Electric Company",
+      "account_number": "****1234",
+      "payment_method": "Auto-pay"
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "bill_002",
+    "type": "bill",
+    "category": "utilities",
+    "name": "Water Bill",
+    "amount": 45.00,
+    "due_date": "2024-11-28",
+    "min_due": 10.00,
+    "payment_details": {
+      "payee": "City Water Department",
+      "account_number": "****5678",
+      "payment_method": "Manual"
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "bill_003",
+    "type": "bill",
+    "category": "internet",
+    "name": "Internet Bill",
+    "amount": 79.99,
+    "due_date": "2024-11-20",
+    "min_due": 79.99,
+    "payment_details": {
+      "payee": "Comcast",
+      "account_number": "****9012",
+      "payment_method": "Auto-pay"
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "emi_001",
+    "type": "emi",
+    "category": "loan",
+    "name": "Student Loan",
+    "amount": 350.00,
+    "due_date": "2024-11-15",
+    "min_due": 350.00,
+    "payment_details": {
+      "payee": "Federal Student Aid",
+      "account_number": "****3456",
+      "loan_balance": 25200.00,
+      "payment_method": "Auto-debit"
+    },
+    "emi_details": {
+      "current_emi": 23,
+      "total_emis": 72,
+      "remaining_emis": 49,
+      "interest_rate": 4.5,
+      "principal_remaining": 25200.00
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "emi_002",
+    "type": "emi",
+    "category": "loan",
+    "name": "Car Loan",
+    "amount": 425.00,
+    "due_date": "2024-11-18",
+    "min_due": 425.00,
+    "payment_details": {
+      "payee": "Auto Finance Corp",
+      "account_number": "****7890",
+      "loan_balance": 18700.00,
+      "payment_method": "Auto-debit"
+    },
+    "emi_details": {
+      "current_emi": 15,
+      "total_emis": 60,
+      "remaining_emis": 45,
+      "interest_rate": 5.9,
+      "principal_remaining": 18700.00
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "bill_004",
+    "type": "bill",
+    "category": "subscription",
+    "name": "Netflix",
+    "amount": 15.99,
+    "due_date": "2024-11-22",
+    "min_due": 15.99,
+    "payment_details": {
+      "payee": "Netflix",
+      "account_number": "****2345",
+      "payment_method": "Credit Card"
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "bill_005",
+    "type": "bill",
+    "category": "subscription",
+    "name": "Spotify Premium",
+    "amount": 10.99,
+    "due_date": "2024-11-24",
+    "min_due": 10.99,
+    "payment_details": {
+      "payee": "Spotify",
+      "account_number": "****6789",
+      "payment_method": "Credit Card"
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "bill_006",
+    "type": "bill",
+    "category": "insurance",
+    "name": "Health Insurance",
+    "amount": 250.00,
+    "due_date": "2024-11-30",
+    "min_due": 250.00,
+    "payment_details": {
+      "payee": "HealthCare Insurance Co",
+      "account_number": "****4567",
+      "payment_method": "Auto-pay"
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "bill_007",
+    "type": "bill",
+    "category": "rent",
+    "name": "Rent Payment",
+    "amount": 1500.00,
+    "due_date": "2024-12-01",
+    "min_due": 1500.00,
+    "payment_details": {
+      "payee": "Property Management LLC",
+      "account_number": "****8901",
+      "payment_method": "Bank Transfer"
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  },
+  {
+    "id": "bill_008",
+    "type": "bill",
+    "category": "phone",
+    "name": "Mobile Phone Bill",
+    "amount": 65.00,
+    "due_date": "2024-11-26",
+    "min_due": 20.00,
+    "payment_details": {
+      "payee": "Verizon",
+      "account_number": "****2468",
+      "payment_method": "Auto-pay"
+    },
+    "status": "pending",
+    "recurring": "monthly"
+  }
+]
