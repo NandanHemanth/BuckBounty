@@ -1,0 +1,86 @@
+{
+  "uber": [
+    {
+      "code": "SAVE20",
+      "description": "20% off your next ride",
+      "expiry": "2024-12-31",
+      "terms": "Valid for new users only"
+    },
+    {
+      "code": "FIRSTRIDE",
+      "description": "$15 off your first ride",
+      "expiry": "2024-12-31",
+      "terms": "New users only, minimum $25 order"
+    }
+  ],
+  "doordash": [
+    {
+      "code": "FOOD25",
+      "description": "$25 off orders over $50",
+      "expiry": "2024-12-31",
+      "terms": "First-time customers only"
+    },
+    {
+      "code": "FREEDELIV",
+      "description": "Free delivery on orders over $30",
+      "expiry": "2024-12-31",
+      "terms": "Valid for all users"
+    }
+  ],
+  "amazon": [
+    {
+      "code": "PRIME20",
+      "description": "20% off with Prime membership",
+      "expiry": "2024-12-31",
+      "terms": "Prime members only"
+    },
+    {
+      "code": "SAVE10",
+      "description": "$10 off orders over $50",
+      "expiry": "2024-12-31",
+      "terms": "Valid on select items"
+    }
+  ],
+  "starbucks": [
+    {
+      "code": "COFFEE5",
+      "description": "$5 off orders over $20",
+      "expiry": "2024-12-31",
+      "terms": "Mobile orders only"
+    },
+    {
+      "code": "REWARDS",
+      "description": "Double stars on all purchases",
+      "expiry": "2024-12-31",
+      "terms": "Rewards members only"
+    }
+  ],
+  "target": [
+    {
+      "code": "SAVE15",
+      "description": "15% off entire purchase",
+      "expiry": "2024-12-31",
+      "terms": "In-store and online"
+    },
+    {
+      "code": "FREESHIP",
+      "description": "Free shipping on orders over $35",
+      "expiry": "2024-12-31",
+      "terms": "No minimum with RedCard"
+    }
+  ],
+  "walmart": [
+    {
+      "code": "GROCERY10",
+      "description": "$10 off grocery orders over $50",
+      "expiry": "2024-12-31",
+      "terms": "Online orders only"
+    },
+    {
+      "code": "PICKUP5",
+      "description": "$5 off pickup orders",
+      "expiry": "2024-12-31",
+      "terms": "First-time pickup users"
+    }
+  ]
+}
