@@ -191,6 +191,154 @@ async def get_category_stats(time_filter: str = 'all'):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/api/dashboard/stats")
+async def get_dashboard_stats(user_id: str = "default"):
+    """Get comprehensive dashboard statistics with current vs previous month comparison"""
+    try:
+        from datetime import datetime, timedelta
+        from collections import defaultdict
+        
+        all_transactions = vector_db.get_all_transactions()
+        
+        # Get current date
+        now = datetime.now()
+        current_month_start = now.replace(day=1)
+        previous_month_end = current_month_start - timedelta(days=1)
+        previous_month_start = previous_month_end.replace(day=1)
+        
+        # Split transactions by month
+        current_month_txns = []
+        previous_month_txns = []
+        
+        for txn in all_transactions:
+            txn_date_str = txn.get('date', '')
+            if not txn_date_str:
+                continue
+            
+            try:
+                txn_date = datetime.strptime(txn_date_str, '%Y-%m-%d')
+                if txn_date >= current_month_start:
+                    current_month_txns.append(txn)
+                elif previous_month_start <= txn_date < current_month_start:
+                    previous_month_txns.append(txn)
+            except:
+                continue
+        
+        # Calculate category stats for both months
+        def calculate_category_stats(transactions):
+            stats = defaultdict(lambda: {'count': 0, 'amount': 0})
+            total_spent = 0
+            
+            for txn in transactions:
+                amount = abs(txn.get('amount', 0))
+                category = txn.get('classified_category', 'Other')
+                
+                # Skip income transactions for spending stats
+                if txn.get('amount', 0) < 0:
+                    continue
+                
+                stats[category]['count'] += 1
+                stats[category]['amount'] += amount
+                total_spent += amount
+            
+            return dict(stats), total_spent
+        
+        current_stats, current_total = calculate_category_stats(current_month_txns)
+        previous_stats, previous_total = calculate_category_stats(previous_month_txns)
+        
+        # Get all unique categories
+        all_categories = set(list(current_stats.keys()) + list(previous_stats.keys()))
+        
+        # Build comparison data
+        category_comparison = []
+        for category in all_categories:
+            category_comparison.append({
+                'category': category,
+                'current_amount': current_stats.get(category, {}).get('amount', 0),
+                'previous_amount': previous_stats.get(category, {}).get('amount', 0),
+                'current_count': current_stats.get(category, {}).get('count', 0),
+                'previous_count': previous_stats.get(category, {}).get('count', 0)
+            })
+        
+        # Sort by current amount
+        category_comparison.sort(key=lambda x: x['current_amount'], reverse=True)
+        
+        # Calculate top category
+        top_category = category_comparison[0]['category'] if category_comparison else 'N/A'
+        
+        # Calculate average transaction
+        avg_transaction = current_total / len(current_month_txns) if current_month_txns else 0
+        
+        # Get current month budget
+        budget = vector_db.get_budget(user_id, current_month_start.strftime('%Y-%m'))
+        
+        return {
+            'summary': {
+                'total_transactions': len(current_month_txns),
+                'total_spent': current_total,
+                'avg_transaction': avg_transaction,
+                'top_category': top_category,
+                'budget': budget
+            },
+            'category_comparison': category_comparison,
+            'current_month': {
+                'transactions': len(current_month_txns),
+                'total': current_total
+            },
+            'previous_month': {
+                'transactions': len(previous_month_txns),
+                'total': previous_total
+            }
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/budget/set")
+async def set_budget(user_id: str, amount: float, month: Optional[str] = None):
+    """Set or update budget for a specific month"""
+    try:
+        from datetime import datetime
+        
+        # Use current month if not specified
+        if not month:
+            month = datetime.now().strftime('%Y-%m')
+        
+        # Validate amount
+        if amount < 0:
+            raise HTTPException(status_code=400, detail="Budget amount must be positive")
+        
+        # Save budget with embedding
+        vector_db.set_budget(user_id, month, amount)
+        
+        return {
+            'success': True,
+            'user_id': user_id,
+            'month': month,
+            'amount': amount
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/budget/get")
+async def get_budget(user_id: str, month: Optional[str] = None):
+    """Get budget for a specific month"""
+    try:
+        from datetime import datetime
+        
+        # Use current month if not specified
+        if not month:
+            month = datetime.now().strftime('%Y-%m')
+        
+        budget = vector_db.get_budget(user_id, month)
+        
+        return {
+            'user_id': user_id,
+            'month': month,
+            'amount': budget
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

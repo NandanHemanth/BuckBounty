@@ -9,6 +9,7 @@ import EmbeddingVisualizer from '@/components/EmbeddingVisualizer';
 export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
   const [userId] = useState('user_' + Math.random().toString(36).substr(2, 9));
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -50,8 +51,8 @@ export default function Home() {
           </div>
         ) : (
           <div className="space-y-6">
-            <Dashboard userId={userId} />
-            <TransactionList userId={userId} />
+            <Dashboard userId={userId} refreshTrigger={refreshTrigger} />
+            <TransactionList userId={userId} onTransactionAdded={() => setRefreshTrigger(prev => prev + 1)} />
           </div>
         )}
 

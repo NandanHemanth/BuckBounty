@@ -12,23 +12,42 @@ interface Transaction {
   pending: boolean;
 }
 
-export default function TransactionList({ userId }: { userId: string }) {
+export default function TransactionList({ 
+  userId, 
+  onTransactionAdded 
+}: { 
+  userId: string;
+  onTransactionAdded?: () => void;
+}) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [lastTransactionCount, setLastTransactionCount] = useState(0);
   const transactionsPerPage = 100;
 
-  const fetchTransactions = async () => {
-    setLoading(true);
+  const fetchTransactions = async (silent = false) => {
+    if (!silent) setLoading(true);
     try {
       const response = await axios.get(`http://localhost:8000/api/transactions/${userId}?days=730`);
-      setTransactions(response.data.transactions);
-      setCurrentPage(1); // Reset to first page
+      const newTransactions = response.data.transactions;
+      
+      // Check if new transactions were added (compare count)
+      if (lastTransactionCount > 0 && newTransactions.length > lastTransactionCount) {
+        console.log(`New transactions detected: ${newTransactions.length - lastTransactionCount} added`);
+        onTransactionAdded?.();
+      }
+      
+      setLastTransactionCount(newTransactions.length);
+      setTransactions(newTransactions);
+      
+      if (!silent) {
+        setCurrentPage(1); // Reset to first page only on manual refresh
+      }
     } catch (error) {
       console.error('Error fetching transactions:', error);
     }
-    setLoading(false);
+    if (!silent) setLoading(false);
   };
 
   const searchTransactions = async () => {
@@ -72,6 +91,13 @@ export default function TransactionList({ userId }: { userId: string }) {
 
   useEffect(() => {
     fetchTransactions();
+    
+    // Silent polling every 10 seconds to detect new transactions (doesn't show loading state)
+    const interval = setInterval(() => {
+      fetchTransactions(true); // Silent refresh
+    }, 10000);
+    
+    return () => clearInterval(interval);
   }, [userId]);
 
   return (
@@ -85,20 +111,26 @@ export default function TransactionList({ userId }: { userId: string }) {
           placeholder="Search transactions (e.g., 'coffee shops' or 'groceries')"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyPress={(e) => e.key === 'Enter' && searchTransactions()}
-          className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+          onKeyDown={(e) => e.key === 'Enter' && searchTransactions()}
+          className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
         />
         <button
           onClick={searchTransactions}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium"
+          className="px-4 py-2 text-sm bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-all duration-200 flex items-center gap-1.5"
         >
-          🔍 Search
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          Search
         </button>
         <button
-          onClick={fetchTransactions}
-          className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium"
+          onClick={() => fetchTransactions(false)}
+          className="px-4 py-2 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-all duration-200 flex items-center gap-1.5"
         >
-          ↻ Refresh
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          Refresh
         </button>
       </div>
 
@@ -132,17 +164,20 @@ export default function TransactionList({ userId }: { userId: string }) {
           {/* Pagination Controls */}
           {totalPages > 1 && (
             <div className="mt-6 flex items-center justify-between border-t pt-4">
-              <div className="text-sm text-gray-600">
-                Showing {startIndex + 1}-{Math.min(endIndex, transactions.length)} of {transactions.length} transactions
+              <div className="text-xs text-gray-500">
+                Showing {startIndex + 1}-{Math.min(endIndex, transactions.length)} of {transactions.length}
               </div>
               
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
                 <button
                   onClick={goToPrevPage}
                   disabled={currentPage === 1}
-                  className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 text-gray-700 rounded-lg font-medium transition-colors"
+                  className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 disabled:bg-gray-50 disabled:text-gray-300 text-gray-700 rounded-lg font-medium transition-all duration-200 flex items-center gap-1"
                 >
-                  ← Prev
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  Prev
                 </button>
                 
                 <div className="flex gap-1">
@@ -162,10 +197,10 @@ export default function TransactionList({ userId }: { userId: string }) {
                       <button
                         key={pageNum}
                         onClick={() => goToPage(pageNum)}
-                        className={`px-3 py-2 rounded-lg font-medium transition-colors ${
+                        className={`min-w-[32px] h-8 text-sm rounded-lg font-medium transition-all duration-200 ${
                           currentPage === pageNum
-                            ? 'bg-indigo-600 text-white'
-                            : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                            ? 'bg-indigo-600 text-white shadow-sm'
+                            : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                         }`}
                       >
                         {pageNum}
@@ -177,9 +212,12 @@ export default function TransactionList({ userId }: { userId: string }) {
                 <button
                   onClick={goToNextPage}
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 text-gray-700 rounded-lg font-medium transition-colors"
+                  className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 disabled:bg-gray-50 disabled:text-gray-300 text-gray-700 rounded-lg font-medium transition-all duration-200 flex items-center gap-1"
                 >
-                  Next →
+                  Next
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </button>
               </div>
             </div>

@@ -12,6 +12,7 @@ class VectorDB:
         self.db_path = db_path
         self.index_path = os.path.join(db_path, 'transactions.index')
         self.metadata_path = os.path.join(db_path, 'metadata.json')
+        self.budget_path = os.path.join(db_path, 'budgets.json')
         
         # Create directory if it doesn't exist
         os.makedirs(db_path, exist_ok=True)
@@ -28,6 +29,13 @@ class VectorDB:
         else:
             self.index = faiss.IndexFlatL2(self.dimension)
             self.metadata = []
+        
+        # Load or create budgets
+        if os.path.exists(self.budget_path):
+            with open(self.budget_path, 'r') as f:
+                self.budgets = json.load(f)
+        else:
+            self.budgets = {}
         
         print(f"Vector DB initialized with {self.index.ntotal} transactions")
     
@@ -138,3 +146,61 @@ class VectorDB:
         """
         self.add_transaction(transaction)
         return {"status": "synced", "transaction_id": transaction.get('id')}
+    
+    def set_budget(self, user_id: str, month: str, amount: float):
+        """Set or update budget for a specific user and month with Gemini embedding"""
+        import google.generativeai as genai
+        import os
+        
+        # Configure Gemini API
+        api_key = os.getenv('GEMINI_API_KEY')
+        if api_key:
+            genai.configure(api_key=api_key)
+        
+        # Create budget key
+        budget_key = f"{user_id}_{month}"
+        
+        # Generate embedding for budget using Gemini
+        budget_text = f"Monthly budget for {month}: ${amount:.2f} USD. User: {user_id}. Budget limit set for financial tracking and spending control."
+        
+        try:
+            # Use Gemini's embedding model
+            result = genai.embed_content(
+                model="models/embedding-001",
+                content=budget_text,
+                task_type="retrieval_document"
+            )
+            embedding = result['embedding']
+        except Exception as e:
+            print(f"Error creating Gemini embedding for budget: {e}")
+            embedding = None
+        
+        # Store budget with embedding
+        self.budgets[budget_key] = {
+            'user_id': user_id,
+            'month': month,
+            'amount': amount,
+            'embedding': embedding,
+            'embedding_text': budget_text,
+            'updated_at': datetime.now().isoformat()
+        }
+        
+        # Save to disk
+        self._save_budgets()
+        
+        print(f"Budget set for {user_id} ({month}): ${amount:.2f}")
+        return self.budgets[budget_key]
+    
+    def get_budget(self, user_id: str, month: str) -> float:
+        """Get budget for a specific user and month"""
+        budget_key = f"{user_id}_{month}"
+        budget_data = self.budgets.get(budget_key)
+        
+        if budget_data:
+            return budget_data.get('amount', 0.0)
+        return 0.0
+    
+    def _save_budgets(self):
+        """Save budgets to disk"""
+        with open(self.budget_path, 'w') as f:
+            json.dump(self.budgets, f, indent=2)
