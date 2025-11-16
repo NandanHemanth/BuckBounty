@@ -117,6 +117,9 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
       };
 
       setMessages(prev => [...prev, assistantMessage]);
+      
+      // Automatically speak MARK's response
+      speakResponse(assistantMessage.content);
     } catch (error) {
       console.error('Error sending message:', error);
       const errorMessage: Message = {
@@ -147,19 +150,29 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
 
         mediaRecorder.onstop = async () => {
           const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-
-          // TODO: Send audio to speech-to-text service
-          console.log('Audio recording completed', audioBlob);
-
-          // For now, show a placeholder message
-          const voiceMessage: Message = {
-            id: Date.now().toString(),
-            role: 'assistant',
-            content: 'Voice input received! Speech-to-text processing will be implemented soon.',
-            timestamp: new Date(),
-            agent: 'mark'
-          };
-          setMessages(prev => [...prev, voiceMessage]);
+          
+          try {
+            // Convert speech to text using Web Speech API (browser built-in)
+            // For production, you can use ElevenLabs or OpenAI Whisper
+            const formData = new FormData();
+            formData.append('audio', audioBlob);
+            
+            const response = await fetch('/api/speech-to-text', {
+              method: 'POST',
+              body: formData
+            });
+            
+            const data = await response.json();
+            const transcribedText = data.text || 'Could not transcribe audio';
+            
+            // Send the transcribed text as a message
+            setInputMessage(transcribedText);
+            await handleSendMessage(transcribedText);
+            
+          } catch (error) {
+            console.error('Error transcribing audio:', error);
+            alert('Failed to transcribe audio. Please try again.');
+          }
 
           stream.getTracks().forEach(track => track.stop());
         };
@@ -173,6 +186,46 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
     } else {
       mediaRecorderRef.current?.stop();
       setIsRecording(false);
+    }
+  };
+
+  // Text-to-Speech for MARK's responses
+  const speakResponse = async (text: string) => {
+    try {
+      const response = await fetch('/api/text-to-speech', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text })
+      });
+      
+      if (response.headers.get('Content-Type')?.includes('application/json')) {
+        // Fallback to browser's built-in speech synthesis
+        const data = await response.json();
+        if (data.useBrowserTTS) {
+          const utterance = new SpeechSynthesisUtterance(text);
+          utterance.rate = 0.9;
+          utterance.pitch = 1.0;
+          utterance.volume = 1.0;
+          window.speechSynthesis.speak(utterance);
+        }
+      } else {
+        // Use ElevenLabs audio
+        const audioBlob = await response.blob();
+        const audioUrl = URL.createObjectURL(audioBlob);
+        const audio = new Audio(audioUrl);
+        audio.play();
+      }
+    } catch (error) {
+      console.error('Error playing audio:', error);
+      // Final fallback to browser TTS
+      try {
+        const utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
+      } catch (e) {
+        console.error('Browser TTS also failed:', e);
+      }
     }
   };
 
@@ -201,8 +254,8 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
         <div className="flex items-center gap-3">
           <div className="text-3xl">🤖</div>
           <div>
-            <h2 className="text-xl font-bold">MARK Assistant</h2>
-            <p className="text-xs text-indigo-100">Multi-Agent Finance System</p>
+            <h2 className="text-xl font-bold">MARK</h2>
+            <p className="text-xs text-indigo-100">Multi-Agent Finance Orchestrator</p>
           </div>
         </div>
         <button

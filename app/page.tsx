@@ -8,6 +8,7 @@ import EmbeddingVisualizer from '@/components/EmbeddingVisualizer';
 import BillSplitModal from '@/components/BillSplitModal';
 import ChatInterface from '@/components/ChatInterface';
 import NotificationBell from '@/components/NotificationBell';
+import FinancialTipsLoader from '@/components/FinancialTipsLoader';
 
 export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
@@ -15,6 +16,7 @@ export default function Home() {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [isBillSplitOpen, setIsBillSplitOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isLoadingDashboard, setIsLoadingDashboard] = useState(false);
 
   // Debug: Log state changes
   console.log('Chat state:', { isConnected, isChatOpen });
@@ -85,7 +87,14 @@ export default function Home() {
             
             <PlaidLink 
               userId={userId} 
-              onSuccess={() => setIsConnected(true)}
+              onSuccess={() => {
+                setIsLoadingDashboard(true);
+                // Simulate dashboard loading time
+                setTimeout(() => {
+                  setIsConnected(true);
+                  setIsLoadingDashboard(false);
+                }, 15000); // 15 seconds to show tips
+              }}
             />
           </div>
         ) : (
@@ -156,6 +165,9 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      {/* Financial Tips Loader */}
+      <FinancialTipsLoader isLoading={isLoadingDashboard} />
     </main>
   );
 }

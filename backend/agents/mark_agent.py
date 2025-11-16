@@ -204,12 +204,13 @@ class MarkAgent(BaseAgent):
         if any(word in message_lower for word in ["news", "market", "stock", "economy", "trend", "finance"]):
             return "finance_news"
 
-        # Budget check for purchases (NEW - specific check)
-        if any(word in message_lower for word in ["can i buy", "should i buy", "afford to buy", "purchase"]) and any(char.isdigit() for char in message):
+        # Budget check for purchases (MUST BE BEFORE budget_advice!)
+        # Check if message contains price/amount AND purchase-related words
+        if any(char.isdigit() for char in message) and any(word in message_lower for word in ["can i buy", "should i buy", "can i afford", "should i afford", "afford to buy", "purchase", "buy"]):
             return "budget_check"
 
-        # Budget advice
-        if any(word in message_lower for word in ["budget", "spending", "afford", "save", "savings"]):
+        # Budget advice (general budgeting questions)
+        if any(word in message_lower for word in ["budget", "spending", "save", "savings"]):
             return "budget_advice"
 
         # Transaction analysis
