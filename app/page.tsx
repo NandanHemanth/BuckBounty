@@ -63,7 +63,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="text-xl text-green-400">
-              Your AI-Powered Personal Finance Assistant
+              Turn every dollar into opportunity!!
             </p>
           </header>
 
