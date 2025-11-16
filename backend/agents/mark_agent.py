@@ -19,6 +19,7 @@ from redis_cache import redis_cache
 from rag_service import rag_service
 from credit_card_optimizer import credit_card_optimizer
 from investment_advisor import investment_advisor
+from polymarket_service import polymarket_service
 
 
 class MarkAgent(BaseAgent):
@@ -54,6 +55,7 @@ class MarkAgent(BaseAgent):
         self.rag_service = rag_service
         self.cc_optimizer = credit_card_optimizer
         self.investment_advisor = investment_advisor
+        self.polymarket = polymarket_service
 
         # Conversation history per user
         self.conversations: Dict[str, List[Dict]] = {}
@@ -70,6 +72,7 @@ class MarkAgent(BaseAgent):
         print("   ✅ RAG service (FLAT + HNSW) ready")
         print("   ✅ Credit card optimizer loaded")
         print("   ✅ Investment advisor ready")
+        print("   ✅ PolyMarket service connected")
 
     async def process_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -118,6 +121,8 @@ class MarkAgent(BaseAgent):
         # Route to appropriate handler
         if intent == "promo_codes":
             response = await self._handle_promo_codes(user_id, message)
+        elif intent == "polymarket":
+            response = await self._handle_polymarket_analysis(user_id, message)
         elif intent == "wealth_building":
             response = await self._handle_wealth_building(user_id, message)
         elif intent == "coupon_search":
@@ -180,6 +185,13 @@ class MarkAgent(BaseAgent):
         # Promo codes lookup (NEW - highest priority for @Codes)
         if "@codes" in message_lower or "@code" in message_lower:
             return "promo_codes"
+
+        # PolyMarket analysis (NEW - prediction markets)
+        if any(word in message_lower for word in [
+            "polymarket", "prediction market", "betting market", "market odds",
+            "prediction odds", "bet on", "market opportunities", "poly market"
+        ]):
+            return "polymarket"
 
         # Build wealth with market trends (NEW - uses finance news)
         if any(word in message_lower for word in [
@@ -1240,3 +1252,122 @@ Make it exciting and motivating! Show them how small optimizations lead to wealt
     def get_conversation_history(self, user_id: str) -> List[Dict]:
         """Get conversation history for a user"""
         return self.conversations.get(user_id, [])
+
+    async def _handle_polymarket_analysis(self, user_id: str, message: str) -> str:
+        """
+        Analyze PolyMarket prediction markets and provide investment opportunities
+        """
+        try:
+            # Fetch trending markets
+            markets = await self.polymarket.get_trending_markets(limit=10)
+            
+            if not markets:
+                return "I'm having trouble accessing PolyMarket data right now. Please try again later!"
+            
+            # Get user's available budget (mock for now)
+            available_budget = 500  # TODO: Get from user's actual budget
+            
+            # Analyze opportunities
+            opportunities = []
+            for market in markets[:5]:  # Top 5 markets
+                yes_odds = market['odds']['yes']
+                
+                # Calculate potential returns for different investment amounts
+                small_investment = min(50, available_budget * 0.1)
+                medium_investment = min(100, available_budget * 0.2)
+                large_investment = min(200, available_budget * 0.4)
+                
+                small_return = self.polymarket.calculate_potential_return(small_investment, yes_odds)
+                medium_return = self.polymarket.calculate_potential_return(medium_investment, yes_odds)
+                large_return = self.polymarket.calculate_potential_return(large_investment, yes_odds)
+                
+                # Assess risk level
+                if yes_odds >= 75:
+                    risk = "Low"
+                    recommendation = "Safe bet"
+                elif yes_odds >= 55:
+                    risk = "Medium"
+                    recommendation = "Moderate opportunity"
+                else:
+                    risk = "High"
+                    recommendation = "High risk/reward"
+                
+                opportunities.append({
+                    'market': market,
+                    'risk': risk,
+                    'recommendation': recommendation,
+                    'small_return': small_return,
+                    'medium_return': medium_return,
+                    'large_return': large_return
+                })
+            
+            # Generate AI response
+            context = {
+                'opportunities': opportunities,
+                'available_budget': available_budget,
+                'total_markets': len(markets)
+            }
+            
+            prompt = f"""You are MARK, a financial advisor analyzing PolyMarket prediction markets.
+
+USER QUERY: {message}
+
+AVAILABLE BUDGET: ${available_budget}
+
+TOP PREDICTION MARKET OPPORTUNITIES:
+
+{self._format_polymarket_opportunities(opportunities)}
+
+Provide a comprehensive analysis that includes:
+1. Overview of the prediction market landscape
+2. Top 3 recommended opportunities with reasoning
+3. Risk assessment for each recommendation
+4. Suggested investment strategy (diversification)
+5. Potential returns and risks
+6. Clear next steps
+
+Make it exciting and educational! Help them understand prediction markets while identifying real opportunities.
+Use emojis and clear formatting."""
+
+            response = await self.generate_response(prompt, context, temperature=0.7, max_tokens=1200)
+            
+            # Add structured summary
+            response += "\n\n📊 **Quick Summary:**\n"
+            response += f"💰 Available Budget: ${available_budget}\n"
+            response += f"🎯 Markets Analyzed: {len(markets)}\n"
+            response += f"✅ Top Opportunities: {len(opportunities)}\n\n"
+            
+            # Add top 3 opportunities
+            response += "🔝 **Top 3 Picks:**\n"
+            for i, opp in enumerate(opportunities[:3], 1):
+                market = opp['market']
+                medium = opp['medium_return']
+                response += f"{i}. {market['question']}\n"
+                response += f"   • Odds: {market['odds']['yes']}% Yes\n"
+                response += f"   • Risk: {opp['risk']}\n"
+                response += f"   • Invest ${medium['investment']} → Win ${medium['potential_win']} ({medium['return_pct']}% return)\n\n"
+            
+            return response
+            
+        except Exception as e:
+            print(f"❌ Error in PolyMarket analysis: {e}")
+            import traceback
+            traceback.print_exc()
+            return "I'm having trouble analyzing PolyMarket opportunities right now. Please try again later!"
+    
+    def _format_polymarket_opportunities(self, opportunities: List[Dict]) -> str:
+        """Format opportunities for LLM prompt"""
+        formatted = ""
+        for i, opp in enumerate(opportunities, 1):
+            market = opp['market']
+            medium = opp['medium_return']
+            
+            formatted += f"\n{i}. {market['question']}\n"
+            formatted += f"   Category: {market['category']}\n"
+            formatted += f"   Current Odds: {market['odds']['yes']}% Yes, {market['odds']['no']}% No\n"
+            formatted += f"   Volume: ${market['volume']:,.0f}\n"
+            formatted += f"   Risk Level: {opp['risk']}\n"
+            formatted += f"   Recommendation: {opp['recommendation']}\n"
+            formatted += f"   Example: Invest ${medium['investment']} → Win ${medium['potential_win']} ({medium['return_pct']}% return)\n"
+        
+        return formatted

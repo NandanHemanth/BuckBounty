@@ -683,6 +683,45 @@ async def clear_user_cache(user_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# ==================== POLYMARKET ENDPOINTS ====================
+
+@app.get("/api/polymarket/trending")
+async def get_trending_markets(limit: int = 10):
+    """Get trending prediction markets from PolyMarket"""
+    try:
+        from polymarket_service import polymarket_service
+        markets = await polymarket_service.get_trending_markets(limit=limit)
+        return {"markets": markets, "count": len(markets)}
+    except Exception as e:
+        print(f"❌ Error fetching PolyMarket data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/polymarket/market/{market_id}")
+async def get_market_details(market_id: str):
+    """Get detailed information about a specific market"""
+    try:
+        from polymarket_service import polymarket_service
+        market = await polymarket_service.get_market_details(market_id)
+        if not market:
+            raise HTTPException(status_code=404, detail="Market not found")
+        return market
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"❌ Error fetching market details: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/polymarket/search")
+async def search_markets(query: str, limit: int = 5):
+    """Search prediction markets by keyword"""
+    try:
+        from polymarket_service import polymarket_service
+        markets = await polymarket_service.search_markets(query, limit=limit)
+        return {"markets": markets, "count": len(markets), "query": query}
+    except Exception as e:
+        print(f"❌ Error searching markets: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 # ==================== MAIN ====================
 
 if __name__ == "__main__":

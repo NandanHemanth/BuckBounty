@@ -19,7 +19,41 @@ export async function POST(request: NextRequest) {
       }, { status: 200 });
     }
 
-    // Call ElevenLabs API
+    // Analyze text for emotional context
+    const hasExcitement = /!|great|amazing|excellent|wonderful|fantastic|congratulations/i.test(text);
+    const hasWarning = /warning|caution|careful|important|urgent|overdue/i.test(text);
+    const hasQuestion = /\?|should|would|could|can i/i.test(text);
+    const hasNumbers = /\$|%|\d+/i.test(text);
+
+    // Adjust voice settings based on content
+    let stability = 0.5;
+    let similarityBoost = 0.75;
+    let style = 0.0;
+    let useSpeakerBoost = true;
+
+    if (hasExcitement) {
+      // More expressive for exciting news
+      stability = 0.3;
+      similarityBoost = 0.8;
+      style = 0.5; // More emotional
+    } else if (hasWarning) {
+      // More serious and clear for warnings
+      stability = 0.7;
+      similarityBoost = 0.6;
+      style = 0.2;
+    } else if (hasQuestion) {
+      // Slightly more inquisitive
+      stability = 0.4;
+      similarityBoost = 0.7;
+      style = 0.3;
+    } else if (hasNumbers) {
+      // Clear and precise for financial data
+      stability = 0.6;
+      similarityBoost = 0.7;
+      style = 0.1;
+    }
+
+    // Call ElevenLabs API with enhanced settings
     const response = await fetch(
       `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
       {
@@ -31,10 +65,12 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           text: text,
-          model_id: 'eleven_monolingual_v1',
+          model_id: 'eleven_multilingual_v2', // Better model for emotions
           voice_settings: {
-            stability: 0.5,
-            similarity_boost: 0.5
+            stability: stability,
+            similarity_boost: similarityBoost,
+            style: style,
+            use_speaker_boost: useSpeakerBoost
           }
         })
       }

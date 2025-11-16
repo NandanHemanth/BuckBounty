@@ -138,53 +138,52 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
   const handleVoiceInput = async () => {
     if (!isRecording) {
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        const mediaRecorder = new MediaRecorder(stream);
-        mediaRecorderRef.current = mediaRecorder;
+        // Use browser's Web Speech API for speech-to-text
+        const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+        
+        if (!SpeechRecognition) {
+          alert('Speech recognition is not supported in your browser. Please use Chrome or Edge.');
+          return;
+        }
 
-        const audioChunks: Blob[] = [];
+        const recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'en-US';
 
-        mediaRecorder.ondataavailable = (event) => {
-          audioChunks.push(event.data);
+        recognition.onstart = () => {
+          setIsRecording(true);
+          console.log('Speech recognition started');
         };
 
-        mediaRecorder.onstop = async () => {
-          const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+        recognition.onresult = async (event: any) => {
+          const transcript = event.results[0][0].transcript;
+          console.log('Transcribed:', transcript);
           
-          try {
-            // Convert speech to text using Web Speech API (browser built-in)
-            // For production, you can use ElevenLabs or OpenAI Whisper
-            const formData = new FormData();
-            formData.append('audio', audioBlob);
-            
-            const response = await fetch('/api/speech-to-text', {
-              method: 'POST',
-              body: formData
-            });
-            
-            const data = await response.json();
-            const transcribedText = data.text || 'Could not transcribe audio';
-            
-            // Send the transcribed text as a message
-            setInputMessage(transcribedText);
-            await handleSendMessage(transcribedText);
-            
-          } catch (error) {
-            console.error('Error transcribing audio:', error);
-            alert('Failed to transcribe audio. Please try again.');
-          }
-
-          stream.getTracks().forEach(track => track.stop());
+          // Send the transcribed text as a message
+          setInputMessage(transcript);
+          await handleSendMessage(transcript);
         };
 
-        mediaRecorder.start();
-        setIsRecording(true);
+        recognition.onerror = (event: any) => {
+          console.error('Speech recognition error:', event.error);
+          setIsRecording(false);
+          alert(`Speech recognition error: ${event.error}. Please try again.`);
+        };
+
+        recognition.onend = () => {
+          setIsRecording(false);
+          console.log('Speech recognition ended');
+        };
+
+        recognition.start();
       } catch (error) {
-        console.error('Error accessing microphone:', error);
-        alert('Unable to access microphone. Please check permissions.');
+        console.error('Error starting speech recognition:', error);
+        alert('Failed to start speech recognition. Please try again.');
+        setIsRecording(false);
       }
     } else {
-      mediaRecorderRef.current?.stop();
+      // Stop recording (browser will handle this automatically)
       setIsRecording(false);
     }
   };
@@ -401,9 +400,9 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Quick Action Buttons - 3 buttons in a row */}
+      {/* Quick Action Buttons - 4 buttons in a row */}
       <div className="border-t border-gray-200 px-4 pt-3 pb-2 bg-white">
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-4 gap-2">
           {/* Button 1: Maximize Savings */}
           <button
             onClick={async () => {
@@ -443,6 +442,20 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
           >
             <span className="text-2xl mb-1">📈</span>
             <span className="text-xs font-semibold text-gray-800 text-center">Build Wealth</span>
+          </button>
+
+          {/* Button 4: PolyMarket Analysis */}
+          <button
+            onClick={() => {
+              const polymarketQuery = "Analyze PolyMarket prediction market opportunities";
+              setInputMessage(polymarketQuery);
+              handleSendMessage(polymarketQuery);
+            }}
+            disabled={isLoading}
+            className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-orange-50 to-yellow-50 hover:from-orange-100 hover:to-yellow-100 border border-orange-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <span className="text-2xl mb-1">🔮</span>
+            <span className="text-xs font-semibold text-gray-800 text-center">PolyMarket</span>
           </button>
         </div>
       </div>

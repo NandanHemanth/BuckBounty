@@ -9,6 +9,7 @@ import BillSplitModal from '@/components/BillSplitModal';
 import ChatInterface from '@/components/ChatInterface';
 import NotificationBell from '@/components/NotificationBell';
 import FinancialTipsLoader from '@/components/FinancialTipsLoader';
+import PolyMarketWidget from '@/components/PolyMarketWidget';
 
 export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
@@ -100,6 +101,10 @@ export default function Home() {
         ) : (
           <div className="space-y-6">
             <Dashboard userId={userId} refreshTrigger={refreshTrigger} />
+            
+            {/* PolyMarket Widget */}
+            <PolyMarketWidget />
+            
             <TransactionList 
               userId={userId} 
               onTransactionAdded={() => setRefreshTrigger(prev => prev + 1)}

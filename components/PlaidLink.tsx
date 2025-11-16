@@ -7,6 +7,7 @@ import axios from 'axios';
 interface PlaidLinkProps {
   userId: string;
   onSuccess: () => void;
+  onSkip?: () => void;
 }
 
 export default function PlaidLink({ userId, onSuccess }: PlaidLinkProps) {

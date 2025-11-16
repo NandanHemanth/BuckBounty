@@ -120,10 +120,36 @@ export default function BillSplitModal({ isOpen, onClose, userId, onTransactionA
       });
 
       if (response.data.checkout_url) {
-        window.location.href = response.data.checkout_url;
+        // Open Stripe checkout in a popup window
+        const width = 600;
+        const height = 800;
+        const left = (window.screen.width - width) / 2;
+        const top = (window.screen.height - height) / 2;
+        
+        const popup = window.open(
+          response.data.checkout_url,
+          'stripe-checkout',
+          `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
+        );
+
+        if (!popup) {
+          // Popup blocked, fallback to redirect
+          window.location.href = response.data.checkout_url;
+        } else {
+          // Monitor popup for completion
+          const checkPopup = setInterval(() => {
+            if (popup.closed) {
+              clearInterval(checkPopup);
+              setLoading(false);
+              // Refresh to check if payment completed
+              onTransactionAdded();
+              onClose();
+            }
+          }, 1000);
+        }
       }
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'Failed to create payment');
+      setError(err.response?.data?.detail || 'Failed to create payment. Make sure the backend server is running.');
       setLoading(false);
     }
   };
