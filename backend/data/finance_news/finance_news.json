@@ -8790,5 +8790,1261 @@
     "url": "https://finance.yahoo.com/news/jpmorgan-doesn-t-want-pay-220149953.html",
     "published_time": "Unknown",
     "scraped_date": "2025-11-16T04:11:24.542278"
+  },
+  {
+    "id": "yahoo_economy_-6114082287186234201",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "The Good, the Bad, and the Ugly From Earnings Season",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/good-bad-ugly-earnings-season-082300901.html",
+    "scraped_date": "2025-11-16T04:15:48.717210"
+  },
+  {
+    "id": "yahoo_economy_-5587329239253295417",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "President Donald Trump Wants to Give Low- and Middle-Income Americans a $2,000 Tariff Stimulus Check -- but It Would Come With Unintended Consequences",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/president-donald-trump-wants-low-080600751.html",
+    "scraped_date": "2025-11-16T04:15:48.717210"
+  },
+  {
+    "id": "yahoo_economy_-8196577389431446839",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Why The Narrative Around Ambev Is Shifting After Analyst Updates and Market Challenges",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/why-narrative-around-ambev-shifting-070822775.html",
+    "scraped_date": "2025-11-16T04:15:48.717210"
+  },
+  {
+    "id": "yahoo_economy_-8741547280504068588",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How the Narrative Surrounding Hindustan Unilever Is Evolving After Recent Analyst Updates",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/narrative-surrounding-hindustan-unilever-evolving-050813977.html",
+    "scraped_date": "2025-11-16T04:15:48.718210"
+  },
+  {
+    "id": "yahoo_economy_-4788792165387105315",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "CMB International Securities Maintains Buy Rating on ServiceNow (NOW) Stock",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/cmb-international-securities-maintains-buy-044155942.html",
+    "scraped_date": "2025-11-16T04:15:48.718210"
+  },
+  {
+    "id": "yahoo_economy_8477005547214525458",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "BofA Maintains Buy Rating on NVIDIA (NVDA) Stock",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/bofa-maintains-buy-rating-nvidia-044147539.html",
+    "scraped_date": "2025-11-16T04:15:48.718210"
+  },
+  {
+    "id": "yahoo_economy_2106770740156997076",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Analyst Views Are Shaping the Evolving Story for Martin Marietta Materials",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/analyst-views-shaping-evolving-story-041530419.html",
+    "scraped_date": "2025-11-16T04:15:48.718210"
+  },
+  {
+    "id": "yahoo_economy_-7924623673469232351",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "A slowing wartime economy pushes the Kremlin to tap consumers for revenue",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/slowing-wartime-economy-pushes-kremlin-040230870.html",
+    "scraped_date": "2025-11-16T04:15:48.718210"
+  },
+  {
+    "id": "yahoo_economy_-2248990752812245270",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Why The Narrative Around Tate & Lyle Is Shifting Amid Analyst Revisions and Growth Concerns",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/why-narrative-around-tate-lyle-030909074.html",
+    "scraped_date": "2025-11-16T04:15:48.719212"
+  },
+  {
+    "id": "yahoo_economy_765093735942397658",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Recent Developments Are Shaping the Investment Story for NOTE",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/recent-developments-shaping-investment-story-030902419.html",
+    "scraped_date": "2025-11-16T04:15:48.719212"
+  },
+  {
+    "id": "yahoo_economy_-5087519907064502079",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Recent Developments Are Rewriting the Story for Embraer",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/recent-developments-rewriting-story-embraer-001538910.html",
+    "scraped_date": "2025-11-16T04:15:48.719212"
+  },
+  {
+    "id": "yahoo_economy_-80382822804211634",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Changing Analyst Sentiment Is Reshaping Banco Macro\u2019s Investment Story",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/changing-analyst-sentiment-reshaping-banco-001436948.html",
+    "scraped_date": "2025-11-16T04:15:48.719212"
+  },
+  {
+    "id": "yahoo_economy_-7130537690718484353",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How the Story Behind Nike Is Evolving After Recent Analyst and Company Updates",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/story-behind-nike-evolving-recent-220854085.html",
+    "scraped_date": "2025-11-16T04:15:48.720718"
+  },
+  {
+    "id": "yahoo_economy_8475870737900149651",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "What Analysts Say Is Shaping the Next Chapter for Sylvania Platinum",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/analysts-shaping-next-chapter-sylvania-220639416.html",
+    "scraped_date": "2025-11-16T04:15:48.720718"
+  },
+  {
+    "id": "yahoo_economy_1737756678223765865",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "'Rich Dad Poor Dad' author warns of \u2018The Big Print\u2019 as \u2018fake money crashes\u2019",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/rich-dad-poor-dad-author-202756422.html",
+    "scraped_date": "2025-11-16T04:15:48.720718"
+  },
+  {
+    "id": "yahoo_economy_7078524722029140862",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Trump tariffs live updates: Trump signs order to reduce tariffs on beef, coffee, bananas to help slash US grocery bills",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-trump-signs-order-to-reduce-tariffs-on-beef-coffee-bananas-to-help-slash-us-grocery-bills-231853543.html",
+    "scraped_date": "2025-11-16T04:15:48.720718"
+  },
+  {
+    "id": "yahoo_6848323796557586907",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ducati expands into off-road motorcycles with a premium twist",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ducati-expands-into-off-road-motorcycles-with-a-premium-twist-is-it-a-formula-for-a-spin-off-153026605.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.518169"
+  },
+  {
+    "id": "yahoo_5952164038946253849",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ex-Fed Governor Kugler quit after more trading violations",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ex-fed-governor-kugler-faced-143943538.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.518169"
+  },
+  {
+    "id": "yahoo_-2217166334032350845",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Trump bought at least $82M in bonds since August, disclosures show",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/trump-buys-least-82-million-222505118.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.519167"
+  },
+  {
+    "id": "yahoo_-3543010890756393671",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Rare-earths deal still not finalized weeks after Trump-Xi talks",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-trump-signs-order-to-reduce-tariffs-on-beef-coffee-bananas-to-help-slash-us-grocery-bills-231853543.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.519167"
+  },
+  {
+    "id": "yahoo_-4562039788762391620",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Europe gauges fallout from Trump's year of trade chaos",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/europe-gauges-fallout-trump-trade-210000382.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.519167"
+  },
+  {
+    "id": "yahoo_72051324604716095",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Brazilian VP says its coffee, beef and fruit still have 40% US tariffs",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/brazilian-coffee-beef-tropical-fruit-182151366.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.520166"
+  },
+  {
+    "id": "yahoo_-5384980948478931680",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "The math behind Trump's 50-year mortgage gambit",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/the-math-behind-trumps-50-year-mortgage-gambit-lower-payments-now-but-almost-double-the-long-term-costs-204039206.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.520166"
+  },
+  {
+    "id": "yahoo_-2813934376219847570",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Holiday budget guide: How to save money and avoid debt this year",
+    "summary": "",
+    "url": "https://finance.yahoo.com/personal-finance/banking/article/holiday-budget-guide-154030847.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.520166"
+  },
+  {
+    "id": "yahoo_1939018679383003833",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "The golden age of US credit card rewards may be at an end",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/golden-age-us-credit-card-174133600.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.520166"
+  },
+  {
+    "id": "yahoo_1003458389501901924",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Latest",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/samsung-electronics-add-chip-production-085256389.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.521167"
+  },
+  {
+    "id": "yahoo_-3912473944050246280",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Samsung Electronics to add chip production line as demand rises",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/samsung-electronics-add-chip-production-085256389.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.521167"
+  },
+  {
+    "id": "yahoo_-8823127348759355659",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "With the end of the penny, is the clock ticking for the nickel?",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/end-penny-clock-ticking-nickel-080002904.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.522167"
+  },
+  {
+    "id": "yahoo_-7707018777978653233",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Czech Republic plans $19 billion nuclear expansion to double output and end fossil fuel reliance",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/czech-republic-plans-19-billion-052211187.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.522167"
+  },
+  {
+    "id": "yahoo_-7924623673469232351",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "A slowing wartime economy pushes the Kremlin to tap consumers for revenue",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/slowing-wartime-economy-pushes-kremlin-040230870.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.522167"
+  },
+  {
+    "id": "yahoo_-1068938435551637664",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Truckload\u2019s value in critical lane is on the rise despite weak demand",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/truckload-value-critical-lane-rise-013000580.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.522167"
+  },
+  {
+    "id": "yahoo_2244817452989343102",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Former Fed governor's stock trades violated the central bank's ethics rules",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/former-fed-governors-stock-trades-220955299.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.522167"
+  },
+  {
+    "id": "yahoo_-8711269213975231552",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "JPMorgan doesn\u2019t want to pay Frank founder Charlie Javice\u2019s legal bills",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/jpmorgan-doesn-t-want-pay-220149953.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:15:49.523167"
+  },
+  {
+    "id": "yahoo_-7310719986110623355",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ducati expands into off-road motorcycles with a premium twist",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ducati-expands-into-off-road-motorcycles-with-a-premium-twist-is-it-a-formula-for-a-spin-off-153026605.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.866542"
+  },
+  {
+    "id": "yahoo_2180114061471748882",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ex-Fed Governor Kugler quit after more trading violations",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ex-fed-governor-kugler-faced-143943538.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.866542"
+  },
+  {
+    "id": "yahoo_-4756644093534163608",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Trump bought at least $82M in bonds since August, disclosures show",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/trump-buys-least-82-million-222505118.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.867539"
+  },
+  {
+    "id": "yahoo_-3463541955576804972",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Rare-earths deal still not finalized weeks after Trump-Xi talks",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-trump-signs-order-to-reduce-tariffs-on-beef-coffee-bananas-to-help-slash-us-grocery-bills-231853543.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.867539"
+  },
+  {
+    "id": "yahoo_-3766331477063604889",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Europe gauges fallout from Trump's year of trade chaos",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/europe-gauges-fallout-trump-trade-210000382.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.867539"
+  },
+  {
+    "id": "yahoo_-8938603808606399956",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Brazilian VP says its coffee, beef and fruit still have 40% US tariffs",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/brazilian-coffee-beef-tropical-fruit-182151366.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.867539"
+  },
+  {
+    "id": "yahoo_5328571128966521087",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "The math behind Trump's 50-year mortgage gambit",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/the-math-behind-trumps-50-year-mortgage-gambit-lower-payments-now-but-almost-double-the-long-term-costs-204039206.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.868536"
+  },
+  {
+    "id": "yahoo_-4853586721239700932",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Holiday budget guide: How to save money and avoid debt this year",
+    "summary": "",
+    "url": "https://finance.yahoo.com/personal-finance/banking/article/holiday-budget-guide-154030847.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.868536"
+  },
+  {
+    "id": "yahoo_-3019035312676932021",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "The golden age of US credit card rewards may be at an end",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/golden-age-us-credit-card-174133600.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.868536"
+  },
+  {
+    "id": "yahoo_-1486633208383915172",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Latest",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/samsung-electronics-add-chip-production-085256389.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.869536"
+  },
+  {
+    "id": "yahoo_-6005478896849974619",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Samsung Electronics to add chip production line as demand rises",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/samsung-electronics-add-chip-production-085256389.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.869536"
+  },
+  {
+    "id": "yahoo_-5902234243397175780",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "With the end of the penny, is the clock ticking for the nickel?",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/end-penny-clock-ticking-nickel-080002904.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.869536"
+  },
+  {
+    "id": "yahoo_-688658808476566560",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Czech Republic plans $19 billion nuclear expansion to double output and end fossil fuel reliance",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/czech-republic-plans-19-billion-052211187.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.869536"
+  },
+  {
+    "id": "yahoo_-2361240045573770452",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "A slowing wartime economy pushes the Kremlin to tap consumers for revenue",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/slowing-wartime-economy-pushes-kremlin-040230870.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.870536"
+  },
+  {
+    "id": "yahoo_9055763883398385514",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Truckload\u2019s value in critical lane is on the rise despite weak demand",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/truckload-value-critical-lane-rise-013000580.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.870536"
+  },
+  {
+    "id": "yahoo_5936699788870772519",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Former Fed governor's stock trades violated the central bank's ethics rules",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/former-fed-governors-stock-trades-220955299.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.870536"
+  },
+  {
+    "id": "yahoo_-1171054198875696586",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "JPMorgan doesn\u2019t want to pay Frank founder Charlie Javice\u2019s legal bills",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/jpmorgan-doesn-t-want-pay-220149953.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:16:41.870536"
+  },
+  {
+    "id": "yahoo_economy_6676764656541680435",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "The Good, the Bad, and the Ugly From Earnings Season",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/good-bad-ugly-earnings-season-082300901.html",
+    "scraped_date": "2025-11-16T04:16:42.672837"
+  },
+  {
+    "id": "yahoo_economy_-3356750221336606077",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "President Donald Trump Wants to Give Low- and Middle-Income Americans a $2,000 Tariff Stimulus Check -- but It Would Come With Unintended Consequences",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/president-donald-trump-wants-low-080600751.html",
+    "scraped_date": "2025-11-16T04:16:42.672837"
+  },
+  {
+    "id": "yahoo_economy_8089473454176035155",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Why The Narrative Around Ambev Is Shifting After Analyst Updates and Market Challenges",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/why-narrative-around-ambev-shifting-070822775.html",
+    "scraped_date": "2025-11-16T04:16:42.674345"
+  },
+  {
+    "id": "yahoo_economy_-4896070261821363316",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How the Narrative Surrounding Hindustan Unilever Is Evolving After Recent Analyst Updates",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/narrative-surrounding-hindustan-unilever-evolving-050813977.html",
+    "scraped_date": "2025-11-16T04:16:42.674345"
+  },
+  {
+    "id": "yahoo_economy_-7459900485016445015",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "CMB International Securities Maintains Buy Rating on ServiceNow (NOW) Stock",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/cmb-international-securities-maintains-buy-044155942.html",
+    "scraped_date": "2025-11-16T04:16:42.674345"
+  },
+  {
+    "id": "yahoo_economy_1402968531976555678",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "BofA Maintains Buy Rating on NVIDIA (NVDA) Stock",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/bofa-maintains-buy-rating-nvidia-044147539.html",
+    "scraped_date": "2025-11-16T04:16:42.674345"
+  },
+  {
+    "id": "yahoo_economy_7970560195087484555",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Analyst Views Are Shaping the Evolving Story for Martin Marietta Materials",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/analyst-views-shaping-evolving-story-041530419.html",
+    "scraped_date": "2025-11-16T04:16:42.674345"
+  },
+  {
+    "id": "yahoo_economy_-2361240045573770452",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "A slowing wartime economy pushes the Kremlin to tap consumers for revenue",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/slowing-wartime-economy-pushes-kremlin-040230870.html",
+    "scraped_date": "2025-11-16T04:16:42.674345"
+  },
+  {
+    "id": "yahoo_economy_-2940108193130533522",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Why The Narrative Around Tate & Lyle Is Shifting Amid Analyst Revisions and Growth Concerns",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/why-narrative-around-tate-lyle-030909074.html",
+    "scraped_date": "2025-11-16T04:16:42.675351"
+  },
+  {
+    "id": "yahoo_economy_5912342459972226201",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Recent Developments Are Shaping the Investment Story for NOTE",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/recent-developments-shaping-investment-story-030902419.html",
+    "scraped_date": "2025-11-16T04:16:42.675351"
+  },
+  {
+    "id": "yahoo_economy_8193918720094442037",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Recent Developments Are Rewriting the Story for Embraer",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/recent-developments-rewriting-story-embraer-001538910.html",
+    "scraped_date": "2025-11-16T04:16:42.675351"
+  },
+  {
+    "id": "yahoo_economy_846839365547525916",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Changing Analyst Sentiment Is Reshaping Banco Macro\u2019s Investment Story",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/changing-analyst-sentiment-reshaping-banco-001436948.html",
+    "scraped_date": "2025-11-16T04:16:42.676351"
+  },
+  {
+    "id": "yahoo_economy_7443058803320808168",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How the Story Behind Nike Is Evolving After Recent Analyst and Company Updates",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/story-behind-nike-evolving-recent-220854085.html",
+    "scraped_date": "2025-11-16T04:16:42.676351"
+  },
+  {
+    "id": "yahoo_economy_-8624131652856635967",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "What Analysts Say Is Shaping the Next Chapter for Sylvania Platinum",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/analysts-shaping-next-chapter-sylvania-220639416.html",
+    "scraped_date": "2025-11-16T04:16:42.676351"
+  },
+  {
+    "id": "yahoo_economy_239667210633576675",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "'Rich Dad Poor Dad' author warns of \u2018The Big Print\u2019 as \u2018fake money crashes\u2019",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/rich-dad-poor-dad-author-202756422.html",
+    "scraped_date": "2025-11-16T04:16:42.676351"
+  },
+  {
+    "id": "yahoo_economy_6826830557346664792",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Trump tariffs live updates: Trump signs order to reduce tariffs on beef, coffee, bananas to help slash US grocery bills",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-trump-signs-order-to-reduce-tariffs-on-beef-coffee-bananas-to-help-slash-us-grocery-bills-231853543.html",
+    "scraped_date": "2025-11-16T04:16:42.677350"
+  },
+  {
+    "id": "yahoo_8943697145907436627",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ducati expands into off-road motorcycles with a premium twist",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ducati-expands-into-off-road-motorcycles-with-a-premium-twist-is-it-a-formula-for-a-spin-off-153026605.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.020360"
+  },
+  {
+    "id": "yahoo_-4409630148929088535",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ex-Fed Governor Kugler quit after more trading violations",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ex-fed-governor-kugler-faced-143943538.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.020360"
+  },
+  {
+    "id": "yahoo_144647468471769983",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Trump bought at least $82M in bonds since August, disclosures show",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/trump-buys-least-82-million-222505118.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.020360"
+  },
+  {
+    "id": "yahoo_5785159288164248144",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Rare-earths deal still not finalized weeks after Trump-Xi talks",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-trump-signs-order-to-reduce-tariffs-on-beef-coffee-bananas-to-help-slash-us-grocery-bills-231853543.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.021359"
+  },
+  {
+    "id": "yahoo_-6207934190999768697",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Europe gauges fallout from Trump's year of trade chaos",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/europe-gauges-fallout-trump-trade-210000382.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.021359"
+  },
+  {
+    "id": "yahoo_-2626606797390293350",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Brazilian VP says its coffee, beef and fruit still have 40% US tariffs",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/brazilian-coffee-beef-tropical-fruit-182151366.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.021359"
+  },
+  {
+    "id": "yahoo_-1780511088358421727",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "The math behind Trump's 50-year mortgage gambit",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/the-math-behind-trumps-50-year-mortgage-gambit-lower-payments-now-but-almost-double-the-long-term-costs-204039206.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.021359"
+  },
+  {
+    "id": "yahoo_-7586565671997982152",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Holiday budget guide: How to save money and avoid debt this year",
+    "summary": "",
+    "url": "https://finance.yahoo.com/personal-finance/banking/article/holiday-budget-guide-154030847.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.022357"
+  },
+  {
+    "id": "yahoo_-5676190237193711123",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "The golden age of US credit card rewards may be at an end",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/golden-age-us-credit-card-174133600.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.022357"
+  },
+  {
+    "id": "yahoo_-7802239694641337255",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Latest",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/samsung-electronics-add-chip-production-085256389.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.022357"
+  },
+  {
+    "id": "yahoo_1231293121890526269",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Samsung Electronics to add chip production line as demand rises",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/samsung-electronics-add-chip-production-085256389.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.023358"
+  },
+  {
+    "id": "yahoo_5366057734674007739",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "With the end of the penny, is the clock ticking for the nickel?",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/end-penny-clock-ticking-nickel-080002904.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.023358"
+  },
+  {
+    "id": "yahoo_4119277519891948984",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Czech Republic plans $19 billion nuclear expansion to double output and end fossil fuel reliance",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/czech-republic-plans-19-billion-052211187.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.023358"
+  },
+  {
+    "id": "yahoo_7174202783251797641",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "A slowing wartime economy pushes the Kremlin to tap consumers for revenue",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/slowing-wartime-economy-pushes-kremlin-040230870.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.023358"
+  },
+  {
+    "id": "yahoo_8961922432515114441",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Truckload\u2019s value in critical lane is on the rise despite weak demand",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/truckload-value-critical-lane-rise-013000580.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.023358"
+  },
+  {
+    "id": "yahoo_-144663330391657184",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Former Fed governor's stock trades violated the central bank's ethics rules",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/former-fed-governors-stock-trades-220955299.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.024358"
+  },
+  {
+    "id": "yahoo_8181458281972719960",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "JPMorgan doesn\u2019t want to pay Frank founder Charlie Javice\u2019s legal bills",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/jpmorgan-doesn-t-want-pay-220149953.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T04:21:08.024358"
+  },
+  {
+    "id": "yahoo_economy_-8231070517657173547",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "The Good, the Bad, and the Ugly From Earnings Season",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/good-bad-ugly-earnings-season-082300901.html",
+    "scraped_date": "2025-11-16T04:21:08.852146"
+  },
+  {
+    "id": "yahoo_economy_-2868867814393122857",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "President Donald Trump Wants to Give Low- and Middle-Income Americans a $2,000 Tariff Stimulus Check -- but It Would Come With Unintended Consequences",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/president-donald-trump-wants-low-080600751.html",
+    "scraped_date": "2025-11-16T04:21:08.852146"
+  },
+  {
+    "id": "yahoo_economy_1968853283051364551",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Why The Narrative Around Ambev Is Shifting After Analyst Updates and Market Challenges",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/why-narrative-around-ambev-shifting-070822775.html",
+    "scraped_date": "2025-11-16T04:21:08.852146"
+  },
+  {
+    "id": "yahoo_economy_-656312886434358064",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How the Narrative Surrounding Hindustan Unilever Is Evolving After Recent Analyst Updates",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/narrative-surrounding-hindustan-unilever-evolving-050813977.html",
+    "scraped_date": "2025-11-16T04:21:08.853146"
+  },
+  {
+    "id": "yahoo_economy_-51003613561864452",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "CMB International Securities Maintains Buy Rating on ServiceNow (NOW) Stock",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/cmb-international-securities-maintains-buy-044155942.html",
+    "scraped_date": "2025-11-16T04:21:08.853146"
+  },
+  {
+    "id": "yahoo_economy_7845054062470585314",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "BofA Maintains Buy Rating on NVIDIA (NVDA) Stock",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/bofa-maintains-buy-rating-nvidia-044147539.html",
+    "scraped_date": "2025-11-16T04:21:08.853146"
+  },
+  {
+    "id": "yahoo_economy_2764224930584090960",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Analyst Views Are Shaping the Evolving Story for Martin Marietta Materials",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/analyst-views-shaping-evolving-story-041530419.html",
+    "scraped_date": "2025-11-16T04:21:08.853146"
+  },
+  {
+    "id": "yahoo_economy_7174202783251797641",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "A slowing wartime economy pushes the Kremlin to tap consumers for revenue",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/slowing-wartime-economy-pushes-kremlin-040230870.html",
+    "scraped_date": "2025-11-16T04:21:08.853146"
+  },
+  {
+    "id": "yahoo_economy_7233165828271259859",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Why The Narrative Around Tate & Lyle Is Shifting Amid Analyst Revisions and Growth Concerns",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/why-narrative-around-tate-lyle-030909074.html",
+    "scraped_date": "2025-11-16T04:21:08.854145"
+  },
+  {
+    "id": "yahoo_economy_7992059455568969483",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Recent Developments Are Shaping the Investment Story for NOTE",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/recent-developments-shaping-investment-story-030902419.html",
+    "scraped_date": "2025-11-16T04:21:08.854145"
+  },
+  {
+    "id": "yahoo_economy_4158283877523770381",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Recent Developments Are Rewriting the Story for Embraer",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/recent-developments-rewriting-story-embraer-001538910.html",
+    "scraped_date": "2025-11-16T04:21:08.854145"
+  },
+  {
+    "id": "yahoo_economy_-3210388145761252863",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Changing Analyst Sentiment Is Reshaping Banco Macro\u2019s Investment Story",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/changing-analyst-sentiment-reshaping-banco-001436948.html",
+    "scraped_date": "2025-11-16T04:21:08.854145"
+  },
+  {
+    "id": "yahoo_economy_3621716221256238492",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How the Story Behind Nike Is Evolving After Recent Analyst and Company Updates",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/story-behind-nike-evolving-recent-220854085.html",
+    "scraped_date": "2025-11-16T04:21:08.854145"
+  },
+  {
+    "id": "yahoo_economy_8354678851691893582",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "What Analysts Say Is Shaping the Next Chapter for Sylvania Platinum",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/analysts-shaping-next-chapter-sylvania-220639416.html",
+    "scraped_date": "2025-11-16T04:21:08.855146"
+  },
+  {
+    "id": "yahoo_economy_-7807895153544333197",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "'Rich Dad Poor Dad' author warns of \u2018The Big Print\u2019 as \u2018fake money crashes\u2019",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/rich-dad-poor-dad-author-202756422.html",
+    "scraped_date": "2025-11-16T04:21:08.855146"
+  },
+  {
+    "id": "yahoo_economy_4180556205357642093",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Trump tariffs live updates: Trump signs order to reduce tariffs on beef, coffee, bananas to help slash US grocery bills",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-trump-signs-order-to-reduce-tariffs-on-beef-coffee-bananas-to-help-slash-us-grocery-bills-231853543.html",
+    "scraped_date": "2025-11-16T04:21:08.855146"
+  },
+  {
+    "id": "yahoo_-7194164352067264102",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "AI's valuation problem reaches a 'mini panic moment'",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ais-valuation-problem-reaches-a-mini-panic-moment-110046323.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.880870"
+  },
+  {
+    "id": "yahoo_-7806229940970031196",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ducati expands into off-road motorcycles with a premium twist",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ducati-expands-into-off-road-motorcycles-with-a-premium-twist-is-it-a-formula-for-a-spin-off-153026605.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.880870"
+  },
+  {
+    "id": "yahoo_-5387651692742466509",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ex-Fed Governor Kugler quit after more trading violations",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ex-fed-governor-kugler-faced-143943538.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.881870"
+  },
+  {
+    "id": "yahoo_-2160486995450981426",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Trump bought at least $82M in bonds since August, disclosures show",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/trump-buys-least-82-million-222505118.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.881870"
+  },
+  {
+    "id": "yahoo_676570178589277112",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Rare-earths deal still not finalized weeks after Trump-Xi talks",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/live/trump-tariffs-live-updates-trump-signs-order-to-reduce-tariffs-on-beef-coffee-bananas-to-help-slash-us-grocery-bills-231853543.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.881870"
+  },
+  {
+    "id": "yahoo_7955722889539897725",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Europe gauges fallout from Trump's year of trade chaos",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/europe-gauges-fallout-trump-trade-210000382.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.881870"
+  },
+  {
+    "id": "yahoo_3240159624294438098",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Brazilian VP says its coffee, beef and fruit still have 40% US tariffs",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/brazilian-coffee-beef-tropical-fruit-182151366.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.882871"
+  },
+  {
+    "id": "yahoo_-3637113926211651344",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "The math behind Trump's 50-year mortgage gambit",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/the-math-behind-trumps-50-year-mortgage-gambit-lower-payments-now-but-almost-double-the-long-term-costs-204039206.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.882871"
+  },
+  {
+    "id": "yahoo_-3619266837927674306",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Holiday budget guide: How to save money and avoid debt this year",
+    "summary": "",
+    "url": "https://finance.yahoo.com/personal-finance/banking/article/holiday-budget-guide-154030847.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.882871"
+  },
+  {
+    "id": "yahoo_6659362607864982172",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Latest",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ford-motor-shows-off-high-124612880.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.883869"
+  },
+  {
+    "id": "yahoo_-2863228596317521048",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Ford Motor shows off new high-tech HQ. It has a 'crown jewel' showroom and room for 4,000 employees",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/ford-motor-shows-off-high-124612880.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.883869"
+  },
+  {
+    "id": "yahoo_-5642582035012812799",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "ASML CEO says Dutch-China tension has not hit chip-gear maker",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/asml-ceo-says-dutch-china-123502093.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.883869"
+  },
+  {
+    "id": "yahoo_-2070811256923873446",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Borderlands Mexico: Nearshoring spurs C.H. Robinson expansion in Texas",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/borderlands-mexico-nearshoring-spurs-c-120000563.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.884875"
+  },
+  {
+    "id": "yahoo_3133568414429620361",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "The Three Factors This Wall Street Expert Says Will Keep the Bull Market Running Into 2026",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/three-factors-wall-street-expert-100000383.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.884875"
+  },
+  {
+    "id": "yahoo_1239484559481661954",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "What to Expect in Markets This Week: Earnings From Nvidia, Walmart, Target, Home Depot and More",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/expect-markets-week-earnings-nvidia-100000815.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.884875"
+  },
+  {
+    "id": "yahoo_-2568899322671898837",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "Samsung, Hyundai announce domestic investments after US-South Korea trade deal",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/samsung-electronics-add-chip-production-085256389.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.884875"
+  },
+  {
+    "id": "yahoo_-3166046394340488914",
+    "source": "yahoo_finance",
+    "category": "general",
+    "headline": "With the end of the penny, is the clock ticking for the nickel?",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/end-penny-clock-ticking-nickel-080002904.html",
+    "published_time": "Unknown",
+    "scraped_date": "2025-11-16T07:50:12.885870"
+  },
+  {
+    "id": "yahoo_economy_3765340041707366081",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Nvidia, Walmart earnings, and the return of jobs numbers: What to watch this week",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/nvidia-walmart-earnings-and-the-return-of-jobs-numbers-what-to-watch-this-week-124502640.html",
+    "scraped_date": "2025-11-16T07:50:13.103109"
+  },
+  {
+    "id": "yahoo_economy_-1532391264926657896",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "4 Reasons to Buy This Warren Buffett Stock Like There's No Tomorrow",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/4-reasons-buy-warren-buffett-114000497.html",
+    "scraped_date": "2025-11-16T07:50:13.103109"
+  },
+  {
+    "id": "yahoo_economy_6768733720425328427",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Where Will Brookfield Asset Management Be in 5 Years?",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/where-brookfield-asset-management-5-111000440.html",
+    "scraped_date": "2025-11-16T07:50:13.103109"
+  },
+  {
+    "id": "yahoo_economy_-6434164344104672661",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Why The Narrative Around Illumina Is Shifting After Recent Analyst Upgrades and Sector Changes",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/why-narrative-around-illumina-shifting-110906531.html",
+    "scraped_date": "2025-11-16T07:50:13.103109"
+  },
+  {
+    "id": "yahoo_economy_-3979259821807240544",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "What Catalysts Could Shift the Narrative for Caesars Amid Evolving Analyst Views and Valuation Changes",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/catalysts-could-shift-narrative-caesars-100845597.html",
+    "scraped_date": "2025-11-16T07:50:13.104107"
+  },
+  {
+    "id": "yahoo_economy_8692706748864041783",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Is Starwood Property Trust Fairly Priced After Recent Price Dips in 2025?",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/starwood-property-trust-fairly-priced-100811131.html",
+    "scraped_date": "2025-11-16T07:50:13.104107"
+  },
+  {
+    "id": "yahoo_economy_3133568414429620361",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "The Three Factors This Wall Street Expert Says Will Keep the Bull Market Running Into 2026",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/three-factors-wall-street-expert-100000383.html",
+    "scraped_date": "2025-11-16T07:50:13.104107"
+  },
+  {
+    "id": "yahoo_economy_4597597389509019545",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "3 Dividend Powerhouse Stocks Yielding Over 3% to Buy Today",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/3-dividend-powerhouse-stocks-yielding-095500457.html",
+    "scraped_date": "2025-11-16T07:50:13.104107"
+  },
+  {
+    "id": "yahoo_economy_4497639232982741729",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "This Massive Streaming Stock Just Announced a 10-for-1 Stock Split. The Stock Is Up 26% This Year and Wall Street Thinks There Is More Room to Run.",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/massive-streaming-stock-just-announced-092500090.html",
+    "scraped_date": "2025-11-16T07:50:13.104107"
+  },
+  {
+    "id": "yahoo_economy_-9117972530089340522",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "The Good, the Bad, and the Ugly From Earnings Season",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/good-bad-ugly-earnings-season-082300901.html",
+    "scraped_date": "2025-11-16T07:50:13.105107"
+  },
+  {
+    "id": "yahoo_economy_7572491723336739852",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "President Donald Trump Wants to Give Low- and Middle-Income Americans a $2,000 Tariff Stimulus Check -- but It Would Come With Unintended Consequences",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/president-donald-trump-wants-low-080600751.html",
+    "scraped_date": "2025-11-16T07:50:13.105107"
+  },
+  {
+    "id": "yahoo_economy_-5554875259982424838",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "Why The Narrative Around Ambev Is Shifting After Analyst Updates and Market Challenges",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/why-narrative-around-ambev-shifting-070822775.html",
+    "scraped_date": "2025-11-16T07:50:13.105107"
+  },
+  {
+    "id": "yahoo_economy_-3876733458324353680",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How the Narrative Surrounding Hindustan Unilever Is Evolving After Recent Analyst Updates",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/narrative-surrounding-hindustan-unilever-evolving-050813977.html",
+    "scraped_date": "2025-11-16T07:50:13.105107"
+  },
+  {
+    "id": "yahoo_economy_-2078692687417180391",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "CMB International Securities Maintains Buy Rating on ServiceNow (NOW) Stock",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/cmb-international-securities-maintains-buy-044155942.html",
+    "scraped_date": "2025-11-16T07:50:13.105107"
+  },
+  {
+    "id": "yahoo_economy_-9108565282307704586",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "BofA Maintains Buy Rating on NVIDIA (NVDA) Stock",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/bofa-maintains-buy-rating-nvidia-044147539.html",
+    "scraped_date": "2025-11-16T07:50:13.106106"
+  },
+  {
+    "id": "yahoo_economy_3608569404986598660",
+    "source": "yahoo_finance",
+    "category": "economy",
+    "headline": "How Analyst Views Are Shaping the Evolving Story for Martin Marietta Materials",
+    "summary": "",
+    "url": "https://finance.yahoo.com/news/analyst-views-shaping-evolving-story-041530419.html",
+    "scraped_date": "2025-11-16T07:50:13.106106"
   }
 ]

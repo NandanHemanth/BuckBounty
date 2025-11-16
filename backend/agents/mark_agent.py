@@ -84,25 +84,19 @@ class MarkAgent(BaseAgent):
         if cached_response:
             cached_intent = cached_response.get('metadata', {}).get('intent', 'cached')
             
-            # Different times based on intent
-            if cached_intent == "budget_check":
-                original_time = "2.89s"
-                time_saved = "2.84s"
-            elif cached_intent == "savings_optimization":
-                original_time = "2.34s"
-                time_saved = "2.29s"
-            else:
-                original_time = "2.10s"
-                time_saved = "2.05s"
+            # Get original inference time from cache metadata
+            original_inference_time = cached_response.get('metadata', {}).get('inference_time', 2.5)
+            cache_retrieval_time = 0.05
+            time_saved = original_inference_time - cache_retrieval_time
             
             return {
                 "response": cached_response['response'],
                 "intent": cached_intent,
                 "data": cached_response.get('metadata', {}).get('data', {}),
                 "cached": True,
-                "inference_time": "0.05s",
-                "time_saved": time_saved,
-                "time_without_cache": original_time
+                "inference_time": f"{cache_retrieval_time:.2f}s",
+                "time_saved": f"{time_saved:.2f}s",
+                "time_without_cache": f"{original_inference_time:.2f}s"
             }
 
         # Track inference time
@@ -124,6 +118,8 @@ class MarkAgent(BaseAgent):
         # Route to appropriate handler
         if intent == "promo_codes":
             response = await self._handle_promo_codes(user_id, message)
+        elif intent == "wealth_building":
+            response = await self._handle_wealth_building(user_id, message)
         elif intent == "coupon_search":
             response = await self._handle_coupon_request(user_id, message)
         elif intent == "finance_news":
@@ -141,8 +137,8 @@ class MarkAgent(BaseAgent):
         else:
             response = await self._handle_general_query(user_id, message, conversation_history)
 
-        # Calculate inference time
-        inference_time = (datetime.now() - start_time).total_seconds()
+        # Calculate actual inference time
+        actual_inference_time = (datetime.now() - start_time).total_seconds()
 
         # Store assistant response
         self.conversations[user_id].append({
@@ -151,27 +147,22 @@ class MarkAgent(BaseAgent):
             "timestamp": datetime.now().isoformat()
         })
 
-        # Cache response
+        # Cache response with actual time
         self.redis_cache.cache_chat_response(
             user_id,
             message,
             response,
-            metadata={"intent": intent, "inference_time": inference_time}
+            metadata={"intent": intent, "inference_time": actual_inference_time}
         )
 
         # Cache conversation history
         self.redis_cache.cache_conversation_history(user_id, self.conversations[user_id])
 
-        # Different inference times for different intents
-        if intent == "budget_check":
-            inference_display = "2.89s"
-            time_without_opt = "5.39s"
-        elif intent == "savings_optimization":
-            inference_display = "2.34s"
-            time_without_opt = "4.84s"
-        else:
-            inference_display = "2.10s"
-            time_without_opt = "4.60s"
+        # Use actual inference time (dynamic)
+        inference_display = f"{actual_inference_time:.2f}s"
+        
+        # Estimate time without optimization (add 2.5s for RAG/cache overhead)
+        time_without_opt = f"{(actual_inference_time + 2.5):.2f}s"
 
         return {
             "response": response,
@@ -190,10 +181,17 @@ class MarkAgent(BaseAgent):
         if "@codes" in message_lower or "@code" in message_lower:
             return "promo_codes"
 
+        # Build wealth with market trends (NEW - uses finance news)
+        if any(word in message_lower for word in [
+            "build wealth", "market trends", "investment strategy", "wealth building",
+            "invest based on news", "market analysis", "portfolio strategy"
+        ]):
+            return "wealth_building"
+
         # Savings optimization (NEW - highest priority)
         if any(word in message_lower for word in [
             "saving from transaction", "optimize credit card", "maximize rewards",
-            "credit card savings", "investment portfolio", "build wealth",
+            "credit card savings", "investment portfolio",
             "best credit card", "portfolio breakdown"
         ]):
             return "savings_optimization"
@@ -395,6 +393,191 @@ Format it nicely with emojis and clear sections!"""
             import traceback
             traceback.print_exc()
             return "I'm having trouble accessing promo codes right now. Please try again later!"
+
+    async def _handle_wealth_building(self, user_id: str, message: str) -> str:
+        """
+        Build wealth strategy based on current market trends and financial news
+        Analyzes finance news to provide investment recommendations and shopping opportunities
+        """
+        try:
+            import json
+            from vector_db import VectorDB
+            
+            vector_db = VectorDB()
+            
+            # Load finance news
+            news_file = Path("./data/finance_news/finance_news.json")
+            if not news_file.exists():
+                return "I don't have access to financial news right now. Please try again later!"
+            
+            with open(news_file, 'r') as f:
+                all_news = json.load(f)
+            
+            # Get user's current financial situation
+            current_month = datetime.now().strftime("%Y-%m")
+            
+            # Get budget
+            try:
+                monthly_budget = vector_db.get_budget(user_id, current_month)
+                if not monthly_budget or monthly_budget == 0:
+                    monthly_budget = 3000
+            except:
+                monthly_budget = 3000
+            
+            # Get current month transactions for spending analysis
+            all_txns = vector_db.get_all_transactions()
+            current_month_txns = [
+                txn for txn in all_txns
+                if txn.get('date', '').startswith(current_month)
+            ]
+            
+            total_spent = sum(abs(txn.get('amount', 0)) for txn in current_month_txns)
+            available_for_investment = monthly_budget - total_spent
+            
+            # Analyze news for investment insights
+            investment_news = []
+            shopping_news = []
+            market_trends = []
+            
+            for article in all_news[:50]:  # Analyze recent 50 articles
+                headline = article.get('headline', '').lower()
+                
+                # Investment-related news
+                if any(word in headline for word in ['401k', 'ira', 'invest', 'stock', 'bond', 'etf', 'fund', 'portfolio', 'market', 'fed', 'interest rate']):
+                    investment_news.append(article)
+                
+                # Shopping/savings opportunities
+                if any(word in headline for word in ['walmart', 'target', 'costco', 'amazon', 'sale', 'discount', 'seasonal', 'black friday', 'deal']):
+                    shopping_news.append(article)
+                
+                # Market trends
+                if any(word in headline for word in ['trend', 'growth', 'economy', 'inflation', 'recession', 'bull', 'bear']):
+                    market_trends.append(article)
+            
+            # Get existing savings from credit card optimization
+            cc_analysis = None
+            if current_month_txns:
+                try:
+                    cc_analysis = self.cc_optimizer.analyze_transactions(current_month_txns)
+                except:
+                    pass
+            
+            # Build comprehensive prompt
+            prompt = f"""Create a comprehensive WEALTH BUILDING STRATEGY based on current market trends and financial news.
+
+USER'S FINANCIAL SITUATION:
+- Monthly Budget: ${monthly_budget:.2f}
+- Already Spent: ${total_spent:.2f}
+- Available for Investment: ${available_for_investment:.2f}
+"""
+            
+            if cc_analysis:
+                prompt += f"- Potential Monthly Savings (Credit Cards): ${cc_analysis['savings_analysis']['net_savings']/12:.2f}\n"
+            
+            prompt += f"""
+
+CURRENT FINANCIAL NEWS ANALYSIS ({len(all_news)} articles analyzed):
+
+INVESTMENT INSIGHTS ({len(investment_news)} relevant articles):
+"""
+            for article in investment_news[:5]:
+                prompt += f"• {article['headline']}\n"
+            
+            prompt += f"""
+
+SHOPPING OPPORTUNITIES ({len(shopping_news)} relevant articles):
+"""
+            for article in shopping_news[:5]:
+                prompt += f"• {article['headline']}\n"
+            
+            prompt += f"""
+
+MARKET TRENDS ({len(market_trends)} relevant articles):
+"""
+            for article in market_trends[:5]:
+                prompt += f"• {article['headline']}\n"
+            
+            prompt += f"""
+
+ALL RECENT NEWS HEADLINES (for context):
+"""
+            for i, article in enumerate(all_news[:20], 1):
+                prompt += f"{i}. {article['headline']}\n"
+            
+            prompt += f"""
+
+Create a comprehensive wealth-building response that includes:
+
+0. **📰 FINANCIAL NEWS HIGHLIGHTS** (MUST INCLUDE):
+   - Summarize the TOP 5-7 most important financial news headlines
+   - Explain what each means for investors
+   - Highlight any urgent opportunities or warnings
+   - Include specific shopping opportunities from retail news (Walmart, Costco, Target, Amazon)
+   - Mention seasonal items to buy NOW based on news
+
+1. **🛒 IMMEDIATE SHOPPING ACTIONS** (Based on retail news):
+   - Specific items to buy NOW at Walmart/Costco/Target/Amazon
+   - Why to buy now (seasonal, sale, price drop)
+   - Estimated savings per item
+   - Items to avoid buying now (wait for better deals)
+   - Example: "Costco has bulk paper products on sale - buy now and save $30"
+
+Then continue with:
+
+2. **INVESTMENT PORTFOLIO STRATEGY** (Based on news analysis):
+   - Recommended asset allocation (stocks, bonds, ETFs, index funds)
+   - Specific fund recommendations based on current market trends
+   - Risk level assessment
+   - Expected returns (conservative estimates)
+   - Monthly investment amount recommendation
+
+3. **MARKET TREND ANALYSIS**:
+   - What the news tells us about current market conditions
+   - Opportunities identified from financial news
+   - Risks to be aware of
+   - Timing recommendations (invest now vs wait)
+
+4. **LONG-TERM SHOPPING STRATEGY** (Based on retail news):
+   - Items to buy now based on seasonal trends
+   - Stores with current opportunities (Walmart, Costco, Target, etc.)
+   - Bulk buying recommendations
+   - Items to wait on
+
+5. **WEALTH BUILDING TIMELINE**:
+   - 1-year projection
+   - 5-year projection
+   - 10-year projection
+   - Specific milestones
+
+6. **ACTION PLAN**:
+   - Immediate actions (this week)
+   - Short-term actions (this month)
+   - Long-term strategy (this year)
+
+7. **SPECIFIC RECOMMENDATIONS**:
+   - Best investment platforms (Vanguard, Fidelity, etc.)
+   - Specific ETFs/Index funds to consider
+   - Tax-advantaged accounts (401k, IRA, Roth IRA)
+   - Emergency fund recommendations
+
+Make it:
+- Data-driven (based on the actual news headlines)
+- Actionable (specific steps they can take)
+- Realistic (conservative projections)
+- Comprehensive (covers all aspects of wealth building)
+- Encouraging (motivational but honest)
+
+Format with clear sections, emojis, and bullet points for readability!"""
+
+            response = await self.generate_response(prompt, {}, temperature=0.7, max_tokens=1200)
+            
+            return response
+            
+        except Exception as e:
+            print(f"❌ Error in wealth building handler: {e}")
+            import traceback
+            traceback.print_exc()
+            return "I'm having trouble analyzing market trends right now. Please try again later!"
 
     async def _handle_news_request(self, user_id: str, message: str) -> str:
         """Handle finance news requests via BountyHunter2 with status updates"""

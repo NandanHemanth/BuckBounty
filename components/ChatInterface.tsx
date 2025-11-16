@@ -367,7 +367,7 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
           {/* Button 2: Budget Check */}
           <button
             onClick={() => {
-              const budgetQuery = "Should I buy AirPods Pro 2 ($249)?";
+              const budgetQuery = "Can I afford AirPods Pro 2 ($249)?";
               setInputMessage(budgetQuery);
               handleSendMessage(budgetQuery);
             }}
@@ -378,17 +378,18 @@ export default function ChatInterface({ isOpen, onClose, userId }: ChatInterface
             <span className="text-xs font-semibold text-gray-800 text-center">Budget?</span>
           </button>
 
-          {/* Button 3: Placeholder for future feature */}
+          {/* Button 3: Build Wealth */}
           <button
             onClick={() => {
-              // Future feature
-              alert('Feature coming soon!');
+              const wealthQuery = "Build wealth with current market trends";
+              setInputMessage(wealthQuery);
+              handleSendMessage(wealthQuery);
             }}
             disabled={isLoading}
             className="flex flex-col items-center justify-center p-3 bg-gradient-to-br from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border border-purple-200 rounded-lg transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <span className="text-2xl mb-1">🎯</span>
-            <span className="text-xs font-semibold text-gray-800 text-center">Coming Soon</span>
+            <span className="text-2xl mb-1">📈</span>
+            <span className="text-xs font-semibold text-gray-800 text-center">Build Wealth</span>
           </button>
         </div>
       </div>

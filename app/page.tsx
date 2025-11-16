@@ -27,13 +27,31 @@ export default function Home() {
         <header className="text-center mb-12 relative">
           <div className="flex items-center justify-center gap-4 mb-2">
             {isConnected && (
-              <button
-                onClick={() => setIsBillSplitOpen(true)}
-                className="absolute left-0 top-1/2 -translate-y-1/2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
-              >
-                <span className="text-2xl">🧾</span>
-                <span>Split Bill</span>
-              </button>
+              <>
+                <button
+                  onClick={() => setIsBillSplitOpen(true)}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                >
+                  <span className="text-2xl">🧾</span>
+                  <span>Split Bill</span>
+                </button>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+                  <button
+                    onClick={() => window.open('https://polymarket.com', '_blank')}
+                    className="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                  >
+                    <span className="text-2xl">📊</span>
+                    <span>PolyMarket</span>
+                  </button>
+                  <button
+                    onClick={() => window.open('https://robinhood.com', '_blank')}
+                    className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                  >
+                    <span className="text-2xl">📈</span>
+                    <span>Stocks</span>
+                  </button>
+                </div>
+              </>
             )}
             <h1 className="text-5xl font-bold text-gray-800">
               💰 BuckBounty
