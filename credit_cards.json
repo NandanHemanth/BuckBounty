@@ -1,0 +1,232 @@
+{
+  "scraped_at": "2025-11-15 21:00:21",
+  "source": "https://www.creditcards.com/best-credit-cards/",
+  "total_cards": 10,
+  "credit_cards": [
+    {
+      "id": 1,
+      "name": "Chase Sapphire Preferred® Card",
+      "issuer": "Chase",
+      "benefits": [
+        "Travel and purchase protection",
+        "No foreign transaction fees",
+        "Primary rental car insurance",
+        "Trip cancellation/interruption insurance",
+        "Baggage delay insurance"
+      ],
+      "rewards": [
+        "5x points on travel purchased through Chase Ultimate Rewards",
+        "3x points on dining",
+        "3x points on online grocery purchases",
+        "3x points on select streaming services",
+        "2x points on all other travel purchases",
+        "1x points on all other purchases"
+      ],
+      "annual_fee": "$95",
+      "intro_apr": "N/A",
+      "regular_apr": "21.49% - 28.49% Variable",
+      "credit_needed": "Good to Excellent",
+      "bonus_offer": "60,000 bonus points after spending $4,000 in first 3 months"
+    },
+    {
+      "id": 2,
+      "name": "Chase Freedom Unlimited®",
+      "issuer": "Chase",
+      "benefits": [
+        "Cell phone protection",
+        "Purchase protection",
+        "Extended warranty protection",
+        "Auto rental collision damage waiver"
+      ],
+      "rewards": [
+        "5% cash back on travel purchased through Chase Ultimate Rewards",
+        "3% cash back on dining and drugstore purchases",
+        "1.5% cash back on all other purchases"
+      ],
+      "annual_fee": "$0",
+      "intro_apr": "0% for 15 months on purchases",
+      "regular_apr": "20.49% - 29.24% Variable",
+      "credit_needed": "Good to Excellent",
+      "bonus_offer": "$200 bonus after spending $500 in first 3 months"
+    },
+    {
+      "id": 3,
+      "name": "American Express® Gold Card",
+      "issuer": "American Express",
+      "benefits": [
+        "$120 Uber Cash annually",
+        "$120 dining credit annually",
+        "No foreign transaction fees",
+        "Travel and emergency assistance",
+        "Baggage insurance plan"
+      ],
+      "rewards": [
+        "4x points at restaurants worldwide",
+        "4x points at U.S. supermarkets (up to $25,000 per year)",
+        "3x points on flights booked directly with airlines",
+        "1x points on all other purchases"
+      ],
+      "annual_fee": "$250",
+      "intro_apr": "N/A",
+      "regular_apr": "Pay Over Time APR: 19.24% - 28.24% Variable",
+      "credit_needed": "Good to Excellent",
+      "bonus_offer": "60,000 points after spending $4,000 in first 6 months"
+    },
+    {
+      "id": 4,
+      "name": "Capital One Venture Rewards Credit Card",
+      "issuer": "Capital One",
+      "benefits": [
+        "No foreign transaction fees",
+        "Travel accident insurance",
+        "24/7 travel assistance services",
+        "Auto rental collision damage waiver",
+        "Extended warranty"
+      ],
+      "rewards": [
+        "2x miles on every purchase",
+        "5x miles on hotels and rental cars booked through Capital One Travel",
+        "Unlimited miles with no expiration"
+      ],
+      "annual_fee": "$95",
+      "intro_apr": "N/A",
+      "regular_apr": "19.99% - 29.99% Variable",
+      "credit_needed": "Excellent",
+      "bonus_offer": "75,000 miles after spending $4,000 in first 3 months"
+    },
+    {
+      "id": 5,
+      "name": "Citi® Double Cash Card",
+      "issuer": "Citi",
+      "benefits": [
+        "Citi Entertainment access",
+        "Purchase protection",
+        "Extended warranty",
+        "Damage and theft protection"
+      ],
+      "rewards": [
+        "2% cash back on all purchases",
+        "1% when you buy",
+        "1% when you pay",
+        "No category restrictions or limits"
+      ],
+      "annual_fee": "$0",
+      "intro_apr": "0% for 18 months on balance transfers",
+      "regular_apr": "19.24% - 29.24% Variable",
+      "credit_needed": "Good to Excellent",
+      "bonus_offer": "No sign-up bonus"
+    },
+    {
+      "id": 6,
+      "name": "Discover it® Cash Back",
+      "issuer": "Discover",
+      "benefits": [
+        "Free FICO® Credit Score",
+        "Freeze your account instantly",
+        "$0 fraud liability",
+        "No annual fee ever",
+        "Cashback Match for first year"
+      ],
+      "rewards": [
+        "5% cash back on rotating categories each quarter (up to $1,500)",
+        "1% cash back on all other purchases",
+        "Automatic Cashback Match at end of first year"
+      ],
+      "annual_fee": "$0",
+      "intro_apr": "0% for 15 months on purchases and balance transfers",
+      "regular_apr": "16.24% - 27.24% Variable",
+      "credit_needed": "Good to Excellent",
+      "bonus_offer": "Cashback Match - Discover matches all cash back earned first year"
+    },
+    {
+      "id": 7,
+      "name": "Blue Cash Preferred® Card from American Express",
+      "issuer": "American Express",
+      "benefits": [
+        "Purchase protection",
+        "Extended warranty",
+        "Return protection",
+        "Car rental loss and damage insurance",
+        "Global Assist Hotline"
+      ],
+      "rewards": [
+        "6% cash back at U.S. supermarkets (up to $6,000 per year)",
+        "6% cash back on select U.S. streaming subscriptions",
+        "3% cash back at U.S. gas stations",
+        "3% cash back on transit",
+        "1% cash back on other purchases"
+      ],
+      "annual_fee": "$95",
+      "intro_apr": "0% for 12 months on purchases",
+      "regular_apr": "19.24% - 29.99% Variable",
+      "credit_needed": "Good to Excellent",
+      "bonus_offer": "$250 statement credit after spending $3,000 in first 6 months"
+    },
+    {
+      "id": 8,
+      "name": "Wells Fargo Active Cash® Card",
+      "issuer": "Wells Fargo",
+      "benefits": [
+        "Cell phone protection",
+        "Zero liability protection",
+        "Travel and emergency assistance",
+        "Roadside dispatch",
+        "Lost wallet assistance"
+      ],
+      "rewards": [
+        "2% cash rewards on purchases",
+        "Unlimited rewards with no categories to track",
+        "Redeem for cash, gift cards, or travel"
+      ],
+      "annual_fee": "$0",
+      "intro_apr": "0% for 15 months on purchases and qualifying balance transfers",
+      "regular_apr": "20.24%, 25.24%, or 29.99% Variable",
+      "credit_needed": "Good to Excellent",
+      "bonus_offer": "$200 cash rewards bonus after spending $500 in first 3 months"
+    },
+    {
+      "id": 9,
+      "name": "Bank of America® Premium Rewards® Credit Card",
+      "issuer": "Bank of America",
+      "benefits": [
+        "$100 airline incidental statement credit",
+        "No foreign transaction fees",
+        "Travel and emergency assistance",
+        "Auto rental collision damage waiver",
+        "Purchase protection and extended warranty"
+      ],
+      "rewards": [
+        "2 points per $1 spent on travel and dining",
+        "1.5 points per $1 spent on all other purchases",
+        "Up to 75% points bonus with Preferred Rewards"
+      ],
+      "annual_fee": "$95",
+      "intro_apr": "N/A",
+      "regular_apr": "19.24% - 29.24% Variable",
+      "credit_needed": "Excellent",
+      "bonus_offer": "50,000 bonus points after spending $3,000 in first 90 days"
+    },
+    {
+      "id": 10,
+      "name": "U.S. Bank Cash+® Visa Signature® Card",
+      "issuer": "U.S. Bank",
+      "benefits": [
+        "Cell phone protection",
+        "Extended warranty protection",
+        "Purchase security",
+        "Travel and emergency assistance",
+        "Zero liability protection"
+      ],
+      "rewards": [
+        "5% cash back on your first $2,000 in combined eligible purchases each quarter in two categories you choose",
+        "2% cash back on one everyday category",
+        "1% cash back on all other eligible purchases"
+      ],
+      "annual_fee": "$0",
+      "intro_apr": "0% for 15 billing cycles on purchases and balance transfers",
+      "regular_apr": "18.74% - 29.74% Variable",
+      "credit_needed": "Good to Excellent",
+      "bonus_offer": "$200 bonus after spending $1,000 in first 120 days"
+    }
+  ]
+}
